@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/tycherion/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/tycherion/static/js/main.811e3d2d.chunk.js",
-    "main.js.map": "/tycherion/static/js/main.811e3d2d.chunk.js.map",
-    "runtime-main.js": "/tycherion/static/js/runtime-main.28313baa.js",
-    "runtime-main.js.map": "/tycherion/static/js/runtime-main.28313baa.js.map",
-    "static/js/2.2b05ca3c.chunk.js": "/tycherion/static/js/2.2b05ca3c.chunk.js",
-    "static/js/2.2b05ca3c.chunk.js.map": "/tycherion/static/js/2.2b05ca3c.chunk.js.map",
-    "static/js/3.61c53b99.chunk.js": "/tycherion/static/js/3.61c53b99.chunk.js",
-    "static/js/3.61c53b99.chunk.js.map": "/tycherion/static/js/3.61c53b99.chunk.js.map",
+    "main.css": "/tycherion/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/tycherion/static/js/main.088bbfba.chunk.js",
+    "main.js.map": "/tycherion/static/js/main.088bbfba.chunk.js.map",
+    "runtime-main.js": "/tycherion/static/js/runtime-main.a6d72794.js",
+    "runtime-main.js.map": "/tycherion/static/js/runtime-main.a6d72794.js.map",
+    "static/css/2.8e61f691.chunk.css": "/tycherion/static/css/2.8e61f691.chunk.css",
+    "static/js/2.82a5bc23.chunk.js": "/tycherion/static/js/2.82a5bc23.chunk.js",
+    "static/js/2.82a5bc23.chunk.js.map": "/tycherion/static/js/2.82a5bc23.chunk.js.map",
+    "static/js/3.7bd89497.chunk.js": "/tycherion/static/js/3.7bd89497.chunk.js",
+    "static/js/3.7bd89497.chunk.js.map": "/tycherion/static/js/3.7bd89497.chunk.js.map",
     "index.html": "/tycherion/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/tycherion/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.2b05ca3c.chunk.js.LICENSE.txt": "/tycherion/static/js/2.2b05ca3c.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/tycherion/static/media/logo.6ce24c58.svg"
+    "static/css/2.8e61f691.chunk.css.map": "/tycherion/static/css/2.8e61f691.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/tycherion/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.82a5bc23.chunk.js.LICENSE.txt": "/tycherion/static/js/2.82a5bc23.chunk.js.LICENSE.txt",
+    "static/media/all.css": "/tycherion/static/media/fa-solid-900.46fdbd2d.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.28313baa.js",
-    "static/js/2.2b05ca3c.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.811e3d2d.chunk.js"
+    "static/js/runtime-main.a6d72794.js",
+    "static/css/2.8e61f691.chunk.css",
+    "static/js/2.82a5bc23.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.088bbfba.chunk.js"
   ]
 }
