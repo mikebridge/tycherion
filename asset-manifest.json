@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tycherion/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/tycherion/static/js/main.811e3d2d.chunk.js",
+    "main.js.map": "/tycherion/static/js/main.811e3d2d.chunk.js.map",
+    "runtime-main.js": "/tycherion/static/js/runtime-main.28313baa.js",
+    "runtime-main.js.map": "/tycherion/static/js/runtime-main.28313baa.js.map",
+    "static/js/2.2b05ca3c.chunk.js": "/tycherion/static/js/2.2b05ca3c.chunk.js",
+    "static/js/2.2b05ca3c.chunk.js.map": "/tycherion/static/js/2.2b05ca3c.chunk.js.map",
+    "static/js/3.61c53b99.chunk.js": "/tycherion/static/js/3.61c53b99.chunk.js",
+    "static/js/3.61c53b99.chunk.js.map": "/tycherion/static/js/3.61c53b99.chunk.js.map",
+    "index.html": "/tycherion/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/tycherion/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.2b05ca3c.chunk.js.LICENSE.txt": "/tycherion/static/js/2.2b05ca3c.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/tycherion/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28313baa.js",
+    "static/js/2.2b05ca3c.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.811e3d2d.chunk.js"
+  ]
+}
