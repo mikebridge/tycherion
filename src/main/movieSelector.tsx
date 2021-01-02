@@ -9,7 +9,7 @@ export const MovieSelector = () => {
         <div>
             <Container>
                 <Jumbotron>
-                    <h1 className="display-3">Testomg!</h1>
+                    <h1 className="display-3">Testing!</h1>
                     <p className="lead">This is just a test.</p>
                     <hr className="my-2" />
                     <p>Content goes here.</p>
