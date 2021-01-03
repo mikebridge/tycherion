@@ -1,6 +1,6 @@
 import {Button, Container, Jumbotron, Media} from "reactstrap";
 import React, {useState} from "react";
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
 
 interface IMovie {
     title: string,
@@ -30,18 +30,18 @@ const findRandomMovie = (movieList: IMovie[]): IMovie => {
     let count = 0;
     for (let movie of movieList) {
         count += 1;
-        if (Math.floor(Math.random() * count) + 1 == count) {
+        if (Math.floor(Math.random() * count) + 1 === count) {
             selectedMovie = movie;
         }
     }
 
     // this should be a hook side-effect
-    ReactGA.event({
-        category: "Movie",
-        action: "Assigned Movie",
-        label: "title",
-        dimension1: selectedMovie.title
-    });
+    // ReactGA.event({
+    //     category: "Movie",
+    //     action: "Assigned Movie",
+    //     label: "title",
+    //     dimension1: selectedMovie.title
+    // });
     return selectedMovie;
 }
 
@@ -51,12 +51,12 @@ interface IMoviePreviewProps {
 
 export const MoviePreview = ({movie}: IMoviePreviewProps) => {
     const goToMovie = () => {
-        ReactGA.outboundLink({
-            label: movie.url,
-        }, () => {
+        // ReactGA.outboundLink({
+        //     label: movie.url,
+        // }, () => {
             (window as any).location.href=movie.url;
             //console.log('event sent', movie.url);
-        });
+        //});
 
     };
     return (
