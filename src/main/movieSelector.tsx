@@ -33,11 +33,38 @@ const cropImgUrl = (imgUrl: string): string => {
     return `${imgUrl}?auto=format%2Ccompress&fit=crop,left&h=${height}&q=100&w=${width}&crop=left`
 }
 
+const skipMultipart = (movieSlug: string): boolean => {
+    // todo: move this to the scraper
+    if (movieSlug.indexOf("berlin-alexanderplatz") === 0 &&
+        movieSlug !== 'berlin-alexanderplatz-part-1') {
+        return true;
+    }
+    if (movieSlug.indexOf("-part-2") > 0 ||
+        movieSlug.indexOf("-part-3") > 0 ||
+        movieSlug.indexOf("-part-two") > 0 ||
+        movieSlug.indexOf("-episode-2") > 0 ||
+        movieSlug.indexOf("-episode-3") > 0 ||
+        movieSlug.indexOf("-episode-4") > 0 ||
+        movieSlug.indexOf("-episode-5") > 0 ||
+        movieSlug.indexOf("-episode-6") > 0 ||
+        movieSlug.indexOf("-episode-7") > 0 ||
+        movieSlug.indexOf("-part-ii") > 0 ||
+        movieSlug.indexOf("-part-iii") > 0 ||
+        movieSlug.indexOf("-part-iv") > 0) {
+        return true;
+    }
+    return false;
+}
+
 const findRandomMovie = (movieList: IMovie[]): IMovie => {
     let selectedMovie: IMovie = movieList[0];
     let count = 0;
     for (let movie of movieList) {
         count += 1;
+        if (skipMultipart(movie.slug)) {
+            continue;
+        }
+
         if (Math.floor(Math.random() * count) + 1 === count) {
             selectedMovie = movie;
         }
