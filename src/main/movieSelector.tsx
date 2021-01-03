@@ -7,7 +7,8 @@ interface IMovie {
     url: string,
     img: string,
     country: string,
-    year: string
+    year: string,
+    director: string
 }
 
 const movieList: IMovie[] = require('../data/films.json');
@@ -50,11 +51,25 @@ interface IMoviePreviewProps {
 
 export const MoviePreview = ({movie}: IMoviePreviewProps) => {
     const goToMovie = () => {
-        (window as any).gtag('event', 'select_content', {
-            content_type: 'movie',
-            item_id: movie.title
+        // (window as any).gtag('event', 'select_content', {
+        //     content_type: 'movie',
+        //     item_id: movie.title
+        // });
+        console.log("navigating to ");
+        console.log(movie.url);
+        console.log((window as any).gtag);
+        (window as any).gtag('event', 'click', {
+            'event_category': 'outbound',
+            'event_label': movie.url,
+            'transport_type': 'beacon',
+            'event_callback': () => {
+                (window as any).location = movie.url;
+            }
         });
-        (window as any).location.href=movie.url;
+        // fallback if event_callback is not fired
+        setTimeout(
+            () => {(window as any).location.href=movie.url;},
+            3000);
     };
     return (
         <Media className="bg-light border">
@@ -66,9 +81,10 @@ export const MoviePreview = ({movie}: IMoviePreviewProps) => {
                     <Media heading>
                         {movie.title}
                     </Media>
-                    <Media>
+                    <div>
+                        <p className="font-weight-bold">{movie.director}</p>
                         <p className="font-italic">{movie.country} ({movie.year})</p>
-                    </Media>
+                    </div>
                     <Button color="primary" onClick={goToMovie}>View on Criterion</Button>
                 </Container>
             </Media>
