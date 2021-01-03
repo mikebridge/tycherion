@@ -34,14 +34,13 @@ const findRandomMovie = (movieList: IMovie[]): IMovie => {
             selectedMovie = movie;
         }
     }
+    // MB: this should be a hook
+    (window as any).gtag('event', 'view_item', {
+        items: [{
+            item_id: selectedMovie.title,
+        }],
+    });
 
-    // this should be a hook side-effect
-    // ReactGA.event({
-    //     category: "Movie",
-    //     action: "Assigned Movie",
-    //     label: "title",
-    //     dimension1: selectedMovie.title
-    // });
     return selectedMovie;
 }
 
@@ -51,13 +50,11 @@ interface IMoviePreviewProps {
 
 export const MoviePreview = ({movie}: IMoviePreviewProps) => {
     const goToMovie = () => {
-        // ReactGA.outboundLink({
-        //     label: movie.url,
-        // }, () => {
-            (window as any).location.href=movie.url;
-            //console.log('event sent', movie.url);
-        //});
-
+        (window as any).gtag('event', 'select_content', {
+            content_type: 'movie',
+            item_id: movie.title
+        });
+        (window as any).location.href=movie.url;
     };
     return (
         <Media className="bg-light border">
@@ -82,9 +79,9 @@ export const MoviePreview = ({movie}: IMoviePreviewProps) => {
 export const MovieSelector = () => {
     const [suggestedMovie, setSuggestedMovie] = useState<IMovie | null>(null);
 
-    const selectMovie = () =>
+    const selectMovie = () => {
         setSuggestedMovie(findRandomMovie(movieList));
-
+    }
     return (
         <div>
             <Container>
