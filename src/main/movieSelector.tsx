@@ -47,23 +47,36 @@ const findRandomMovie = (movieList: IMovie[]): IMovie => {
 
 interface IMoviePreviewProps {
     movie: IMovie;
-    onReset: () => void;
+    onReset: (oldMovie: IMovie) => void;
 }
 
 export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
+    const resetMovie = () => {
+        onReset(movie);
+    }
     const goToMovie = () => {
         const timeoutId = setTimeout(
             () => {(window as any).location.assign(movie.url);},
             1000);
-        (window as any).gtag('event', 'click', {
-            'event_category': 'outbound',
-            'event_label': movie.slug,
+        (window as any).gtag('event', 'search_success', {
+            'event_category': 'search',
+            'movie': movie,
+            'slug': movie.slug,
             'transport_type': 'beacon',
             'event_callback': () => {
                 clearTimeout(timeoutId);
                 (window as any).location.assign(movie.url);
             }
         });
+        // (window as any).gtag('event', 'click', {
+        //     'event_category': 'outbound',
+        //     'event_label': movie.slug,
+        //     'transport_type': 'beacon',
+        //     'event_callback': () => {
+        //         clearTimeout(timeoutId);
+        //         (window as any).location.assign(movie.url);
+        //     }
+        // });
     };
     return (
         <Media className="bg-light border rounded">
@@ -81,7 +94,7 @@ export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
                     </div>
                     <div className="mt-4">
                     <Button color="primary" onClick={goToMovie}>View on Criterion</Button>
-                    <Button color="danger" onClick={onReset}>I've already seen it</Button>
+                    <Button color="danger" onClick={resetMovie}>I've already seen it</Button>
                     </div>
                 </Container>
             </Media>
@@ -96,11 +109,12 @@ export const MovieSelector = () => {
         setSuggestedMovie(findRandomMovie(movieList));
     }
 
-    const onReset = () => {
+    const onReset = (oldMovie: IMovie) => {
         setSuggestedMovie(findRandomMovie(movieList));
-        (window as any).gtag('event', 'click', {
+        (window as any).gtag('event', 'search_reject', {
             'event_category': 'search',
-            'event_label': 'reset',
+            'movie': oldMovie,
+            'slug': oldMovie.slug,
             'transport_type': 'beacon'
         });
     }
@@ -108,10 +122,12 @@ export const MovieSelector = () => {
     useEffect(
         () => {
             if (suggestedMovie) {
-                (window as any).gtag('event', 'view_item', {
-                    items: [{
-                        item_id: suggestedMovie.title,
-                    }],
+                (window as any).gtag('event', 'search', {
+                    'event_category': 'search_result',
+                    'event_label': 'Show Movie',
+                    'movie': suggestedMovie,
+                    'slug': suggestedMovie.slug,
+                    'transport_type': 'beacon'
                 });
             }
         },
