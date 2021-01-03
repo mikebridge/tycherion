@@ -4,12 +4,6 @@ import './index.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 
-// import ReactGA from 'react-ga';
-// const trackingId = "G-1W98XG2459";
-// ReactGA.initialize(trackingId);
-// // ReactGA.set({
-// // })
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

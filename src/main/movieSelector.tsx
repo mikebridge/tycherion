@@ -1,6 +1,6 @@
 import {Button, Container, Jumbotron, Media} from "reactstrap";
-import React, {useState} from "react";
-//import ReactGA from 'react-ga';
+import React, {useEffect, useState} from "react";
+import {timeAgoInWords, withDateStringsAsDates} from "./utils";
 
 interface IMovie {
     title: string,
@@ -8,25 +8,32 @@ interface IMovie {
     img: string,
     country: string,
     year: string,
-    director: string
+    director: string,
+    slug: string
+}
+
+interface IMovieMetaData {
+    date: Date,
+    scrapeterion: string
 }
 
 const movieList: IMovie[] = require('../data/films.json');
 
-// interface MetaData {
-//
-// }
-//
-// const metaData: MetaData = require('../data/filmsMetaData.json');
+const metaDataPreDate: any = require('../data/filmsMetaData.json');
 
-const cropImgUrl = (origUrl: string): string => {
-    // https://vhx.imgix.net/criterionchannelchartersu/assets/bff62486-e5e9-4e8d-ad75-436cb2cf12c9.jpg?auto=format%2Ccompress&fit=crop,left&h=140&q=100&w=100&crop=left
-    const newUrl = origUrl.replace(/w=[0-9]+/, 'w=100');
-    return `${newUrl}&crop=left`
+const metaData: IMovieMetaData = withDateStringsAsDates(metaDataPreDate);
+
+const cropImgUrl = (imgUrl: string): string => {
+    // original url:
+    // https://vhx.imgix.net/criterionchannelchartersu/assets/bff62486-e5e9-4e8d-ad75-436cb2cf12c9.jpg
+    // append this:
+    // ?auto=format%2Ccompress&fit=crop,left&h=140&q=100&w=100&crop=left
+    const width=200;
+    const height=280;
+    return `${imgUrl}?auto=format%2Ccompress&fit=crop,left&h=${height}&q=100&w=${width}&crop=left`
 }
 
 const findRandomMovie = (movieList: IMovie[]): IMovie => {
-
     let selectedMovie: IMovie = movieList[0];
     let count = 0;
     for (let movie of movieList) {
@@ -35,57 +42,47 @@ const findRandomMovie = (movieList: IMovie[]): IMovie => {
             selectedMovie = movie;
         }
     }
-    // MB: this should be a hook
-    (window as any).gtag('event', 'view_item', {
-        items: [{
-            item_id: selectedMovie.title,
-        }],
-    });
-
     return selectedMovie;
 }
 
 interface IMoviePreviewProps {
     movie: IMovie;
+    onReset: () => void;
 }
 
-export const MoviePreview = ({movie}: IMoviePreviewProps) => {
+export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
     const goToMovie = () => {
-        // (window as any).gtag('event', 'select_content', {
-        //     content_type: 'movie',
-        //     item_id: movie.title
-        // });
-        console.log("navigating to ");
-        console.log(movie.url);
-        console.log((window as any).gtag);
+        const timeoutId = setTimeout(
+            () => {(window as any).location.assign(movie.url);},
+            1000);
         (window as any).gtag('event', 'click', {
             'event_category': 'outbound',
-            'event_label': movie.url,
+            'event_label': movie.slug,
             'transport_type': 'beacon',
             'event_callback': () => {
-                (window as any).location = movie.url;
+                clearTimeout(timeoutId);
+                (window as any).location.assign(movie.url);
             }
         });
-        // fallback if event_callback is not fired
-        setTimeout(
-            () => {(window as any).location.href=movie.url;},
-            3000);
     };
     return (
-        <Media className="bg-light border">
-            <Media left href="#">
-                <Media object src={cropImgUrl(movie.img)} alt={movie.title} />
+        <Media className="bg-light border rounded">
+            <Media left href="#" onClick={goToMovie}>
+                <Media object style={{"width":200, "height": 280}} src={cropImgUrl(movie.img)} alt={movie.title} />
             </Media>
-            <Media body>
-                <Container className="mt-1">
+            <Media body className="align-items-center">
+                <Container className="mt-4">
                     <Media heading>
                         {movie.title}
                     </Media>
                     <div>
-                        <p className="font-weight-bold">{movie.director}</p>
-                        <p className="font-italic">{movie.country} ({movie.year})</p>
+                        <div className="font-weight-bold">{movie.director}</div>
+                        <div className="font-italic">{movie.country} ({movie.year})</div>
                     </div>
+                    <div className="mt-4">
                     <Button color="primary" onClick={goToMovie}>View on Criterion</Button>
+                    <Button color="danger" onClick={onReset}>I've already seen it</Button>
+                    </div>
                 </Container>
             </Media>
         </Media>
@@ -98,15 +95,42 @@ export const MovieSelector = () => {
     const selectMovie = () => {
         setSuggestedMovie(findRandomMovie(movieList));
     }
+
+    const onReset = () => {
+        setSuggestedMovie(findRandomMovie(movieList));
+        (window as any).gtag('event', 'click', {
+            'event_category': 'search',
+            'event_label': 'reset',
+            'transport_type': 'beacon'
+        });
+    }
+
+    useEffect(
+        () => {
+            if (suggestedMovie) {
+                (window as any).gtag('event', 'view_item', {
+                    items: [{
+                        item_id: suggestedMovie.title,
+                    }],
+                });
+            }
+        },
+        [suggestedMovie],
+    )
+
+
     return (
-        <div>
-            <Container>
-                <Jumbotron>
-                    <h1 className="display-5">Random Movie Selector</h1>
+            <>
+            <div>
+                &nbsp;
+            </div>
+            <Container className="mt-5">
+                <Jumbotron className={"p-4"}>
+                    <h1 className="display-6">Random Movie Selector</h1>
                     <hr className="my-2"/>
                     {!suggestedMovie &&
                         <>
-                            <p className="lead">Let the Goddess of Fortune, Tyche,
+                            <p className="lead">Let the Goddess of Fortune, <a href="https://greekgodsandgoddesses.net/goddesses/tyche/" rel="noreferrer" target="_blank">Tyche</a>,
                                 assign you a movie on Criterion Channel.</p>
                             {/*<p className="font-italic">O Goddess Tyche</p>*/}
                             <p className="lead">
@@ -116,18 +140,25 @@ export const MovieSelector = () => {
                     }
                     {suggestedMovie &&
                         <p>
-                            <p className="lead">The Goddess of Fortune, Tyche, Has Determined Your Future.</p>
-
-                            <MoviePreview movie={suggestedMovie} />
+                            <p className="lead">Tyche, The Goddess of Fortune, has spoken.</p>
+                            <MoviePreview movie={suggestedMovie} onReset={onReset}/>
                         </p>
                     }
-
-
                 </Jumbotron>
-                <Container>
-                    <p className="font-italic">We like Criterion---but this page isn't associated with them in any way.</p>
-                </Container>
 
+                <footer className="footer">
+                    <div className="container">
+                        <div>Last updated:&nbsp;
+                            <span className="font-weight-bold">{timeAgoInWords(metaData.date)}
+                            </span>
+                        </div>
+                        <hr/>
+                        <div className="text-muted">Powered by <a href="https://github.com/mikebridge/scrapeterion" rel="noreferrer" target="_blank">scrapeterion {metaData.scrapeterion}</a>.</div>
+                        <div className="text-muted font-italic">This site is not affiliated with Criterion.</div>
+                    </div>
+
+                </footer>
             </Container>
-        </div>);
+            </>
+    );
 }

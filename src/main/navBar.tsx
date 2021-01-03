@@ -11,7 +11,7 @@ export const NavBar = () => {
         <div>
             <Navbar color="dark" dark expand="md" fixed="top">
                 <Container>
-                    <NavbarBrand href="/" className="mr-auto">Tycherion</NavbarBrand>
+                    <NavbarBrand href="#" className="mr-auto">Tycherion</NavbarBrand>
                 </Container>
             </Navbar>
         </div>
