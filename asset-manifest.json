@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tycherion/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/tycherion/static/js/main.9a5fca98.chunk.js",
-    "main.js.map": "/tycherion/static/js/main.9a5fca98.chunk.js.map",
+    "main.js": "/tycherion/static/js/main.aaa4b606.chunk.js",
+    "main.js.map": "/tycherion/static/js/main.aaa4b606.chunk.js.map",
     "runtime-main.js": "/tycherion/static/js/runtime-main.9c96a577.js",
     "runtime-main.js.map": "/tycherion/static/js/runtime-main.9c96a577.js.map",
     "static/css/2.8e61f691.chunk.css": "/tycherion/static/css/2.8e61f691.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.8e61f691.chunk.css",
     "static/js/2.365ef5f6.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.9a5fca98.chunk.js"
+    "static/js/main.aaa4b606.chunk.js"
   ]
 }
