@@ -82,8 +82,9 @@ export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
         onReset(movie);
     }
     const goToMovie = () => {
+        const url = `${movie.url}?utm_source=tycherion`;
         const timeoutId = setTimeout(
-            () => {(window as any).location.assign(movie.url);},
+            () => {(window as any).location.assign(url);},
             1000);
         (window as any).gtag('event', 'search_success', {
             'event_category': 'search',
@@ -92,7 +93,7 @@ export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
             'transport_type': 'beacon',
             'event_callback': () => {
                 clearTimeout(timeoutId);
-                (window as any).location.assign(movie.url);
+                (window as any).location.assign(url);
             }
         });
         // (window as any).gtag('event', 'click', {
@@ -169,12 +170,12 @@ export const MovieSelector = () => {
             </div>
             <Container className="mt-5">
                 <Jumbotron className={"p-4"}>
-                    <h1 className="display-6">Random Movie Selector</h1>
+                    <h1 className="display-6">Random Movie Finder</h1>
                     <hr className="my-2"/>
                     {!suggestedMovie &&
                         <>
                             <p className="lead">Let the Goddess of Fortune, <a href="https://greekgodsandgoddesses.net/goddesses/tyche/" rel="noreferrer" target="_blank">Tyche</a>,
-                                assign you a movie on Criterion Channel.</p>
+                                assign you a movie from <a href="https://www.criterionchannel.com/" target="_blank" rel="noreferrer">the Criterion Channel</a><sup>*</sup>.</p>
                             {/*<p className="font-italic">O Goddess Tyche</p>*/}
                             <p className="lead">
                                 <Button color="primary" onClick={selectMovie}>I accept my fate</Button>
@@ -197,7 +198,7 @@ export const MovieSelector = () => {
                         </div>
                         <hr/>
                         <div className="text-muted">Powered by <a href="https://github.com/mikebridge/scrapeterion" rel="noreferrer" target="_blank">scrapeterion {metaData.scrapeterion}</a>.</div>
-                        <div className="text-muted font-italic">This site is not affiliated with Criterion.</div>
+                        <div className="text-muted font-italic"><sup>*</sup> This site is not affiliated with Criterion Channel.</div>
                     </div>
 
                 </footer>
