@@ -37,3 +37,6 @@ export const timeAgoInWords = (dateThen: Date, dateNow: Date = new Date()): stri
     }
     return formatDistanceStrict(dateThen, dateNow, {addSuffix: true});
 };
+
+export const partition = <T>(array: T[], size: number): T[][] =>
+    array.length ? [array.splice(0, size)].concat(partition(array, size)) : [];

@@ -3,15 +3,17 @@ import {
     Button,
     ButtonGroup,
     Col,
-    Container, Form,
+    Container,
+    Form,
     FormGroup,
     Input,
-    Jumbotron, Label,
+    Jumbotron,
+    Label,
     Media,
     Row
 } from "reactstrap";
 import React, {useEffect, useState} from "react";
-import {timeAgoInWords, withDateStringsAsDates} from "./utils";
+import {partition, timeAgoInWords, withDateStringsAsDates} from "./utils";
 
 interface IMovie {
     title: string,
@@ -231,16 +233,23 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
         }
 
     }
-
     return (
-        <FormGroup check inline>
-            {getDecades().map(decade => decade.toString()).map(decade =>
-            <Label check key={decade}>
-                <Input  type="checkbox" name={decade} checked={decades.includes(decade)}
-                       value={decade} onChange={onSelectionChanged }/>{decade}s
-            </Label>
-            )}
-        </FormGroup>
+        <>
+            <Row>
+                {getDecades().map(decade => decade.toString()).map(decade =>
+                    <Col lg={3} md={4} xs={6}>
+                        <FormGroup check>
+                            <Label check key={decade}>
+                                <Input type="checkbox" name={decade} checked={decades.includes(decade)}
+                                       value={decade} onChange={onSelectionChanged}/>&nbsp;{decade}s
+                            </Label>
+                        </FormGroup>
+                    </Col>
+                )}
+
+            </Row>
+
+        </>
     )
 }
 
@@ -316,15 +325,20 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
             onChange(newCountries);
         }
     }
+    const countryStrings = getCountries().map(country => country.toString());
     return (
-        <FormGroup check inline>
-            {getCountries().map(country => country.toString()).map(country =>
-                <Label check key={country}>
-                    <Input  type="checkbox" name={country} checked={countries.includes(country)}
-                            value={country} onChange={onSelectionChanged }/>{country}
-                </Label>
+        <Row >
+            {countryStrings.map(country =>
+            <Col lg={3} md={4} xs={6}>
+                <FormGroup check>
+                    <Label check key={country}>
+                        <Input type="checkbox" name={country} checked={countries.includes(country)}
+                               value={country} onChange={onSelectionChanged}/>{country}
+                    </Label>
+                </FormGroup>
+            </Col>
             )}
-        </FormGroup>
+        </Row>
     )
 }
 
@@ -453,41 +467,38 @@ export const MovieSelector = () => {
                         {/*<p className="font-italic">O Goddess Tyche</p>*/}
                         <Form>
                         <Container>
-                            <Row className="flex-row">
-                                <Col xs="auto">
+                            <Row>
+
                                     <DecadeMultiSelector label="Decade"
                                                     selectedDecades={decades}
                                                     onChange={changeDecades}/>
 
-                                </Col>
                             </Row>
-                        </Container>
 
-                        <Container>
-                            <Row className="flex-row">
-                                <Col xs="auto">
+                            {/*<Row className="flex-row">*/}
+                            {/*    <Col xs="auto">*/}
 
-                                    <YearSelector label="From"
-                                                  years={summary.years}
-                                                  selected={fromYear}
-                                                  name={"fromyear"}
-                                                  onChange={changeFromYear}/>
-                                </Col>
-                                <Col xs="auto">
-                                    <YearSelector label="To"
-                                                  years={summary.years}
-                                                  selected={toYear}
-                                                  name={"toYear"}
-                                                  onChange={changeToYear}/>
-                                </Col>
-                            </Row>
-                            <Row className="flex-row">
-                                <Col xs="auto">
+                            {/*        <YearSelector label="From"*/}
+                            {/*                      years={summary.years}*/}
+                            {/*                      selected={fromYear}*/}
+                            {/*                      name={"fromyear"}*/}
+                            {/*                      onChange={changeFromYear}/>*/}
+                            {/*    </Col>*/}
+                            {/*    <Col xs="auto">*/}
+                            {/*        <YearSelector label="To"*/}
+                            {/*                      years={summary.years}*/}
+                            {/*                      selected={toYear}*/}
+                            {/*                      name={"toYear"}*/}
+                            {/*                      onChange={changeToYear}/>*/}
+                            {/*    </Col>*/}
+                            {/*</Row>*/}
+
+
                                     <CountryMultiSelector label="Countries"
                                                      selectedCountries={countries}
                                                      onChange={changeCountries} />
-                                </Col>
-                            </Row>
+
+
                             <Row>
                                 <Col offset="2" className="pt-3">
                                     <ButtonGroup>
