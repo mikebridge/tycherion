@@ -2,7 +2,7 @@ import {
     Alert,
     Button,
     ButtonGroup,
-    Col,
+    Col, Collapse,
     Container,
     Form,
     FormGroup,
@@ -219,6 +219,10 @@ interface IDecadeMultiSelectorProps {
 
 export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeMultiSelectorProps) => {
     const [decades, setDecades] = useState<string[]>(selectedDecades);
+    const [isOpen, setIsOpen] = useState(selectedDecades.length > 0);
+
+    const toggle = () => setIsOpen(!isOpen);
+
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
         const currentValue = e.currentTarget.value;
         const isChecked = (e.currentTarget as any).checked;
@@ -235,19 +239,23 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
     }
     return (
         <>
-            <Row>
-                {getDecades().map(decade => decade.toString()).map(decade =>
-                    <Col lg={3} md={4} xs={6}>
-                        <FormGroup check>
-                            <Label check key={decade}>
-                                <Input type="checkbox" name={decade} checked={decades.includes(decade)}
-                                       value={decade} onChange={onSelectionChanged}/>&nbsp;{decade}s
-                            </Label>
-                        </FormGroup>
-                    </Col>
-                )}
-
-            </Row>
+            <Container>
+                <Button color="primary" onClick={toggle} className="mb-2" >{label}</Button>
+                <Collapse isOpen={isOpen}>
+                    <Row>
+                        {getDecades().map(decade => decade.toString()).map(decade =>
+                            <Col lg={3} md={4} xs={6}>
+                                <FormGroup check>
+                                    <Label check key={decade}>
+                                        <Input type="checkbox" name={decade} checked={decades.includes(decade)}
+                                               value={decade} onChange={onSelectionChanged}/>&nbsp;{decade}s
+                                    </Label>
+                                </FormGroup>
+                            </Col>
+                        )}
+                    </Row>
+                </Collapse>
+            </Container>
 
         </>
     )
@@ -312,6 +320,9 @@ interface ICountryMultiSelectorProps {
 
 export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICountryMultiSelectorProps) => {
     const [countries, setCountries] = useState<string[]>(selectedCountries);
+    const [isOpen, setIsOpen] = useState(countries.length > 0);
+    const toggle = () => setIsOpen(!isOpen);
+
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
         const currentValue = e.currentTarget.value;
         const isChecked = (e.currentTarget as any).checked;
@@ -327,18 +338,25 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
     }
     const countryStrings = getCountries().map(country => country.toString());
     return (
-        <Row >
-            {countryStrings.map(country =>
-            <Col lg={3} md={4} xs={6}>
-                <FormGroup check>
-                    <Label check key={country}>
-                        <Input type="checkbox" name={country} checked={countries.includes(country)}
-                               value={country} onChange={onSelectionChanged}/>{country}
-                    </Label>
-                </FormGroup>
-            </Col>
-            )}
-        </Row>
+        <>
+            <Container>
+                <Button color="primary" onClick={toggle} className="mt-2 mb-2">Select Countries &gt;&gt;</Button>
+                <Collapse isOpen={isOpen}>
+                    <Row >
+                        {countryStrings.map(country =>
+                        <Col lg={3} md={4} xs={6}>
+                            <FormGroup check>
+                                <Label check key={country}>
+                                    <Input type="checkbox" name={country} checked={countries.includes(country)}
+                                           value={country} onChange={onSelectionChanged}/>{country}
+                                </Label>
+                            </FormGroup>
+                        </Col>
+                        )}
+                    </Row>
+                </Collapse>
+            </Container>
+        </>
     )
 }
 
@@ -384,25 +402,6 @@ export const MovieSelector = () => {
     const [decades, setDecades] = useState<string[]>([]);
     const [hasSelected, setHasSelected] = useState<boolean>(false);
     const [countries, setCountries] = useState<string[]>([]);
-
-    const changeFromYear = (year: string) => {
-        console.log("Setting from ", year)
-        setFromYear(year);
-        if (parseInt(toYear, 10) < parseInt(year, 10)) {
-            console.log("SETTING TO YEAR " + year)
-            setToYear(year);
-        }
-    }
-
-    const changeToYear = (year: string) => {
-        console.log("Setting to", year)
-        setToYear(year);
-        if (parseInt(year, 10) < parseInt(fromYear, 10)) {
-            console.log("SETTING FROM YEAR " + year)
-            setFromYear(year);
-        }
-    }
-
     const changeCountries = (countries: string[]) => {
         setCountries(countries);
     }
@@ -420,7 +419,7 @@ export const MovieSelector = () => {
     const onReset = (oldMovie: IMovie) => {
         setHasSelected(false);
         setSuggestedMovie(null);
-        //setSuggestedMovie(findRandomMovie(movieList, fromYear, toYear, countries));
+
         (window as any).gtag('event', 'search_reject', {
             'event_category': 'search',
             'movie': oldMovie,
@@ -444,7 +443,6 @@ export const MovieSelector = () => {
         [suggestedMovie],
     )
 
-
     return (
         <>
             <div>
@@ -455,67 +453,47 @@ export const MovieSelector = () => {
                     <Alert color="danger">You have asked too much of the Goddess! Try again!</Alert>
                 }
                     <Jumbotron className={"p-4"}>
+                    <Container>
                     <h1 className="display-6">Random Movie Finder</h1>
                     <hr className="my-2"/>
+                    </Container>
                     {!suggestedMovie &&
-                    <>
+                    <> <Container>
                         <p className="lead">Let the Goddess of Fortune, <a
                             href="https://greekgodsandgoddesses.net/goddesses/tyche/" rel="noreferrer"
                             target="_blank">Tyche</a>,
                             assign you a movie from <a href="https://www.criterionchannel.com/" target="_blank"
                                                        rel="noreferrer">the Criterion Channel</a><sup>*</sup>.</p>
                         {/*<p className="font-italic">O Goddess Tyche</p>*/}
+                    </Container>
                         <Form>
-                        <Container>
-                            <Row>
-
-                                    <DecadeMultiSelector label="Decade"
-                                                    selectedDecades={decades}
-                                                    onChange={changeDecades}/>
-
-                            </Row>
-
-                            {/*<Row className="flex-row">*/}
-                            {/*    <Col xs="auto">*/}
-
-                            {/*        <YearSelector label="From"*/}
-                            {/*                      years={summary.years}*/}
-                            {/*                      selected={fromYear}*/}
-                            {/*                      name={"fromyear"}*/}
-                            {/*                      onChange={changeFromYear}/>*/}
-                            {/*    </Col>*/}
-                            {/*    <Col xs="auto">*/}
-                            {/*        <YearSelector label="To"*/}
-                            {/*                      years={summary.years}*/}
-                            {/*                      selected={toYear}*/}
-                            {/*                      name={"toYear"}*/}
-                            {/*                      onChange={changeToYear}/>*/}
-                            {/*    </Col>*/}
-                            {/*</Row>*/}
-
-
-                                    <CountryMultiSelector label="Countries"
-                                                     selectedCountries={countries}
-                                                     onChange={changeCountries} />
-
-
-                            <Row>
-                                <Col offset="2" className="pt-3">
-                                    <ButtonGroup>
-                                        <Button color="primary" onClick={selectMovie}>I accept my fate</Button>
-                                    </ButtonGroup>
-                                </Col>
-                            </Row>
-
-                        </Container>
+                            <DecadeMultiSelector
+                                label="Select Decades &gt;&gt;"
+                                selectedDecades={decades}
+                                onChange={changeDecades}
+                            />
+                            <CountryMultiSelector
+                                label="Countries"
+                                selectedCountries={countries}
+                                onChange={changeCountries}
+                            />
+                            <Container>
+                                <Row>
+                                    <Col offset="2" className="mt-2">
+                                        <ButtonGroup>
+                                            <Button color="primary" onClick={selectMovie}>I accept my fate</Button>
+                                        </ButtonGroup>
+                                    </Col>
+                                </Row>
+                            </Container>
                         </Form>
                     </>
                     }
                     {suggestedMovie &&
-                    <p>
+                        <Container>
                         <p className="lead">Tyche, The Goddess of Fortune, has spoken.</p>
                         <MoviePreview movie={suggestedMovie} onReset={onReset}/>
-                    </p>
+                        </Container>
                     }
                 </Jumbotron>
 
