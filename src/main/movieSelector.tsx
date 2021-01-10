@@ -4,11 +4,12 @@ import {
     ButtonGroup,
     Col,
     Container,
+    FormGroup,
     Input,
     InputGroup,
     InputGroupAddon,
     InputGroupText,
-    Jumbotron,
+    Jumbotron, Label,
     Media,
     Row
 } from "reactstrap";
@@ -39,9 +40,13 @@ interface IYearSummary {
     [key: string]: number
 }
 
+interface ICountrySummary {
+    [key: string]: number
+}
+
 interface ISummary {
     count: number,
-    countries: { [key: string]: number },
+    countries: ICountrySummary,
     directors: { [key: string]: IDirector },
     years: IYearSummary
 }
@@ -98,10 +103,12 @@ const findRandomMovie = (
 ): IMovie | null => {
 
     console.log(`${fromYear}-${toYear}`);
+    console.log(countries);
     let selectedMovie: IMovie | null = null;
     let count = 0;
     const fromYearInt = parseInt(fromYear, 10);
     const toYearInt = parseInt(toYear, 10);
+
     for (let movie of movieList) {
         if (skipMultipart(movie.slug)) {
             continue;
@@ -109,7 +116,9 @@ const findRandomMovie = (
         const movieYear = parseInt(movie.year, 10);
 
         if (movieYear < fromYearInt || movieYear > toYearInt) {
-            console.log("Skipping " + movieYear)
+            continue;
+        }
+        if (countries.length > 0 && !countries.includes(movie.country) ) {
             continue;
         }
         count += 1;
@@ -195,17 +204,67 @@ export const YearSelector = (
     {years, name, label, selected, onChange}: IYearSelectorProps) => {
 
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
+        console.log("SELECTION CHANGED");
+
         onChange(e.currentTarget.value);
+    }
+
+    return (
+        <FormGroup>
+            <Label for={name}>{label}</Label>
+            <Input type="select" value={selected} name={name} id={name} onChange={onSelectionChanged}>
+                {Object.entries(years).map(([year, count]) =>
+                <option key={year} value={year}>{year}</option>)}
+            </Input>
+        </FormGroup>
+        // <InputGroup>
+        //     <InputGroupAddon addonType="prepend">
+        //         <InputGroupText>{label}</InputGroupText>
+        //         <Input type="select" name={name} id={name}
+        //                value={selected} onChange={onSelectionChanged}>
+        //         {Object.entries(years).map(([year, count]) =>
+        //             <option key={year} value={year}>{year}</option>)}
+        //         </Input>
+        //     </InputGroupAddon>
+        // </InputGroup>
+    );
+}
+
+interface ICountrySelectorProps {
+    countries: string[],
+    name: string,
+    label: string,
+    selected: string[],
+    onChange: (countries: string[]) => void
+}
+
+export const CountrySelector = (
+    {countries, name, label, selected, onChange}: ICountrySelectorProps
+) => {
+    //const [selectedCountries, setSelectedCountries] = useState<string[]>(countries);
+    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
+        let selected: string[] = [];
+        const options = (e.target as any).options;
+        for (let i = 0, len = options.length; i < len; i++) {
+            let opt = options[i];
+
+            if (opt.selected) {
+                selected.push(opt.value);
+            }
+        }
+        console.log('selected: ', selected);
+        //setSelectedCountries(selected);
+        onChange(selected);
     }
 
     return (
         <InputGroup>
             <InputGroupAddon addonType="prepend">
                 <InputGroupText>{label}</InputGroupText>
-                <Input type="select" name="{name}" id="{name}"
+                <Input type="select" name={name} id={name} multiple
                        value={selected} onChange={onSelectionChanged}>
-                {Object.entries(years).map(([year, count]) =>
-                    <option key={year} value={year}>{year}</option>)}
+                    {countries.map((country) =>
+                        <option key={country} value={country}>{country}</option>)}
                 </Input>
             </InputGroupAddon>
         </InputGroup>
@@ -220,16 +279,23 @@ export const MovieSelector = () => {
     const [countries, setCountries] = useState<string[]>([]);
 
     const changeFromYear = (year: string) => {
+        console.log("Setting from ", year)
         setFromYear(year);
         if (parseInt(toYear, 10) < parseInt(year, 10)) {
+            console.log("SETTING TO YEAR " + year)
             setToYear(year);
         }
     }
     const changeToYear = (year: string) => {
+        console.log("Setting to", year)
         setToYear(year);
         if (parseInt(year, 10) < parseInt(fromYear, 10)) {
+            console.log("SETTING FROM YEAR " + year)
             setFromYear(year);
         }
+    }
+    const changeCountries = (countries: string[]) => {
+        setCountries(countries);
     }
 
     const selectMovie = () => {
@@ -302,6 +368,15 @@ export const MovieSelector = () => {
                                                   selected={toYear}
                                                   name={"toYear"}
                                                   onChange={changeToYear}/>
+                                </Col>
+                            </Row>
+                            <Row className="flex-row">
+                                <Col xs="auto">
+                                    <CountrySelector label="Countries"
+                                                     countries={Object.keys(summary.countries)}
+                                                     selected={countries}
+                                                     name="countries"
+                                                     onChange={changeCountries} />
                                 </Col>
                             </Row>
                             <Row>
