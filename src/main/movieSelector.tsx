@@ -3,12 +3,9 @@ import {
     Button,
     ButtonGroup,
     Col,
-    Container,
+    Container, Form,
     FormGroup,
     Input,
-    InputGroup,
-    InputGroupAddon,
-    InputGroupText,
     Jumbotron, Label,
     Media,
     Row
@@ -99,6 +96,7 @@ const findRandomMovie = (
     movieList: IMovie[],
     fromYear: string,
     toYear: string,
+    decades: string[],
     countries: string[]
 ): IMovie | null => {
 
@@ -108,7 +106,7 @@ const findRandomMovie = (
     let count = 0;
     const fromYearInt = parseInt(fromYear, 10);
     const toYearInt = parseInt(toYear, 10);
-
+    const decadesInt = decades.map(d => parseInt(d, 10));
     for (let movie of movieList) {
         if (skipMultipart(movie.slug)) {
             continue;
@@ -118,6 +116,16 @@ const findRandomMovie = (
         if (movieYear < fromYearInt || movieYear > toYearInt) {
             continue;
         }
+        if (decadesInt.length > 0) {
+            if (!decadesInt.map(d => [d, d + 9])
+                .some(([from, to]) => movieYear >= from
+                    && movieYear <= to
+                )) {
+                continue;
+            }
+        }
+
+
         if (countries.length > 0 && !countries.includes(movie.country) ) {
             continue;
         }
@@ -191,6 +199,73 @@ export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
     )
 }
 
+const getCountries = (): string[] => Object.keys(summary.countries)
+
+const getDecades = (): number[] => {
+    const startDecade = 1910;
+    const currentYear = new Date().getFullYear();
+    const currentDecade = currentYear - (currentYear % 10);
+    return Array.from({length: (currentDecade - startDecade)/10 + 1 }, (
+        x, i) => startDecade + i * 10);
+}
+
+interface IDecadeMultiSelectorProps {
+    label: string,
+    selectedDecades: string[],
+    onChange: (decades: string[]) => void
+}
+
+export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeMultiSelectorProps) => {
+    const [decades, setDecades] = useState<string[]>(selectedDecades);
+    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
+        const currentValue = e.currentTarget.value;
+        const isChecked = (e.currentTarget as any).checked;
+        if (isChecked) {
+            const newDecades = [...decades, currentValue]
+            setDecades(newDecades);
+            onChange(newDecades);
+        } else {
+            const newDecades = decades.filter((decade) => currentValue !== decade);
+            setDecades(newDecades);
+            onChange(newDecades);
+        }
+
+    }
+
+    return (
+        <FormGroup check inline>
+            {getDecades().map(decade => decade.toString()).map(decade =>
+            <Label check key={decade}>
+                <Input  type="checkbox" name={decade} checked={decades.includes(decade)}
+                       value={decade} onChange={onSelectionChanged }/>{decade}s
+            </Label>
+            )}
+        </FormGroup>
+    )
+}
+
+interface IDecadeSelectorProps {
+    name: string,
+    label: string,
+    selectedDecade: string | null,
+    onChange: (startYear: string) => void
+}
+
+export const DecadeSelectorDropDown = ({name, label, selectedDecade, onChange}: IDecadeSelectorProps) => {
+    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
+        console.log("SELECTION CHANGED");
+        onChange(e.currentTarget.value);
+    }
+    return(
+        <FormGroup>
+            <Label for={name}>{label}</Label>
+            <Input type="select" value={selectedDecade??""}  name={name} id={name} onChange={onSelectionChanged}>
+                {getDecades().map(decade =>
+                    <option key={decade} value={decade}>{decade}s</option>)}
+            </Input>
+    </FormGroup>
+    );
+}
 
 interface IYearSelectorProps {
     years: IYearSummary,
@@ -200,12 +275,12 @@ interface IYearSelectorProps {
     onChange: (year: string) => void
 }
 
+
 export const YearSelector = (
     {years, name, label, selected, onChange}: IYearSelectorProps) => {
 
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
         console.log("SELECTION CHANGED");
-
         onChange(e.currentTarget.value);
     }
 
@@ -217,17 +292,40 @@ export const YearSelector = (
                 <option key={year} value={year}>{year}</option>)}
             </Input>
         </FormGroup>
-        // <InputGroup>
-        //     <InputGroupAddon addonType="prepend">
-        //         <InputGroupText>{label}</InputGroupText>
-        //         <Input type="select" name={name} id={name}
-        //                value={selected} onChange={onSelectionChanged}>
-        //         {Object.entries(years).map(([year, count]) =>
-        //             <option key={year} value={year}>{year}</option>)}
-        //         </Input>
-        //     </InputGroupAddon>
-        // </InputGroup>
     );
+}
+
+interface ICountryMultiSelectorProps {
+    label: string,
+    selectedCountries: string[],
+    onChange: (country: string[]) => void
+}
+
+export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICountryMultiSelectorProps) => {
+    const [countries, setCountries] = useState<string[]>(selectedCountries);
+    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
+        const currentValue = e.currentTarget.value;
+        const isChecked = (e.currentTarget as any).checked;
+        if (isChecked) {
+            const newCountries = [...countries, currentValue]
+            setCountries(newCountries);
+            onChange(newCountries);
+        } else {
+            const newCountries = countries.filter((countries) => currentValue !== countries);
+            setCountries(newCountries);
+            onChange(newCountries);
+        }
+    }
+    return (
+        <FormGroup check inline>
+            {getCountries().map(country => country.toString()).map(country =>
+                <Label check key={country}>
+                    <Input  type="checkbox" name={country} checked={countries.includes(country)}
+                            value={country} onChange={onSelectionChanged }/>{country}
+                </Label>
+            )}
+        </FormGroup>
+    )
 }
 
 interface ICountrySelectorProps {
@@ -241,7 +339,6 @@ interface ICountrySelectorProps {
 export const CountrySelector = (
     {countries, name, label, selected, onChange}: ICountrySelectorProps
 ) => {
-    //const [selectedCountries, setSelectedCountries] = useState<string[]>(countries);
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
         let selected: string[] = [];
         const options = (e.target as any).options;
@@ -252,29 +349,25 @@ export const CountrySelector = (
                 selected.push(opt.value);
             }
         }
-        console.log('selected: ', selected);
-        //setSelectedCountries(selected);
         onChange(selected);
     }
-
-    return (
-        <InputGroup>
-            <InputGroupAddon addonType="prepend">
-                <InputGroupText>{label}</InputGroupText>
-                <Input type="select" name={name} id={name} multiple
-                       value={selected} onChange={onSelectionChanged}>
-                    {countries.map((country) =>
-                        <option key={country} value={country}>{country}</option>)}
-                </Input>
-            </InputGroupAddon>
-        </InputGroup>
-    );
+    return(
+        <FormGroup>
+            <Label for={name}>{label}</Label>
+            <Input type="select" name={name} id={name} multiple
+                   value={selected} onChange={onSelectionChanged}>
+                {countries.map((country) =>
+                    <option key={country} value={country}>{country}</option>)}
+            </Input>
+        </FormGroup>
+    )
 }
 
 export const MovieSelector = () => {
     const [suggestedMovie, setSuggestedMovie] = useState<IMovie | null>(null);
     const [fromYear, setFromYear] = useState<string>(minDate);
     const [toYear, setToYear] = useState<string>(maxDate);
+    const [decades, setDecades] = useState<string[]>([]);
     const [hasSelected, setHasSelected] = useState<boolean>(false);
     const [countries, setCountries] = useState<string[]>([]);
 
@@ -286,6 +379,7 @@ export const MovieSelector = () => {
             setToYear(year);
         }
     }
+
     const changeToYear = (year: string) => {
         console.log("Setting to", year)
         setToYear(year);
@@ -294,13 +388,19 @@ export const MovieSelector = () => {
             setFromYear(year);
         }
     }
+
     const changeCountries = (countries: string[]) => {
         setCountries(countries);
     }
 
+    const changeDecades = (decades: string[]) => {
+        console.log(decades);
+        setDecades(decades);
+    }
+
     const selectMovie = () => {
         setHasSelected(true);
-        setSuggestedMovie(findRandomMovie(movieList, fromYear, toYear, countries));
+        setSuggestedMovie(findRandomMovie(movieList, fromYear, toYear, decades, countries));
     }
 
     const onReset = (oldMovie: IMovie) => {
@@ -351,6 +451,17 @@ export const MovieSelector = () => {
                             assign you a movie from <a href="https://www.criterionchannel.com/" target="_blank"
                                                        rel="noreferrer">the Criterion Channel</a><sup>*</sup>.</p>
                         {/*<p className="font-italic">O Goddess Tyche</p>*/}
+                        <Form>
+                        <Container>
+                            <Row className="flex-row">
+                                <Col xs="auto">
+                                    <DecadeMultiSelector label="Decade"
+                                                    selectedDecades={decades}
+                                                    onChange={changeDecades}/>
+
+                                </Col>
+                            </Row>
+                        </Container>
 
                         <Container>
                             <Row className="flex-row">
@@ -372,10 +483,8 @@ export const MovieSelector = () => {
                             </Row>
                             <Row className="flex-row">
                                 <Col xs="auto">
-                                    <CountrySelector label="Countries"
-                                                     countries={Object.keys(summary.countries)}
-                                                     selected={countries}
-                                                     name="countries"
+                                    <CountryMultiSelector label="Countries"
+                                                     selectedCountries={countries}
                                                      onChange={changeCountries} />
                                 </Col>
                             </Row>
@@ -388,7 +497,7 @@ export const MovieSelector = () => {
                             </Row>
 
                         </Container>
-
+                        </Form>
                     </>
                     }
                     {suggestedMovie &&
