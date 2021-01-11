@@ -1,5 +1,5 @@
 import {
-    Alert,
+    Alert, Badge,
     Button,
     ButtonGroup,
     Col, Collapse,
@@ -13,7 +13,7 @@ import {
     Row
 } from "reactstrap";
 import React, {useEffect, useState} from "react";
-import {partition, timeAgoInWords, withDateStringsAsDates} from "./utils";
+import {timeAgoInWords, withDateStringsAsDates} from "./utils";
 
 interface IMovie {
     title: string,
@@ -22,7 +22,8 @@ interface IMovie {
     country: string,
     year: string,
     director: string,
-    slug: string
+    slug: string,
+    genre: string[]
 }
 
 interface IMovieMetaData {
@@ -30,7 +31,7 @@ interface IMovieMetaData {
     scrapeterion: string
 }
 
-interface IDirector {
+interface IDirectorSummary {
     name: string,
     count: number
 }
@@ -43,10 +44,20 @@ interface ICountrySummary {
     [key: string]: number
 }
 
+interface IGenre {
+    slug: string,
+    name: string
+}
+
+// interface IGenres {
+//     genres: IGenre[],
+//     directors: { "key": string, "name": string }
+// }
+
 interface ISummary {
     count: number,
     countries: ICountrySummary,
-    directors: { [key: string]: IDirector },
+    directors: { [key: string]: IDirectorSummary },
     years: IYearSummary
 }
 
@@ -57,6 +68,10 @@ const metaDataPreDate: any = require('../data/filmsMetaData.json');
 const metaData: IMovieMetaData = withDateStringsAsDates(metaDataPreDate);
 
 const summary: ISummary = require('../data/summary.json');
+
+const genreData: IGenre[] = require('../data/genres.json');
+
+console.log(genreData);
 
 const minDate = "1915";  // todo: calculate these
 const maxDate = "2020";
@@ -99,11 +114,12 @@ const findRandomMovie = (
     fromYear: string,
     toYear: string,
     decades: string[],
-    countries: string[]
+    countries: string[],
+    genres: string[]
 ): IMovie | null => {
 
-    console.log(`${fromYear}-${toYear}`);
-    console.log(countries);
+    // console.log(`${fromYear}-${toYear}`);
+    // console.log(countries);
     let selectedMovie: IMovie | null = null;
     let count = 0;
     const fromYearInt = parseInt(fromYear, 10);
@@ -126,7 +142,11 @@ const findRandomMovie = (
                 continue;
             }
         }
-
+        if (genres.length > 0) {
+            if (genres.filter(value => movie.genre.includes(value)).length == 0) {
+                continue;
+            }
+        }
 
         if (countries.length > 0 && !countries.includes(movie.country) ) {
             continue;
@@ -188,6 +208,11 @@ export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
                     <div>
                         <div className="font-weight-bold">{movie.director}</div>
                         <div className="font-italic">{movie.country} ({movie.year})</div>
+                    </div>
+                    <div className="mt-2">
+                        {movie.genre.map((genre) =>
+                            <Badge color="info" pill>{genre}</Badge>
+                        )}
                     </div>
                     <div className="mt-4">
                         <ButtonGroup>
@@ -340,7 +365,7 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
     return (
         <>
             <Container>
-                <Button color="primary" onClick={toggle} className="mt-2 mb-2">Select Countries &gt;&gt;</Button>
+                <Button color="primary" onClick={toggle} className="mt-2 mb-2">{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row >
                         {countryStrings.map(country =>
@@ -359,6 +384,56 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
         </>
     )
 }
+
+interface IGenreMultiSelectorProps {
+    label: string,
+    selectedGenres: string[],
+    onChange: (genre: string[]) => void
+}
+
+export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMultiSelectorProps) => {
+    const [genres, setGenres] = useState<string[]>(selectedGenres);
+    const [isOpen, setIsOpen] = useState(genres.length > 0);
+    const toggle = () => setIsOpen(!isOpen);
+
+    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
+        const currentValue = e.currentTarget.value;
+        const isChecked = (e.currentTarget as any).checked;
+        if (isChecked) {
+            const newGenres = [...genres, currentValue]
+            setGenres(newGenres);
+            onChange(newGenres);
+        } else {
+            const newGenres = genres.filter((genre) => currentValue !== genre);
+            setGenres(newGenres);
+            onChange(newGenres);
+        }
+    }
+
+    return (
+        <>
+            <Container>
+                <Button color="primary" onClick={toggle} className="mt-2 mb-2">{label}</Button>
+                <Collapse isOpen={isOpen}>
+                    <Row >
+                        {genreData.map(g =>
+                            <Col lg={3} md={4} xs={6}>
+                                <FormGroup check>
+                                    <Label check key={g.slug}>
+                                        <Input type="checkbox" name={g.slug} checked={genres.includes(g.slug)}
+                                               value={g.slug} onChange={onSelectionChanged}/>{g.name}
+                                    </Label>
+                                </FormGroup>
+                            </Col>
+                        )}
+                    </Row>
+                </Collapse>
+            </Container>
+        </>
+    )
+}
+
+
 
 interface ICountrySelectorProps {
     countries: string[],
@@ -402,8 +477,14 @@ export const MovieSelector = () => {
     const [decades, setDecades] = useState<string[]>([]);
     const [hasSelected, setHasSelected] = useState<boolean>(false);
     const [countries, setCountries] = useState<string[]>([]);
+    const [genres, setGenres] = useState<string[]>([]);
+
     const changeCountries = (countries: string[]) => {
         setCountries(countries);
+    }
+
+    const changeGenres = (genres: string[]) => {
+        setGenres(genres);
     }
 
     const changeDecades = (decades: string[]) => {
@@ -413,7 +494,8 @@ export const MovieSelector = () => {
 
     const selectMovie = () => {
         setHasSelected(true);
-        setSuggestedMovie(findRandomMovie(movieList, fromYear, toYear, decades, countries));
+        setSuggestedMovie(findRandomMovie(
+            movieList, fromYear, toYear, decades, countries, genres));
     }
 
     const onReset = (oldMovie: IMovie) => {
@@ -473,9 +555,14 @@ export const MovieSelector = () => {
                                 onChange={changeDecades}
                             />
                             <CountryMultiSelector
-                                label="Countries"
+                                label="Select Countries &gt;&gt;"
                                 selectedCountries={countries}
                                 onChange={changeCountries}
+                            />
+                            <GenreMultiSelector
+                                label="Select Genres &gt;&gt;"
+                                selectedGenres={genres}
+                                onChange={changeGenres}
                             />
                             <Container>
                                 <Row>

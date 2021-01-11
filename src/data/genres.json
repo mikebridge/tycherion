@@ -1,0 +1,21 @@
+[
+{"slug": "action-adventure", "name": "Action/Adventure"},
+{"slug": "animation", "name": "Animation"},
+{"slug": "avant-garde", "name": "Avant-garde"},
+{"slug": "comedy", "name": "Comedy"},
+{"slug": "crime", "name": "Crime"},
+{"slug": "documentary", "name": "Documentary"},
+{"slug": "drama", "name": "Drama"},
+{"slug": "fantasy", "name": "Fantasy"},
+{"slug": "film-noir", "name": "Film Noir"},
+{"slug": "horror", "name": "Horror"},
+{"slug": "musical", "name": "Musical"},
+{"slug": "romance", "name": "Romance"},
+{"slug": "samurai", "name": "Samurai"},
+{"slug": "science-fiction", "name": "Science Fiction"},
+{"slug": "shorts", "name": "Shorts"},
+{"slug": "silent", "name": "Silent"},
+{"slug": "thriller", "name": "Thriller"},
+{"slug": "war", "name": "War"},
+{"slug": "western", "name": "Western"}
+]
