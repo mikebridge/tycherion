@@ -71,8 +71,6 @@ const summary: ISummary = require('../data/summary.json');
 
 const genreData: IGenre[] = require('../data/genres.json');
 
-console.log(genreData);
-
 const minDate = "1915";  // todo: calculate these
 const maxDate = "2020";
 
@@ -118,8 +116,6 @@ const findRandomMovie = (
     genres: string[]
 ): IMovie | null => {
 
-    // console.log(`${fromYear}-${toYear}`);
-    // console.log(countries);
     let selectedMovie: IMovie | null = null;
     let count = 0;
     const fromYearInt = parseInt(fromYear, 10);
@@ -295,7 +291,6 @@ interface IDecadeSelectorProps {
 
 export const DecadeSelectorDropDown = ({name, label, selectedDecade, onChange}: IDecadeSelectorProps) => {
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
-        console.log("SELECTION CHANGED");
         onChange(e.currentTarget.value);
     }
     return(
@@ -322,7 +317,6 @@ export const YearSelector = (
     {years, name, label, selected, onChange}: IYearSelectorProps) => {
 
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
-        console.log("SELECTION CHANGED");
         onChange(e.currentTarget.value);
     }
 
@@ -488,7 +482,6 @@ export const MovieSelector = () => {
     }
 
     const changeDecades = (decades: string[]) => {
-        console.log(decades);
         setDecades(decades);
     }
 
