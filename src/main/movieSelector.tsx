@@ -1,3 +1,4 @@
+import React, {useEffect, useState} from "react";
 import {
     Alert, Badge,
     Button,
@@ -12,7 +13,6 @@ import {
     Media,
     Row
 } from "reactstrap";
-import React, {useEffect, useState} from "react";
 import {timeAgoInWords, withDateStringsAsDates} from "./utils";
 
 interface IMovie {
@@ -49,11 +49,6 @@ interface IGenre {
     name: string
 }
 
-// interface IGenres {
-//     genres: IGenre[],
-//     directors: { "key": string, "name": string }
-// }
-
 interface ISummary {
     count: number,
     countries: ICountrySummary,
@@ -71,9 +66,6 @@ const summary: ISummary = require('../data/summary.json');
 
 const genreData: IGenre[] = require('../data/genres.json');
 
-const minDate = "1915";  // todo: calculate these
-const maxDate = "2020";
-
 const cropImgUrl = (imgUrl: string): string => {
     // original url:
     // https://vhx.imgix.net/criterionchannelchartersu/assets/bff62486-e5e9-4e8d-ad75-436cb2cf12c9.jpg
@@ -90,7 +82,7 @@ const skipMultipart = (movieSlug: string): boolean => {
         movieSlug !== 'berlin-alexanderplatz-part-1') {
         return true;
     }
-    if (movieSlug.indexOf("-part-2") > 0 ||
+    return movieSlug.indexOf("-part-2") > 0 ||
         movieSlug.indexOf("-part-3") > 0 ||
         movieSlug.indexOf("-part-two") > 0 ||
         movieSlug.indexOf("-episode-2") > 0 ||
@@ -101,16 +93,12 @@ const skipMultipart = (movieSlug: string): boolean => {
         movieSlug.indexOf("-episode-7") > 0 ||
         movieSlug.indexOf("-part-ii") > 0 ||
         movieSlug.indexOf("-part-iii") > 0 ||
-        movieSlug.indexOf("-part-iv") > 0) {
-        return true;
-    }
-    return false;
+        movieSlug.indexOf("-part-iv") > 0;
+
 }
 
 const findRandomMovie = (
     movieList: IMovie[],
-    fromYear: string,
-    toYear: string,
     decades: string[],
     countries: string[],
     genres: string[]
@@ -118,8 +106,6 @@ const findRandomMovie = (
 
     let selectedMovie: IMovie | null = null;
     let count = 0;
-    const fromYearInt = parseInt(fromYear, 10);
-    const toYearInt = parseInt(toYear, 10);
     const decadesInt = decades.map(d => parseInt(d, 10));
     for (let movie of movieList) {
         if (skipMultipart(movie.slug)) {
@@ -127,9 +113,6 @@ const findRandomMovie = (
         }
         const movieYear = parseInt(movie.year, 10);
 
-        if (movieYear < fromYearInt || movieYear > toYearInt) {
-            continue;
-        }
         if (decadesInt.length > 0) {
             if (!decadesInt.map(d => [d, d + 9])
                 .some(([from, to]) => movieYear >= from
@@ -139,7 +122,7 @@ const findRandomMovie = (
             }
         }
         if (genres.length > 0) {
-            if (genres.filter(value => movie.genre.includes(value)).length == 0) {
+            if (genres.filter(value => movie.genre.includes(value)).length === 0) {
                 continue;
             }
         }
@@ -261,7 +244,7 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
     return (
         <>
             <Container>
-                <Button color="primary" onClick={toggle} className="mb-2" >{label}</Button>
+                <Button color="secondary" onClick={toggle} className="mb-2 w-25" >{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row>
                         {getDecades().map(decade => decade.toString()).map(decade =>
@@ -280,55 +263,6 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
 
         </>
     )
-}
-
-interface IDecadeSelectorProps {
-    name: string,
-    label: string,
-    selectedDecade: string | null,
-    onChange: (startYear: string) => void
-}
-
-export const DecadeSelectorDropDown = ({name, label, selectedDecade, onChange}: IDecadeSelectorProps) => {
-    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
-        onChange(e.currentTarget.value);
-    }
-    return(
-        <FormGroup>
-            <Label for={name}>{label}</Label>
-            <Input type="select" value={selectedDecade??""}  name={name} id={name} onChange={onSelectionChanged}>
-                {getDecades().map(decade =>
-                    <option key={decade} value={decade}>{decade}s</option>)}
-            </Input>
-    </FormGroup>
-    );
-}
-
-interface IYearSelectorProps {
-    years: IYearSummary,
-    name: string,
-    label: string,
-    selected: string,
-    onChange: (year: string) => void
-}
-
-
-export const YearSelector = (
-    {years, name, label, selected, onChange}: IYearSelectorProps) => {
-
-    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
-        onChange(e.currentTarget.value);
-    }
-
-    return (
-        <FormGroup>
-            <Label for={name}>{label}</Label>
-            <Input type="select" value={selected} name={name} id={name} onChange={onSelectionChanged}>
-                {Object.entries(years).map(([year, count]) =>
-                <option key={year} value={year}>{year}</option>)}
-            </Input>
-        </FormGroup>
-    );
 }
 
 interface ICountryMultiSelectorProps {
@@ -359,7 +293,7 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
     return (
         <>
             <Container>
-                <Button color="primary" onClick={toggle} className="mt-2 mb-2">{label}</Button>
+                <Button color="secondary" onClick={toggle} className="mt-2 mb-2 w-25">{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row >
                         {countryStrings.map(country =>
@@ -407,7 +341,7 @@ export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMult
     return (
         <>
             <Container>
-                <Button color="primary" onClick={toggle} className="mt-2 mb-2">{label}</Button>
+                <Button color="secondary" onClick={toggle} className="mt-2 mb-2 w-25">{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row >
                         {genreData.map(g =>
@@ -427,47 +361,8 @@ export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMult
     )
 }
 
-
-
-interface ICountrySelectorProps {
-    countries: string[],
-    name: string,
-    label: string,
-    selected: string[],
-    onChange: (countries: string[]) => void
-}
-
-export const CountrySelector = (
-    {countries, name, label, selected, onChange}: ICountrySelectorProps
-) => {
-    const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
-        let selected: string[] = [];
-        const options = (e.target as any).options;
-        for (let i = 0, len = options.length; i < len; i++) {
-            let opt = options[i];
-
-            if (opt.selected) {
-                selected.push(opt.value);
-            }
-        }
-        onChange(selected);
-    }
-    return(
-        <FormGroup>
-            <Label for={name}>{label}</Label>
-            <Input type="select" name={name} id={name} multiple
-                   value={selected} onChange={onSelectionChanged}>
-                {countries.map((country) =>
-                    <option key={country} value={country}>{country}</option>)}
-            </Input>
-        </FormGroup>
-    )
-}
-
 export const MovieSelector = () => {
     const [suggestedMovie, setSuggestedMovie] = useState<IMovie | null>(null);
-    const [fromYear, setFromYear] = useState<string>(minDate);
-    const [toYear, setToYear] = useState<string>(maxDate);
     const [decades, setDecades] = useState<string[]>([]);
     const [hasSelected, setHasSelected] = useState<boolean>(false);
     const [countries, setCountries] = useState<string[]>([]);
@@ -488,7 +383,7 @@ export const MovieSelector = () => {
     const selectMovie = () => {
         setHasSelected(true);
         setSuggestedMovie(findRandomMovie(
-            movieList, fromYear, toYear, decades, countries, genres));
+            movieList, decades, countries, genres));
     }
 
     const onReset = (oldMovie: IMovie) => {
@@ -558,13 +453,7 @@ export const MovieSelector = () => {
                                 onChange={changeGenres}
                             />
                             <Container>
-                                <Row>
-                                    <Col offset="2" className="mt-2">
-                                        <ButtonGroup>
-                                            <Button color="primary" onClick={selectMovie}>I accept my fate</Button>
-                                        </ButtonGroup>
-                                    </Col>
-                                </Row>
+                                <Button color="primary" className="mt-2 mb-2 w-25" onClick={selectMovie}>I accept my fate</Button>
                             </Container>
                         </Form>
                     </>
@@ -581,6 +470,10 @@ export const MovieSelector = () => {
                     <div className="container">
                         <div>Last updated:&nbsp;
                             <span className="font-weight-bold">{timeAgoInWords(metaData.date)}
+                            </span>
+                        </div>
+                        <div>Movies Indexed:&nbsp;
+                            <span className="font-weight-bold">{summary.count}
                             </span>
                         </div>
                         <hr/>

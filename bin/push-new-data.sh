@@ -2,7 +2,8 @@
 
 set -euxo pipefail
 
-PROJ_HOME=$(realpath "${BASH_SOURCE%/*}/../")
+#PROJ_HOME=$(realpath "${BASH_SOURCE%/*}/../")
+DATE_TODAY=$(date +%Y-%m-%d)
 
 #while [ "$#" -gt 0 ]; do
 #  case "$1" in
@@ -29,22 +30,6 @@ PROJ_HOME=$(realpath "${BASH_SOURCE%/*}/../")
 # scrapy crawl films -O src/data/films.json
 #
 
-DATE_ISO="$(date -u +%Y-%m-%dT%H:%M:%S).000Z"
-DATE_TODAY=$(date +%Y-%m-%d)
-DATA_HOME="${PROJ_HOME}/src/data"
-# FILMS_JSON="${DATA_HOME}/films.json"
-FILMS_META_JSON="${DATA_HOME}/filmsMetaData.json"
-
-#echo "$DATE_ISO"
-#echo "$DATE_TODAY"
-#echo "$FILMS_JSON"
-
-cat <<EOF > $FILMS_META_JSON
-{
-  "scrapeterion": "1.0.0",
-  "date": "$DATE_ISO"
-}
-EOF
 
 git checkout master
 git add -A .
