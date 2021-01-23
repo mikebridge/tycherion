@@ -420,14 +420,14 @@ export const MovieSelector = () => {
             <div>
                 &nbsp;
             </div>
-            <Container className="mt-5">
+            <Container>
                 {hasSelected && !suggestedMovie &&
                     <Alert color="danger">You have asked too much of the Goddess! Try again!</Alert>
                 }
-                    <Jumbotron className={"p-4"}>
+                    <Jumbotron>
                     <Container>
-                    <h1 className="display-6">Random Movie Finder</h1>
-                    <hr className="my-2"/>
+                    <h1>Random Movie Finder</h1>
+                    <hr/>
                     </Container>
                     {!suggestedMovie &&
                     <> <Container>
