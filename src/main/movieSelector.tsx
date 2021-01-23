@@ -15,6 +15,8 @@ import {
 } from "reactstrap";
 import {timeAgoInWords, withDateStringsAsDates} from "./utils";
 
+const selectorButtonClass = "mt-2 mb-2"
+
 interface IMovie {
     title: string,
     url: string,
@@ -244,7 +246,7 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
     return (
         <>
             <Container>
-                <Button color="secondary" onClick={toggle} className="mb-2 w-25" >{label}</Button>
+                <Button color="secondary" onClick={toggle} className={selectorButtonClass} style={{ "width": "200px"}} >{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row>
                         {getDecades().map(decade => decade.toString()).map(decade =>
@@ -293,7 +295,7 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
     return (
         <>
             <Container>
-                <Button color="secondary" onClick={toggle} className="mt-2 mb-2 w-25">{label}</Button>
+                <Button color="secondary" onClick={toggle} className={selectorButtonClass} style={{ "width": "200px"}}>{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row >
                         {countryStrings.map(country =>
@@ -341,7 +343,7 @@ export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMult
     return (
         <>
             <Container>
-                <Button color="secondary" onClick={toggle} className="mt-2 mb-2 w-25">{label}</Button>
+                <Button color="secondary" onClick={toggle} className={selectorButtonClass} style={{ "width": "200px"}}>{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row >
                         {genreData.map(g =>
@@ -453,7 +455,7 @@ export const MovieSelector = () => {
                                 onChange={changeGenres}
                             />
                             <Container>
-                                <Button color="primary" className="mt-2 mb-2 w-25" onClick={selectMovie}>I accept my fate</Button>
+                                <Button color="primary" className={selectorButtonClass} style={{ "width": "200px"}} onClick={selectMovie}>I accept my fate</Button>
                             </Container>
                         </Form>
                     </>
