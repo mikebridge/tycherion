@@ -40,7 +40,8 @@ refresh_film_data() {
   echo "== refreshing films from criterion =="
 
   # find the genres, then query by each genre
-  scrapy crawl films_by_genre -O "$FILMS_BY_GENRE"
+  echo "writing to $FILMS_BY_GENRE_RAW"
+  scrapy crawl films_by_genre -O "$FILMS_BY_GENRE_RAW"
 
   # merge the data
   echo "== writing data to $DATA_HOME/films.json =="
