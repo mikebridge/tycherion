@@ -4,6 +4,7 @@ import {
     Navbar,
     NavbarBrand,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 export const NavBar = () => {
@@ -12,6 +13,8 @@ export const NavBar = () => {
             <Navbar color="dark" dark expand="md" fixed="top">
                 <Container>
                     <NavbarBrand href="#" className="mr-auto">Tycherion</NavbarBrand>
+                    <Link to="suggest">Home</Link>
+                    <Link to="search">Link</Link>
                 </Container>
             </Navbar>
         </div>
