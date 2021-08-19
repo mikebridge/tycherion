@@ -37,4 +37,5 @@ git commit -m "Data Update $DATE_TODAY"
 git tag "v$DATE_TODAY"
 yarn run deploy
 git push origin --tags
+git push origin master
 
