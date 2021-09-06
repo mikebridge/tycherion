@@ -464,7 +464,7 @@ export const MovieSelector = () => {
             </div>
             <Container>
                 {hasSelected && !suggestedMovie &&
-				<Alert color="danger">You have asked too much of the Goddess! Try again!</Alert>
+				<Alert color="danger" style={{marginTop:"50px"}}>There are no matches!  You have asked too much of the Goddess!  Beseech again!</Alert>
                 }
                 <Jumbotron>
                     <Container>
