@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-SCRAPETERION_VERSION="1.1.0"
+SCRAPETERION_VERSION="1.2.0"
 
 verify_env () {
   if [ -z "$SCRAPETERION_VENV" ]; then
@@ -40,8 +40,13 @@ refresh_film_data() {
   echo "== refreshing films from criterion =="
 
   # find the genres, then query by each genre
-  echo "writing to $FILMS_BY_GENRE_RAW"
-  scrapy crawl films_by_genre -O "$FILMS_BY_GENRE_RAW"
+  echo "writing to $FILMS_BY_GENRE_RAW_US"
+  scrapy crawl films_by_genre -a geo=US -O "$FILMS_BY_GENRE_RAW_US"
+
+  echo "writing to $FILMS_BY_GENRE_RAW_CA"
+  scrapy crawl films_by_genre -a geo=CA -O "$FILMS_BY_GENRE_RAW_CA"
+
+  cat "$FILMS_BY_GENRE_RAW_US" "$FILMS_BY_GENRE_RAW_CA" > "$FILMS_BY_GENRE_RAW"
 
   # merge the data
   echo "== writing data to $DATA_HOME/films.json =="
@@ -67,6 +72,8 @@ TMPDIR="$PROJ_HOME/tmp"
 FILMS_BY_GENRE="$DATA_HOME/films.json"
 SUMMARY="$DATA_HOME/summary.json"
 GENRES="$DATA_HOME/genres.json"
+FILMS_BY_GENRE_RAW_US="$TMPDIR/films_by_genre_raw_US.jl"
+FILMS_BY_GENRE_RAW_CA="$TMPDIR/films_by_genre_raw_CA.jl"
 FILMS_BY_GENRE_RAW="$TMPDIR/films_by_genre_raw.jl"
 mkdir -p "$TMPDIR"
 

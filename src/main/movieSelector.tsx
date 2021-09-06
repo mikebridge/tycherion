@@ -1,17 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {
-    Alert, Badge,
-    Button,
-    ButtonGroup,
-    Col, Collapse,
-    Container,
-    Form,
-    FormGroup,
-    Input,
-    Jumbotron,
-    Label,
-    Media,
-    Row
+    Alert, Badge, Button, ButtonGroup, Col, Collapse,
+    Container, Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
+    Form, FormGroup, Input, Jumbotron, Label, Media, Row
 } from "reactstrap";
 import {timeAgoInWords, withDateStringsAsDates} from "./utils";
 
@@ -25,7 +16,8 @@ interface IMovie {
     year: string,
     director: string,
     slug: string,
-    genre: string[]
+    genre: string[],
+    geo: string[]
 }
 
 interface IMovieMetaData {
@@ -103,7 +95,8 @@ const findRandomMovie = (
     movieList: IMovie[],
     decades: string[],
     countries: string[],
-    genres: string[]
+    genres: string[],
+    geo: string
 ): IMovie | null => {
 
     let selectedMovie: IMovie | null = null;
@@ -129,7 +122,10 @@ const findRandomMovie = (
             }
         }
 
-        if (countries.length > 0 && !countries.includes(movie.country) ) {
+        if (countries.length > 0 && !countries.includes(movie.country)) {
+            continue;
+        }
+        if (geo && !movie.geo.includes(geo)) {
             continue;
         }
         count += 1;
@@ -213,7 +209,7 @@ const getDecades = (): number[] => {
     const startDecade = 1910;
     const currentYear = new Date().getFullYear();
     const currentDecade = currentYear - (currentYear % 10);
-    return Array.from({length: (currentDecade - startDecade)/10 + 1 }, (
+    return Array.from({length: (currentDecade - startDecade) / 10 + 1}, (
         x, i) => startDecade + i * 10);
 }
 
@@ -246,7 +242,8 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
     return (
         <>
             <Container>
-                <Button color="secondary" onClick={toggle} className={selectorButtonClass} style={{ "width": "200px"}} >{label}</Button>
+                <Button color="secondary" onClick={toggle} className={selectorButtonClass}
+                        style={{"width": "200px"}}>{label}</Button>
                 <Collapse isOpen={isOpen}>
                     <Row>
                         {getDecades().map(decade => decade.toString()).map(decade =>
@@ -263,6 +260,48 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
                 </Collapse>
             </Container>
 
+        </>
+    )
+}
+
+interface IGeoSelectorProps {
+    selectedGeo: string,
+    onChange: (geo: string) => void
+}
+
+const geoLookup = (abbrev: string) => {
+    return abbrev==='CA' ? 'Canada' : 'United States'
+}
+
+export const GeoSelector = ({selectedGeo, onChange}: IGeoSelectorProps) => {
+    const [geo, setGeo] = useState<string>(selectedGeo);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => setIsOpen(!isOpen);
+
+    const onSelectionChanged = (geoValue: string) => {
+        setGeo(geoValue);
+        onChange(geoValue);
+    }
+    return (
+        <>
+            <Container>
+                <Row>
+                    <Col lg={3} md={4} xs={6}>
+                        <Dropdown isOpen={isOpen} toggle={toggle}>
+                            <DropdownToggle caret style={{"width": "200px"}} className={selectorButtonClass}>
+                                I am in: {geoLookup(geo)}
+                            </DropdownToggle>
+                            <DropdownMenu>
+                                <DropdownItem onClick={() => onSelectionChanged('US')} dropDownValue="US">United
+                                    States</DropdownItem>
+                                <DropdownItem onClick={() => onSelectionChanged('CA')}
+                                              dropDownValue="CA">Canada</DropdownItem>
+                            </DropdownMenu>
+                        </Dropdown>
+                    </Col>
+                </Row>
+            </Container>
         </>
     )
 }
@@ -295,18 +334,19 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
     return (
         <>
             <Container>
-                <Button color="secondary" onClick={toggle} className={selectorButtonClass} style={{ "width": "200px"}}>{label}</Button>
+                <Button color="secondary" onClick={toggle} className={selectorButtonClass}
+                        style={{"width": "200px"}}>{label}</Button>
                 <Collapse isOpen={isOpen}>
-                    <Row >
+                    <Row>
                         {countryStrings.map(country =>
-                        <Col lg={3} md={4} xs={6}>
-                            <FormGroup check>
-                                <Label check key={country}>
-                                    <Input type="checkbox" name={country} checked={countries.includes(country)}
-                                           value={country} onChange={onSelectionChanged}/>{country}
-                                </Label>
-                            </FormGroup>
-                        </Col>
+                            <Col lg={3} md={4} xs={6}>
+                                <FormGroup check>
+                                    <Label check key={country}>
+                                        <Input type="checkbox" name={country} checked={countries.includes(country)}
+                                               value={country} onChange={onSelectionChanged}/>{country}
+                                    </Label>
+                                </FormGroup>
+                            </Col>
                         )}
                     </Row>
                 </Collapse>
@@ -343,9 +383,10 @@ export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMult
     return (
         <>
             <Container>
-                <Button color="secondary" onClick={toggle} className={selectorButtonClass} style={{ "width": "200px"}}>{label}</Button>
+                <Button color="secondary" onClick={toggle} className={selectorButtonClass}
+                        style={{"width": "200px"}}>{label}</Button>
                 <Collapse isOpen={isOpen}>
-                    <Row >
+                    <Row>
                         {genreData.map(g =>
                             <Col lg={3} md={4} xs={6}>
                                 <FormGroup check>
@@ -369,6 +410,7 @@ export const MovieSelector = () => {
     const [hasSelected, setHasSelected] = useState<boolean>(false);
     const [countries, setCountries] = useState<string[]>([]);
     const [genres, setGenres] = useState<string[]>([]);
+    const [geo, setGeo] = useState<string>('US');
 
     const changeCountries = (countries: string[]) => {
         setCountries(countries);
@@ -385,7 +427,7 @@ export const MovieSelector = () => {
     const selectMovie = () => {
         setHasSelected(true);
         setSuggestedMovie(findRandomMovie(
-            movieList, decades, countries, genres));
+            movieList, decades, countries, genres, geo));
     }
 
     const onReset = (oldMovie: IMovie) => {
@@ -422,49 +464,54 @@ export const MovieSelector = () => {
             </div>
             <Container>
                 {hasSelected && !suggestedMovie &&
-                    <Alert color="danger">You have asked too much of the Goddess! Try again!</Alert>
+				<Alert color="danger">You have asked too much of the Goddess! Try again!</Alert>
                 }
-                    <Jumbotron>
+                <Jumbotron>
                     <Container>
-                    <h1>Random Movie Finder</h1>
-                    <hr/>
+                        <h1>Random Movie Finder</h1>
+                        <hr/>
                     </Container>
                     {!suggestedMovie &&
-                    <> <Container>
-                        <p className="lead">Let the Goddess of Fortune, <a
-                            href="https://greekgodsandgoddesses.net/goddesses/tyche/" rel="noreferrer"
-                            target="_blank">Tyche</a>,
-                            assign you a movie from <a href="https://www.criterionchannel.com/" target="_blank"
-                                                       rel="noreferrer">the Criterion Channel</a><sup>*</sup>.</p>
+					<> <Container>
+						<p className="lead">Let the Goddess of Fortune, <a
+							href="https://greekgodsandgoddesses.net/goddesses/tyche/" rel="noreferrer"
+							target="_blank">Tyche</a>,
+							assign you a movie from <a href="https://www.criterionchannel.com/" target="_blank"
+													   rel="noreferrer">the Criterion Channel</a><sup>*</sup>.</p>
                         {/*<p className="font-italic">O Goddess Tyche</p>*/}
-                    </Container>
-                        <Form>
-                            <DecadeMultiSelector
-                                label="Select Decades &gt;&gt;"
-                                selectedDecades={decades}
-                                onChange={changeDecades}
-                            />
-                            <CountryMultiSelector
-                                label="Select Countries &gt;&gt;"
-                                selectedCountries={countries}
-                                onChange={changeCountries}
-                            />
-                            <GenreMultiSelector
-                                label="Select Genres &gt;&gt;"
-                                selectedGenres={genres}
-                                onChange={changeGenres}
-                            />
-                            <Container>
-                                <Button color="primary" className={selectorButtonClass} style={{ "width": "200px"}} onClick={selectMovie}>I accept my fate</Button>
-                            </Container>
-                        </Form>
-                    </>
+					</Container>
+						<Form>
+							<DecadeMultiSelector
+								label="Select Decades &gt;&gt;"
+								selectedDecades={decades}
+								onChange={changeDecades}
+							/>
+							<CountryMultiSelector
+								label="Select Countries &gt;&gt;"
+								selectedCountries={countries}
+								onChange={changeCountries}
+							/>
+							<GenreMultiSelector
+								label="Select Genres &gt;&gt;"
+								selectedGenres={genres}
+								onChange={changeGenres}
+							/>
+							<GeoSelector
+								selectedGeo={geo}
+								onChange={setGeo}
+							/>
+							<Container>
+								<Button color="primary" className={selectorButtonClass} style={{"width": "200px"}}
+										onClick={selectMovie}>I accept my fate</Button>
+							</Container>
+						</Form>
+					</>
                     }
                     {suggestedMovie &&
-                        <Container>
-                        <p className="lead">Tyche, The Goddess of Fortune, has spoken.</p>
-                        <MoviePreview movie={suggestedMovie} onReset={onReset}/>
-                        </Container>
+					<Container>
+						<p className="lead">Tyche, The Goddess of Fortune, has spoken.</p>
+						<MoviePreview movie={suggestedMovie} onReset={onReset}/>
+					</Container>
                     }
                 </Jumbotron>
 
