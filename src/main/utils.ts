@@ -40,3 +40,8 @@ export const timeAgoInWords = (dateThen: Date, dateNow: Date = new Date()): stri
 
 export const partition = <T>(array: T[], size: number): T[][] =>
     array.length ? [array.splice(0, size)].concat(partition(array, size)) : [];
+
+export const topFunction = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

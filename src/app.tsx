@@ -1,24 +1,46 @@
 import React from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 
 import {NavBar} from "./main/navBar";
-import {MovieSelector} from "./main/movieSelector";
-import {Search} from "./main/search"
-import 'bootstrap/dist/css/bootstrap.css';
+import {Suggest} from "./main/suggest";
+
+import {Footer} from "./main/footer";
+import {SuggestedResult} from "./main/suggestedResult";
+import { SelectApp } from './selectApp';
+import {Search} from "./main/search";
+import "./app.css";
 
 const App = () => (
-    <>
+    <div className="app">
         <NavBar/>
-        <Switch>
-            <Route path="/suggest">
-                <MovieSelector/>
-            </Route>
-            <Route path="/search">
-                <Search/>
-            </Route>
-        </Switch>
-        <Redirect exact from="/" to="suggest" />
-    </>
+        <div className="page">
+            <div className="content">
+                <Switch>
+                    {/*<Route path="/">*/}
+                    {/*    <SearchSelector></SearchSelector>*/}
+                    {/*</Route>*/}
+                    <Route exact path="/">
+                        <SelectApp />
+                    </Route>
+                    <Route exact path="/suggest">
+                        <Suggest/>
+                    </Route>
+                    <Route path="/suggest/:slug">{
+                        (props) =>
+                            props?.match?.params.slug ?
+                                (<SuggestedResult slug={props.match.params.slug}/>)
+                                : <div>not found!</div>
+                    }
+                    </Route>
+                    <Route path="/search">
+                        <Search/>
+                    </Route>
+                </Switch>
+            </div>
+        </div>
+        <Footer />
+        {/*{<Redirect exact from="/" to="/suggest" />}*/}
+    </div>
 );
 
 export default App;
