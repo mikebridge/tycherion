@@ -1,14 +1,17 @@
 import React from 'react';
-import lunr from 'lunr';
-import films from '../data/index.json';
+import films from '../data/films.json';
+import filmIndex from '../data/filmIndex.json';
+import Fuse from "fuse.js";
 
-const lunr_idx = lunr.Index.load(films);
+const fuseOptions = {}
+const fuseIndex = Fuse.parseIndex(filmIndex);
+const fuse = new Fuse(films, fuseOptions, fuseIndex);
 
 export const Search = () => (
     <>
         <div style={{marginTop:"100px"}}>Hello World Search</div>
         <pre>
-            {JSON.stringify(lunr_idx.search("strawberries"))}
+            {JSON.stringify(fuse.search("strawberries"))}
         </pre>
 
     </>
