@@ -1,0 +1,23 @@
+.home-link {
+    font-size: x-large;
+}
+
+.home-link:link {
+    color: white;
+    text-decoration: none;
+}
+
+.home-link:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.home-link:active {
+    color: white;
+    text-decoration: underline;
+}

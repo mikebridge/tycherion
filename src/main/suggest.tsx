@@ -178,15 +178,15 @@ export const Suggest = () => {
 							/>
 							<button type="button"
 									className="dropdown-item"
-                                    onClick={selectMovie}>I accept my fate</button>
+                                    onClick={selectMovie}>I accept my fate!</button>
 						</form>
 					</>
                     }
                     {suggestedMovie &&
-					<div>
+					<>
 						<p className="lead">Tyche, The Goddess of Fortune, has spoken.</p>
 						<MoviePreview movie={suggestedMovie} onReset={onReset}/>
-					</div>
+					</>
                     }
                 </div>
 

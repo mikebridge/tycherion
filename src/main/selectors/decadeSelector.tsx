@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./selectors.css";
 
 const getDecades = (): number[] => {
     const startDecade = 1910;
@@ -35,21 +36,17 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
 
     }
     return (
-        <div>
-            {label}
-            <div>
-                {getDecades().map(decade => decade.toString()).map(decade =>
-                    <div key={decade}>
-                        <div>
-                            <label>
-                                {decade}s
-                                <input type="checkbox" name={decade} checked={decades.includes(decade)}
-                                       value={decade} onChange={onSelectionChanged}/>
-                            </label>
-                        </div>
-                    </div>
-                )}
-            </div>
+        <div className="selector">
+            <div className="selector-label">{label}</div>
+            {getDecades().map(decade => decade.toString()).map(decade =>
+                <div key={decade} className="selector-item">
+                    <label>
+                        <input type="checkbox" name={decade} checked={decades.includes(decade)}
+                               value={decade} onChange={onSelectionChanged}/>
+                        {decade}s
+                    </label>
+                </div>
+            )}
         </div>
     )
 }

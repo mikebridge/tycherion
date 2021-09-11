@@ -31,19 +31,17 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
     }
     const countryStrings = getCountries().map(country => country.toString());
     return (
-        <div>
-            {label}
-            <div>
-                {countryStrings.map(country =>
-                    <div key={country}>
-                        <label>
-                            {country}
-                            <input type="checkbox" name={`c_{country}`} checked={countries.includes(country)}
-                                   value={country} onChange={onSelectionChanged}/>
-                        </label>
-                    </div>
-                )}
-            </div>
+        <div className="selector">
+            <div className="selector-label">{label}</div>
+            {countryStrings.map(country =>
+                <div key={country} className="selector-item">
+                    <label>
+                        <input type="checkbox" name={`c_{country}`} checked={countries.includes(country)}
+                               value={country} onChange={onSelectionChanged}/>
+                        {country}
+                    </label>
+                </div>
+            )}
         </div>
     )
 }

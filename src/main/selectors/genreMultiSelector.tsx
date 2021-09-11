@@ -26,22 +26,19 @@ export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMult
     }
 
     return (
-        <div>
-            {label}
-            <div>
-                {genreData.map(g =>
-                    <div key={g.slug}>
-                        <div>
-                            <label>
-                                {g.name}
-                                <input type="checkbox" name={g.slug} checked={genres.includes(g.slug)}
-                                       value={g.slug} onChange={onSelectionChanged}/>
+        <div className="selector">
+            <div className="selector-label">{label}</div>
+            {genreData.map(g =>
+                <div key={g.slug} className="selector-item">
+                    <div>
+                        <label>
+                            <input type="checkbox" name={g.slug} checked={genres.includes(g.slug)}
+                                   value={g.slug} onChange={onSelectionChanged}/>  {g.name}
 
-                            </label>
-                        </div>
+                        </label>
                     </div>
-                )}
-            </div>
+                </div>
+            )}
         </div>
     )
 }

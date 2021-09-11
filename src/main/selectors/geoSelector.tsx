@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./selectors.css";
 
 interface IGeoSelectorProps {
     selectedGeo: string,
@@ -17,20 +18,17 @@ export const GeoSelector = ({selectedGeo, onChange}: IGeoSelectorProps) => {
         onChange(geoValue);
     }
     return (
-        <>
-            <div>I am in: {geoLookup(geo)}</div>
-            <button type="button" value="US"
-                    className="dropdown-item"
+        <div className="selector">
+            <div className="selector-label">I am in: {geoLookup(geo)}</div>
+
+            <button type="button" value="US" className="country-button"
                     onClick={() => onSelectionChanged('US')}
-            >United States
+            > <img style={{width:"50px"}} src={`${process.env.PUBLIC_URL}/us.svg`} alt="US" />
             </button>
-            <button type="button" value="CA"
-                    className="dropdown-item"
+            <button type="button" value="CA" className="country-button"
                     onClick={() => onSelectionChanged('CA')}
-            >Canada
+            ><img style={{width:"50px"}} src={`${process.env.PUBLIC_URL}/ca.svg`} alt="Canada" />
             </button>
-
-
-        </>
+        </div>
     )
 }
