@@ -66,8 +66,8 @@ export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
                         )}
                     </div>
                     <div>
-                            <button onClick={goToMovie}>View on Criterion</button>
-                            <button onClick={resetMovie}>I've already seen it</button>
+                            <button className="button" onClick={goToMovie}>View on Criterion</button>
+                            <button className="button button-error" onClick={resetMovie}>I've already seen it</button>
                     </div>
                 </div>
             </div>

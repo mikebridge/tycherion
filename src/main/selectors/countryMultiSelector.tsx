@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {MouseEvent, useState} from "react";
 import {summary} from "../filmData";
 
 
@@ -13,8 +13,11 @@ interface ICountryMultiSelectorProps {
 
 export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICountryMultiSelectorProps) => {
     const [countries, setCountries] = useState<string[]>(selectedCountries);
-    // const [isOpen, setIsOpen] = useState(countries.length > 0);
-    // const toggle = () => setIsOpen(!isOpen);
+    const [isOpen, setIsOpen] = useState(countries.length > 0);
+    const toggle = (e: MouseEvent<HTMLElement>) => {
+        e.preventDefault();
+        setIsOpen(!isOpen);
+    };
 
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
         const currentValue = e.currentTarget.value;
@@ -32,7 +35,8 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
     const countryStrings = getCountries().map(country => country.toString());
     return (
         <div className="selector">
-            <div className="selector-label">{label}</div>
+            <button className="selector-button" onClick={toggle}>{label}</button>
+            <div className={`selector-panel ${isOpen ? "selector-open" : "selector-closed"}`}>
             {countryStrings.map(country =>
                 <div key={country} className="selector-item">
                     <label>
@@ -42,6 +46,7 @@ export const CountryMultiSelector = ({label, selectedCountries, onChange}: ICoun
                     </label>
                 </div>
             )}
+            </div>
         </div>
     )
 }

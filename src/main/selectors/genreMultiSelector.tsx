@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {MouseEvent, useState} from "react";
 import {genreData} from "../filmData";
 
 interface IGenreMultiSelectorProps {
@@ -7,9 +7,14 @@ interface IGenreMultiSelectorProps {
     onChange: (genre: string[]) => void
 }
 
+
 export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMultiSelectorProps) => {
     const [genres, setGenres] = useState<string[]>(selectedGenres);
-    // const [isOpen, setIsOpen] = useState(genres.length > 0);
+    const [isOpen, setIsOpen] = useState(genres.length > 0);
+    const toggle = (e: MouseEvent<HTMLElement>) => {
+        e.preventDefault();
+        setIsOpen(!isOpen);
+    };
 
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
         const currentValue = e.currentTarget.value;
@@ -27,7 +32,8 @@ export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMult
 
     return (
         <div className="selector">
-            <div className="selector-label">{label}</div>
+            <button className="selector-button" onClick={toggle}>{label}</button>
+            <div className={`selector-panel ${isOpen ? "selector-open" : "selector-closed"}`}>
             {genreData.map(g =>
                 <div key={g.slug} className="selector-item">
                     <div>
@@ -39,6 +45,7 @@ export const GenreMultiSelector = ({label, selectedGenres, onChange}: IGenreMult
                     </div>
                 </div>
             )}
+            </div>
         </div>
     )
 }

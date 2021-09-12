@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from "react";
-
-import "./suggest.css"
 import {DecadeMultiSelector} from "./selectors/decadeSelector";
 import {GeoSelector} from "./selectors/geoSelector";
 import {CountryMultiSelector} from "./selectors/countryMultiSelector";
@@ -8,8 +6,10 @@ import {IMovie, movieList} from "./filmData";
 import {GenreMultiSelector} from "./selectors/genreMultiSelector";
 import {MoviePreview} from "./moviePreview";
 import {Alert} from "./alert";
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {topFunction} from "./utils";
+import "./suggest.css"
+import {getQueryParamFromHash, getSearchStateQS, setQueryParamInHash} from "./urlUtils";
 
 const skipMultipart = (movieSlug: string): boolean => {
     // this should be in the scraper.
@@ -39,7 +39,6 @@ const findRandomMovie = (
     genres: string[],
     geo: string
 ): IMovie | null => {
-
     let selectedMovie: IMovie | null = null;
     let count = 0;
     const decadesInt = decades.map(d => parseInt(d, 10));
@@ -77,17 +76,32 @@ const findRandomMovie = (
     return selectedMovie;
 }
 
+const getDecadeState = (): string[] => getQueryParamFromHash(window.location.hash, 'd');
 
+const getCountryState = (): string[] => getQueryParamFromHash(window.location.hash, 'c');
 
+const getGenreState = (): string[] =>  getQueryParamFromHash(window.location.hash, 'g');
 
 export const Suggest = () => {
     const [suggestedMovie, setSuggestedMovie] = useState<IMovie | null>(null);
-    const [decades, setDecades] = useState<string[]>([]);
+    const [decades, setDecades] = useState<string[]>(getDecadeState());
     const [hasSelected, setHasSelected] = useState<boolean>(false);
-    const [countries, setCountries] = useState<string[]>([]);
-    const [genres, setGenres] = useState<string[]>([]);
+    const [countries, setCountries] = useState<string[]>(getCountryState());
+    const [genres, setGenres] = useState<string[]>(getGenreState());
     const [geo, setGeo] = useState<string>('US');
     const history = useHistory();
+
+    useEffect(() => {
+        history.replace(setQueryParamInHash(window.location.hash, 'd', decades));
+    }, [decades, history]);
+
+    useEffect(() => {
+        history.replace(setQueryParamInHash(window.location.hash, 'c', countries));
+    }, [countries, history]);
+
+    useEffect(() => {
+        history.replace(setQueryParamInHash(window.location.hash, 'g', genres));
+    }, [genres, history]);
 
     const changeCountries = (countries: string[]) => {
         setCountries(countries);
@@ -109,7 +123,9 @@ export const Suggest = () => {
             movieList, decades, countries, genres, geo);
         topFunction();
         if (movie) {
-            history.push(`/suggest/${movie.slug}`);
+            const qs = getSearchStateQS(window.location.hash);
+            const path = qs ? `/suggest/${movie.slug}?${qs}`: `/suggest/${movie.slug}`;
+            history.push(path);
         }
     }
 
@@ -176,8 +192,7 @@ export const Suggest = () => {
 								selectedGeo={geo}
 								onChange={setGeo}
 							/>
-							<button type="button"
-									className="dropdown-item"
+							<button className="button"  type="button"
                                     onClick={selectMovie}>I accept my fate!</button>
 						</form>
 					</>
@@ -189,8 +204,6 @@ export const Suggest = () => {
 					</>
                     }
                 </div>
-
-
             </div>
     );
 }

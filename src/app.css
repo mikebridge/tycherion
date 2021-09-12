@@ -55,7 +55,7 @@ a:active {
     /*box-sizing: border-box;*/
 }
 
-button {
+.button {
     background-color: lightseagreen;
     border-radius: 12px;
     border: none;
@@ -72,10 +72,21 @@ button {
     -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+.button-error {
+    background-color: red;
+}
+
+.button:hover,
+.button:focus {
     background: #198e87;
 }
+
+.button-error:hover,
+.button-error:focus {
+    background: darkred;
+}
+
+
 /*button:focus {*/
 /*    outline: 1px solid #fff;*/
 /*    outline-offset: -4px;*/

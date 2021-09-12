@@ -3,7 +3,7 @@
     margin-bottom: 10px;
     /*grid-template-columns: auto;*/
     /*grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );*/
-    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    /*grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));*/
     /*align-items: center;*/
     /*justify-items: start;*/
     /*grid-auto-flow: column;*/
@@ -27,16 +27,57 @@
 
 }
 
+.selector-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    /*width: calc(100% - 100px);*/
+    /*padding: 0 18px;*/
+    /*display: none;*/
+    /*max-height: 0;*/
+    /*overflow: hidden;*/
+    /*transition: max-height 0.2s ease-out;*/
+    /*overflow: hidden;*/
+}
+
 .selector-item {
     white-space: nowrap;
 }
 
-.selector-label {
+.selector-button {
+    font-size: 16px;
     white-space: nowrap;
     grid-column: 1 / -1;
-    background-color: lightblue;
-    padding: 10px;
+    background-color: lightsteelblue;
+    padding: 18px;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 2.4s;
+
 }
+
+.geoselector-button {
+    align-items: center;
+}
+
+.geoselector-flag {
+    vertical-align: middle;
+    margin-left:10px;
+    width: 35px;
+}
+
+.selector-open {
+    display: grid;
+}
+.selector-closed {
+    display: none;
+}
+
+.active, .selector-button:hover, .geoselector-button:hover {
+    background-color: lightblue;
+}
+
 
 .country-button {
     background-color: white;

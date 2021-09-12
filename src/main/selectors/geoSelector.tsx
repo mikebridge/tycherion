@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {MouseEvent, useEffect, useState} from "react";
 import "./selectors.css";
 
 interface IGeoSelectorProps {
@@ -10,25 +10,30 @@ const geoLookup = (abbrev: string) => {
     return abbrev==='CA' ? 'Canada' : 'United States'
 }
 
-export const GeoSelector = ({selectedGeo, onChange}: IGeoSelectorProps) => {
-    const [geo, setGeo] = useState<string>(selectedGeo);
+const getGeoFromLocalStorage = (): string | null => localStorage.getItem('geo');
 
-    const onSelectionChanged = (geoValue: string) => {
+const setGeoToLocalStorage = (geo: string) => localStorage.setItem('geo', geo);
+
+export const GeoSelector = ({onChange}: IGeoSelectorProps) => {
+    const [geo, setGeo] = useState<string>(getGeoFromLocalStorage() || 'US');
+
+    useEffect(() => {
+        setGeoToLocalStorage(geo);
+        onChange(geo);
+    },[geo, onChange])
+
+    const onSelectionChanged = (e: MouseEvent<HTMLElement>, geoValue: string) => {
+        e.preventDefault();
         setGeo(geoValue);
-        onChange(geoValue);
     }
     return (
         <div className="selector">
-            <div className="selector-label">I am in: {geoLookup(geo)}</div>
+            <div className="selector-button geoselector-button">I am in:
+                <img className="geoselector-flag"
+                     src={`${process.env.PUBLIC_URL}/${geo.toLowerCase()}.svg`} alt={geoLookup(geo)}
+                     onClick={(e) => onSelectionChanged(e,geo === 'US' ? 'CA': 'US')}/>
+            </div>
 
-            <button type="button" value="US" className="country-button"
-                    onClick={() => onSelectionChanged('US')}
-            > <img style={{width:"50px"}} src={`${process.env.PUBLIC_URL}/us.svg`} alt="US" />
-            </button>
-            <button type="button" value="CA" className="country-button"
-                    onClick={() => onSelectionChanged('CA')}
-            ><img style={{width:"50px"}} src={`${process.env.PUBLIC_URL}/ca.svg`} alt="Canada" />
-            </button>
         </div>
     )
 }

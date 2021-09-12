@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {MouseEvent, useState} from "react";
 import "./selectors.css";
 
 const getDecades = (): number[] => {
@@ -17,9 +17,11 @@ interface IDecadeMultiSelectorProps {
 
 export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeMultiSelectorProps) => {
     const [decades, setDecades] = useState<string[]>(selectedDecades);
-    // const [isOpen, setIsOpen] = useState(selectedDecades.length > 0);
-    //
-    // const toggle = () => setIsOpen(!isOpen);
+    const [isOpen, setIsOpen] = useState(selectedDecades.length > 0);
+    const toggle = (e: MouseEvent<HTMLElement>) => {
+        e.preventDefault();
+        setIsOpen(!isOpen);
+    };
 
     const onSelectionChanged = (e: React.FormEvent<HTMLInputElement>) => {
         const currentValue = e.currentTarget.value;
@@ -36,8 +38,9 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
 
     }
     return (
-        <div className="selector">
-            <div className="selector-label">{label}</div>
+        <div className="selector" >
+            <button className="selector-button" onClick={toggle}>{label}</button>
+            <div className={`selector-panel ${isOpen ? "selector-open" : "selector-closed"}`}>
             {getDecades().map(decade => decade.toString()).map(decade =>
                 <div key={decade} className="selector-item">
                     <label>
@@ -47,6 +50,7 @@ export const DecadeMultiSelector = ({label, selectedDecades, onChange}: IDecadeM
                     </label>
                 </div>
             )}
+            </div>
         </div>
     )
 }
