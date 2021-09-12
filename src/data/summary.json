@@ -1,5 +1,5 @@
 {
-  "count": 2562,
+  "count": 2572,
   "countries": {
     "Antigua and Barbuda": 1,
     "Argentina": 2,
@@ -9,10 +9,11 @@
     "Belgium": 12,
     "Bosnia and Herzegovina": 1,
     "Brazil": 5,
-    "Canada": 49,
+    "Canada": 50,
     "Chad": 1,
     "Chile": 4,
     "China": 20,
+    "Croatia": 2,
     "Cuba": 2,
     "Cyprus": 1,
     "Czech Republic": 2,
@@ -20,9 +21,9 @@
     "Denmark": 14,
     "Ethiopia": 2,
     "Finland": 22,
-    "France": 395,
+    "France": 397,
     "Georgia": 1,
-    "Germany": 60,
+    "Germany": 59,
     "Ghana": 6,
     "Greece": 7,
     "Hong Kong": 19,
@@ -33,7 +34,7 @@
     "Iran": 15,
     "Ireland": 4,
     "Israel": 1,
-    "Italy": 108,
+    "Italy": 109,
     "Jamaica": 1,
     "Japan": 348,
     "Jordan": 1,
@@ -47,7 +48,7 @@
     "New Zealand": 2,
     "Norway": 8,
     "Philippines": 4,
-    "Poland": 26,
+    "Poland": 25,
     "Portugal": 9,
     "Puerto Rico": 1,
     "Romania": 4,
@@ -60,13 +61,13 @@
     "Soviet Union": 23,
     "Spain": 28,
     "Sudan": 1,
-    "Sweden": 73,
-    "Switzerland": 5,
+    "Sweden": 74,
+    "Switzerland": 6,
     "Taiwan": 9,
     "Thailand": 2,
     "Turkey": 2,
-    "United Kingdom": 217,
-    "United States": 858,
+    "United Kingdom": 218,
+    "United States": 861,
     "Venezuela": 1,
     "Vietnam": 1,
     "West Germany": 38,
@@ -209,13 +210,13 @@
       "count": 2,
       "name": "Albert Maysles, David Maysles, Charlotte Zwerin"
     },
-    "Albert Maysles, David Maysles, Deborah Dickson, Susan Froemke": {
+    "Albert Maysles, David Maysles, Deborah Dickson, and Susan Froemke": {
       "count": 1,
-      "name": "Albert Maysles, David Maysles, Deborah Dickson, Susan Froemke"
+      "name": "Albert Maysles, David Maysles, Deborah Dickson, and Susan Froemke"
     },
-    "Albert Maysles, David Maysles, Ellen Giffard": {
+    "Albert Maysles, David Maysles, and Ellen Giffard": {
       "count": 1,
-      "name": "Albert Maysles, David Maysles, Ellen Giffard"
+      "name": "Albert Maysles, David Maysles, and Ellen Giffard"
     },
     "Albert Maysles…": {
       "count": 2,
@@ -241,9 +242,9 @@
       "count": 1,
       "name": "Alexander Bocchieri"
     },
-    "Alexander Esway…": {
+    "Alexander Esway, Zoltán Korda, John Monk  Saunders, Alexander Shaw, and Donald Taylor": {
       "count": 1,
-      "name": "Alexander Esway…"
+      "name": "Alexander Esway, Zoltán Korda, John Monk  Saunders, Alexander Shaw, and Donald Taylor"
     },
     "Alexander Hammid": {
       "count": 1,
@@ -710,7 +711,7 @@
       "name": "Cecil B. DeMille"
     },
     "Chantal Akerman": {
-      "count": 10,
+      "count": 11,
       "name": "Chantal Akerman"
     },
     "Charles Barrois": {
@@ -810,7 +811,7 @@
       "name": "Christopher Kahunahana"
     },
     "Christopher Nolan": {
-      "count": 1,
+      "count": 2,
       "name": "Christopher Nolan"
     },
     "Christopher Radcliff…": {
@@ -844,6 +845,10 @@
     "Claude Jutra": {
       "count": 1,
       "name": "Claude Jutra"
+    },
+    "Claude Jutra and Norman McLaren": {
+      "count": 1,
+      "name": "Claude Jutra and Norman McLaren"
     },
     "Clu Gulager": {
       "count": 1,
@@ -1285,8 +1290,12 @@
       "count": 1,
       "name": "François Truffaut…"
     },
+    "Fred C. Newmeyer": {
+      "count": 1,
+      "name": "Fred C. Newmeyer"
+    },
     "Fred Newmeyer": {
-      "count": 2,
+      "count": 1,
       "name": "Fred Newmeyer"
     },
     "Fred Newmeyer and Sam Taylor": {
@@ -1858,7 +1867,7 @@
       "name": "Jean-Loup Felicioli and Alain Gagnol"
     },
     "Jean-Luc Godard": {
-      "count": 10,
+      "count": 12,
       "name": "Jean-Luc Godard"
     },
     "Jean-Luc Godard and Jean-Pierre Gorin": {
@@ -1882,7 +1891,7 @@
       "name": "Jean-Pierre Gorin"
     },
     "Jean-Pierre Melville": {
-      "count": 7,
+      "count": 9,
       "name": "Jean-Pierre Melville"
     },
     "Jeff Feuerzeig": {
@@ -2404,6 +2413,10 @@
     "Lawrence Huntington": {
       "count": 1,
       "name": "Lawrence Huntington"
+    },
+    "Lawrence Kasdan": {
+      "count": 1,
+      "name": "Lawrence Kasdan"
     },
     "Leah Shore": {
       "count": 1,
@@ -2981,9 +2994,9 @@
       "count": 1,
       "name": "Miloš Forman, Kon Ichikawa, Claude Lelouch, Juri Ozerov, Arthur Penn, Michael Pfleghar, John Schlesinger, and Mai Zetterling"
     },
-    "Milton Rosmer…": {
+    "Milton Rosmer, Luis Trenker, and Vincent Korda": {
       "count": 1,
-      "name": "Milton Rosmer…"
+      "name": "Milton Rosmer, Luis Trenker, and Vincent Korda"
     },
     "Mira Nair": {
       "count": 7,
@@ -3338,7 +3351,7 @@
       "name": "René Clément"
     },
     "René Laloux": {
-      "count": 1,
+      "count": 2,
       "name": "René Laloux"
     },
     "René Lucot": {
@@ -3356,6 +3369,10 @@
     "Richard E. Norman": {
       "count": 2,
       "name": "Richard E. Norman"
+    },
+    "Richard Leacock": {
+      "count": 1,
+      "name": "Richard Leacock"
     },
     "Richard Lester": {
       "count": 1,
@@ -3662,12 +3679,8 @@
       "name": "Shauna McGarry"
     },
     "Shikeith": {
-      "count": 1,
+      "count": 2,
       "name": "Shikeith"
-    },
-    "Shikeith Cathey": {
-      "count": 1,
-      "name": "Shikeith Cathey"
     },
     "Shintaro Katsu": {
       "count": 1,
@@ -3680,10 +3693,6 @@
     "Shirley Clarke, D. A. Pennebaker": {
       "count": 1,
       "name": "Shirley Clarke, D. A. Pennebaker"
-    },
-    "Shirley Clarke, Richard Leacock": {
-      "count": 1,
-      "name": "Shirley Clarke, Richard Leacock"
     },
     "Shirley Clarke, Robert Hughes": {
       "count": 1,
@@ -3722,7 +3731,7 @@
       "name": "Sigurd Wallén…"
     },
     "Sky Hopinka": {
-      "count": 11,
+      "count": 12,
       "name": "Sky Hopinka"
     },
     "Sofia Coppola": {
@@ -4264,16 +4273,16 @@
     "1954": 27,
     "1955": 39,
     "1956": 37,
-    "1957": 27,
+    "1957": 28,
     "1958": 44,
     "1959": 40,
     "1960": 45,
-    "1961": 30,
-    "1962": 54,
+    "1961": 32,
+    "1962": 55,
     "1963": 38,
     "1964": 41,
-    "1965": 37,
-    "1966": 43,
+    "1965": 38,
+    "1966": 44,
     "1967": 42,
     "1968": 43,
     "1969": 37,
@@ -4287,10 +4296,10 @@
     "1977": 24,
     "1978": 29,
     "1979": 35,
-    "1980": 32,
+    "1980": 33,
     "1981": 31,
     "1982": 27,
-    "1983": 26,
+    "1983": 27,
     "1984": 28,
     "1985": 24,
     "1986": 24,
@@ -4304,7 +4313,7 @@
     "1994": 24,
     "1995": 21,
     "1996": 13,
-    "1997": 23,
+    "1997": 24,
     "1998": 8,
     "1999": 14,
     "2000": 18,
@@ -4327,6 +4336,6 @@
     "2017": 58,
     "2018": 61,
     "2019": 52,
-    "2020": 16
+    "2020": 17
   }
 }
