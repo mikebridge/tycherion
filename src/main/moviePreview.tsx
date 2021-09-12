@@ -1,5 +1,6 @@
 import {IMovie} from "./filmData";
 import React from "react";
+import "./moviePreview.css";
 
 const cropImgUrl = (imgUrl: string): string => {
     // original url:
@@ -48,29 +49,30 @@ export const MoviePreview = ({movie, onReset}: IMoviePreviewProps) => {
         // });
     };
     return (
-        <div>
-            <img style={{"width": 200, "height": 280}} src={cropImgUrl(movie.img)} alt={movie.title}/>
-
+        <>
+        <div className="movie-result">
             <div>
+                <img className="movie-result-img" src={cropImgUrl(movie.img)} alt={movie.title}/>
+            </div>
+            <div>
+                <div className="movie-result-title">
+                    {movie.title}
+                </div>
                 <div>
-                    <div>
-                        {movie.title}
-                    </div>
-                    <div>
-                        <div className="font-weight-bold">{movie.director}</div>
-                        <div className="font-italic">{movie.country} ({movie.year})</div>
-                    </div>
-                    <div>
-                        {movie.genre.map((genre) =>
-                            <div key={genre}>{genre}</div>
-                        )}
-                    </div>
-                    <div>
-                            <button className="button" onClick={goToMovie}>View on Criterion</button>
-                            <button className="button button-error" onClick={resetMovie}>I've already seen it</button>
-                    </div>
+                    <div className="movie-result-director">{movie.director}</div>
+                    <div className="movie-result-country">{movie.country} ({movie.year})</div>
+                </div>
+                <div>
+                    {movie.genre.map((genre) =>
+                        <div className="movie-result-genre" key={genre}>{genre}</div>
+                    )}
                 </div>
             </div>
         </div>
+            <div className="movie-result-buttons">
+                <button className="button" onClick={goToMovie}>View on Criterion</button>
+                <button className="button button-error" onClick={resetMovie}>I've already seen it</button>
+            </div>
+            </>
     )
 }
