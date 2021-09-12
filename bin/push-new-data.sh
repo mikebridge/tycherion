@@ -35,7 +35,7 @@ git checkout master
 git add -A .
 git commit -m "Data Update $DATE_TODAY"
 git tag "v$DATE_TODAY"
-yarn run deploy
+npm run deploy
 git push origin --tags
 git push origin master
 
