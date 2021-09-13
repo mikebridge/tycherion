@@ -5,15 +5,15 @@ a random movie from the Criterion Channel.
 
 [See it here](https://mikebridge.github.io/tycherion/).
 
-## Deployment
+## Setup
 
 ```bash
-yarn run deploy
-git push origin master
+nvm install
+npm install
 ```
 
-## Local Deployment
+## Run locally
 
 ```bash
-yarn start
+npm start
 ```
