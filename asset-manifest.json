@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/tycherion/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/tycherion/static/js/main.7c863cec.chunk.js",
-    "main.js.map": "/tycherion/static/js/main.7c863cec.chunk.js.map",
-    "runtime-main.js": "/tycherion/static/js/runtime-main.9f5e5618.js",
-    "runtime-main.js.map": "/tycherion/static/js/runtime-main.9f5e5618.js.map",
-    "static/css/2.7e0961ed.chunk.css": "/tycherion/static/css/2.7e0961ed.chunk.css",
-    "static/js/2.73d3de93.chunk.js": "/tycherion/static/js/2.73d3de93.chunk.js",
-    "static/js/2.73d3de93.chunk.js.map": "/tycherion/static/js/2.73d3de93.chunk.js.map",
-    "static/js/3.1e977395.chunk.js": "/tycherion/static/js/3.1e977395.chunk.js",
-    "static/js/3.1e977395.chunk.js.map": "/tycherion/static/js/3.1e977395.chunk.js.map",
+    "main.css": "/tycherion/static/css/main.3e770f7a.chunk.css",
+    "main.js": "/tycherion/static/js/main.37ac8243.chunk.js",
+    "main.js.map": "/tycherion/static/js/main.37ac8243.chunk.js.map",
+    "runtime-main.js": "/tycherion/static/js/runtime-main.c221be67.js",
+    "runtime-main.js.map": "/tycherion/static/js/runtime-main.c221be67.js.map",
+    "static/css/2.8d459d15.chunk.css": "/tycherion/static/css/2.8d459d15.chunk.css",
+    "static/js/2.c8f916f5.chunk.js": "/tycherion/static/js/2.c8f916f5.chunk.js",
+    "static/js/2.c8f916f5.chunk.js.map": "/tycherion/static/js/2.c8f916f5.chunk.js.map",
+    "static/js/3.7c3d50f6.chunk.js": "/tycherion/static/js/3.7c3d50f6.chunk.js",
+    "static/js/3.7c3d50f6.chunk.js.map": "/tycherion/static/js/3.7c3d50f6.chunk.js.map",
     "index.html": "/tycherion/index.html",
-    "static/css/2.7e0961ed.chunk.css.map": "/tycherion/static/css/2.7e0961ed.chunk.css.map",
-    "static/css/main.6dea0f05.chunk.css.map": "/tycherion/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.73d3de93.chunk.js.LICENSE.txt": "/tycherion/static/js/2.73d3de93.chunk.js.LICENSE.txt",
+    "static/css/2.8d459d15.chunk.css.map": "/tycherion/static/css/2.8d459d15.chunk.css.map",
+    "static/css/main.3e770f7a.chunk.css.map": "/tycherion/static/css/main.3e770f7a.chunk.css.map",
+    "static/js/2.c8f916f5.chunk.js.LICENSE.txt": "/tycherion/static/js/2.c8f916f5.chunk.js.LICENSE.txt",
     "static/media/all.css": "/tycherion/static/media/fa-solid-900.eeccf4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.9f5e5618.js",
-    "static/css/2.7e0961ed.chunk.css",
-    "static/js/2.73d3de93.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.7c863cec.chunk.js"
+    "static/js/runtime-main.c221be67.js",
+    "static/css/2.8d459d15.chunk.css",
+    "static/js/2.c8f916f5.chunk.js",
+    "static/css/main.3e770f7a.chunk.css",
+    "static/js/main.37ac8243.chunk.js"
   ]
 }
