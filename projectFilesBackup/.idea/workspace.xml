@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88891b98-3fe0-4dfa-9876-b7f001d9ee81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/films.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/films.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/filmsMetaData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/filmsMetaData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/summary.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="gke_sa-kubernetes_us-central1-c_sa-cluster-1" />
+    <option name="namespace" value="default" />
+  </component>
+  <component name="MajeraCodeReviewSettings">
+    <option name="processedVcsRemotes">
+      <set>
+        <StoredVcsRemote>
+          <option name="vcsRemoteUrl" value="git@github.com:mikebridge/tycherion.git" />
+          <option name="vcsRootUrl" value="file://$PROJECT_DIR$" />
+        </StoredVcsRemote>
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mWYeyHS1CvTORRCNRJwV5pVcBr" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210125_0000" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/main/countrySelector.tsx" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88891b98-3fe0-4dfa-9876-b7f001d9ee81" name="Default Changelist" comment="" />
+      <created>1609610916226</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609610916226</updated>
+      <workItem from="1609610917732" duration="1124000" />
+      <workItem from="1609612103868" duration="2009000" />
+      <workItem from="1609653152752" duration="21000" />
+      <workItem from="1609653203854" duration="8976000" />
+      <workItem from="1609662408868" duration="1368000" />
+      <workItem from="1609694823897" duration="10824000" />
+      <workItem from="1609707386595" duration="253000" />
+      <workItem from="1609776819704" duration="19000" />
+      <workItem from="1610165619096" duration="1072000" />
+      <workItem from="1610235592934" duration="2475000" />
+      <workItem from="1610241499183" duration="17628000" />
+      <workItem from="1610303538755" duration="5617000" />
+      <workItem from="1610343176165" duration="4315000" />
+      <workItem from="1610383943123" duration="219000" />
+      <workItem from="1611422795341" duration="10096000" />
+      <workItem from="1611590908002" duration="28000" />
+      <workItem from="1619111993505" duration="895000" />
+      <workItem from="1619120707986" duration="599000" />
+      <workItem from="1620175259774" duration="802000" />
+      <workItem from="1620227325481" duration="98000" />
+      <workItem from="1620429048372" duration="599000" />
+      <workItem from="1620495784332" duration="47000" />
+      <workItem from="1623883291529" duration="13000" />
+      <workItem from="1630960181499" duration="13169000" />
+      <workItem from="1631378203054" duration="36237000" />
+      <workItem from="1631545953472" duration="867000" />
+      <workItem from="1640969673212" duration="13000" />
+      <workItem from="1641316635367" duration="4542000" />
+      <workItem from="1641321588202" duration="7480000" />
+      <workItem from="1649885478557" duration="1306000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/navBar.tsx</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

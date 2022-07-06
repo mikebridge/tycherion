@@ -10,32 +10,35 @@ import { SelectApp } from './selectApp';
 import {Search} from "./main/search";
 import "./app.css";
 
+const Switch2 = Switch as any;
+const Route2 = Route as any;
+
 const App = () => (
     <div className="app">
         <NavBar/>
         <div className="page">
             <div className="content">
-                <Switch>
+                <Switch2>
                     {/*<Route path="/">*/}
                     {/*    <SearchSelector></SearchSelector>*/}
                     {/*</Route>*/}
-                    <Route exact path="/">
+                    <Route2 exact path="/">
                         <SelectApp />
-                    </Route>
-                    <Route exact path="/suggest">
+                    </Route2>
+                    <Route2 exact path="/suggest">
                         <Suggest/>
-                    </Route>
-                    <Route path="/suggest/:slug">{
-                        (props) =>
+                    </Route2>
+                    <Route2 path="/suggest/:slug">{
+                        (props: any) =>
                             props?.match?.params.slug ?
                                 (<SuggestedResult slug={props.match.params.slug}/>)
                                 : <div>not found!</div>
                     }
-                    </Route>
-                    <Route path="/search">
+                    </Route2>
+                    <Route2 path="/search">
                         <Search/>
-                    </Route>
-                </Switch>
+                    </Route2>
+                </Switch2>
             </div>
         </div>
         <Footer />
