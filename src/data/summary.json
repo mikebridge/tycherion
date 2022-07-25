@@ -1,5 +1,5 @@
 {
-  "count": 2850,
+  "count": 2849,
   "countries": {
     "Afghanistan": 1,
     "Albania": 1,
@@ -24,7 +24,7 @@
     "Egypt": 1,
     "Ethiopia": 2,
     "Finland": 19,
-    "France": 414,
+    "France": 415,
     "Georgia": 1,
     "Germany": 67,
     "Ghana": 6,
@@ -33,7 +33,7 @@
     "Hungary": 4,
     "India": 29,
     "Indonesia": 2,
-    "Iran": 16,
+    "Iran": 15,
     "Ireland": 3,
     "Israel": 2,
     "Italy": 116,
@@ -72,7 +72,7 @@
     "Uganda": 1,
     "Ukraine": 1,
     "United Kingdom": 241,
-    "United States": 991,
+    "United States": 990,
     "Venezuela": 1,
     "Vietnam": 1,
     "West Germany": 43,
@@ -335,10 +335,6 @@
       "count": 1,
       "name": "Ana Kokkinos"
     },
-    "Ana Lily Amirpour": {
-      "count": 1,
-      "name": "Ana Lily Amirpour"
-    },
     "Anatole Litvak": {
       "count": 1,
       "name": "Anatole Litvak"
@@ -498,10 +494,6 @@
     "Ayo Akingbade": {
       "count": 1,
       "name": "Ayo Akingbade"
-    },
-    "Bahman Ghobadi": {
-      "count": 1,
-      "name": "Bahman Ghobadi"
     },
     "Bahram Beyzaie": {
       "count": 1,
@@ -3251,6 +3243,10 @@
       "count": 2,
       "name": "Márta Mészáros"
     },
+    "Nadav Lapid": {
+      "count": 1,
+      "name": "Nadav Lapid"
+    },
     "Nagisa Oshima": {
       "count": 18,
       "name": "Nagisa Oshima"
@@ -4709,7 +4705,7 @@
     "1997": 25,
     "1998": 17,
     "1999": 15,
-    "2000": 19,
+    "2000": 18,
     "2001": 16,
     "2002": 23,
     "2003": 11,
@@ -4723,13 +4719,13 @@
     "2011": 27,
     "2012": 30,
     "2013": 30,
-    "2014": 45,
+    "2014": 44,
     "2015": 31,
     "2016": 54,
     "2017": 66,
     "2018": 72,
     "2019": 58,
     "2020": 51,
-    "2021": 17
+    "2021": 18
   }
 }
