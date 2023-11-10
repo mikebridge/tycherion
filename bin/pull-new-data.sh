@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-SCRAPETERION_VERSION="1.2.0"
+SCRAPETERION_VERSION="1.2.1"
 
 verify_env () {
   if [ -z "$SCRAPETERION_VENV" ]; then

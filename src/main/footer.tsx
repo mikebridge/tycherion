@@ -1,7 +1,7 @@
 import {timeAgoInWords} from "./utils";
 import {metaData, summary} from "./filmData";
 import React from "react";
-import {version} from "../../package.json";
+import packageInfo from "../../package.json";
 
 
 export const Footer = () => (
@@ -20,7 +20,7 @@ export const Footer = () => (
                                                       rel="noreferrer"
                                                       target="_blank">scrapeterion {metaData.scrapeterion}</a> / <a href="https://github.com/mikebridge/tycherion"
                                                                                                                     rel="noreferrer"
-                                                                                                                    target="_blank">tycherion {version}</a>.
+                                                                                                                    target="_blank">tycherion {packageInfo.version}</a>.
             </div>
             <div className="text-muted font-italic"><sup>*</sup> This site is not affiliated with Criterion
                 Channel.
