@@ -6,7 +6,7 @@ import './navBar.css';
 export const NavBar = () => {
     return (
         <header>
-            <Link to="/" className="home-link">Tycherion</Link>
+            <Link to="/">Tycherion</Link>
             {/*<Link to="suggest">Home</Link>*/}
             {/*<Link to="search">Link</Link>*/}
         </header>

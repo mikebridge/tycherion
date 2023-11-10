@@ -1,5 +1,5 @@
 import React, {MouseEvent, useEffect, useState} from "react";
-import "./selectors.css";
+//import "./selectors.css";
 
 interface IGeoSelectorProps {
     selectedGeo: string,

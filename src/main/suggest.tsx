@@ -8,7 +8,7 @@ import {MoviePreview} from "./moviePreview";
 import {Alert} from "./alert";
 import {useNavigate} from "react-router-dom";
 import {topFunction} from "./utils";
-import "./suggest.css"
+// import "./suggest.css"
 import {getQueryParamFromHash, getSearchStateQS, setQueryParamInHash} from "./urlUtils";
 
 const skipMultipart = (movieSlug: string): boolean => {

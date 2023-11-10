@@ -1,5 +1,5 @@
 import React, {MouseEvent, useState} from "react";
-import "./selectors.css";
+// import "./selectors.css";
 
 const getDecades = (): number[] => {
     const startDecade = 1910;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./alert.css";
+// import "./alert.css";
 
 
 interface IAlertProps {

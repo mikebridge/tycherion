@@ -1,6 +1,6 @@
 import {IMovie} from "./filmData";
 import React from "react";
-import "./moviePreview.css";
+// import "./moviePreview.css";
 
 const cropImgUrl = (imgUrl: string): string => {
     // original url:
