@@ -1,64 +1,66 @@
 {
-  "count": 2893,
+  "count": 2948,
   "countries": {
     "Albania": 1,
     "Angola": 1,
     "Antigua and Barbuda": 1,
     "Argentina": 1,
-    "Australia": 22,
-    "Austria": 8,
+    "Australia": 21,
+    "Austria": 9,
     "Bangladesh": 2,
-    "Belgium": 9,
+    "Belgium": 12,
     "Bosnia and Herzegovina": 1,
     "Brazil": 12,
     "Bulgaria": 1,
     "Burkina Faso": 4,
-    "Cambodia": 3,
-    "Canada": 70,
+    "Cambodia": 2,
+    "Canada": 68,
+    "Chad": 1,
     "Chile": 1,
-    "China": 18,
+    "China": 16,
     "Colombia": 3,
+    "Congo": 1,
     "Croatia": 1,
     "Cuba": 3,
     "Czechoslovakia": 44,
-    "Denmark": 15,
+    "Denmark": 16,
     "Dominican Republic": 2,
     "Egypt": 1,
     "Estonia": 1,
     "Ethiopia": 2,
     "Finland": 21,
-    "France": 445,
+    "France": 455,
     "Georgia": 2,
-    "Germany": 61,
+    "Germany": 60,
     "Ghana": 2,
     "Greece": 7,
     "Guatemala": 2,
-    "Hong Kong": 47,
-    "Hungary": 5,
+    "Hong Kong": 50,
+    "Hungary": 6,
     "Iceland": 1,
     "India": 32,
     "Indonesia": 1,
     "Iran": 29,
     "Ireland": 1,
     "Israel": 1,
-    "Italy": 120,
+    "Italy": 122,
     "Jamaica": 1,
-    "Japan": 376,
+    "Japan": 382,
     "Jordan": 1,
     "Kazakhstan": 1,
     "Kyrgyzstan": 1,
     "Lebanon": 1,
     "Lesotho": 3,
-    "Mexico": 15,
-    "Morocco": 1,
+    "Mexico": 16,
+    "Morocco": 2,
     "Netherlands": 6,
     "New Zealand": 5,
-    "Nigeria": 3,
+    "Nigeria": 4,
     "North Macedonia": 1,
-    "Norway": 7,
+    "Norway": 8,
     "Pakistan": 1,
     "Peru": 1,
-    "Philippines": 8,
+    "Philippines": 21,
     "Poland": 32,
     "Portugal": 7,
     "Puerto Rico": 2,
@@ -68,8 +70,8 @@
     "Senegal": 15,
     "South Africa": 4,
     "South Korea": 6,
-    "Soviet Union": 30,
-    "Spain": 30,
+    "Soviet Union": 29,
+    "Spain": 29,
     "Sri Lanka": 1,
     "Sudan": 1,
     "Sweden": 92,
@@ -77,13 +79,13 @@
     "Taiwan": 12,
     "Thailand": 4,
     "Turkey": 4,
-    "Uganda": 1,
+    "Uganda": 2,
     "Ukraine": 2,
-    "United Kingdom": 272,
-    "United States": 886,
+    "United Kingdom": 269,
+    "United States": 905,
     "Venezuela": 1,
     "Vietnam": 1,
-    "West Germany": 37,
+    "West Germany": 38,
     "Yugoslavia": 4
   },
   "directors": {
@@ -104,7 +106,7 @@
       "name": "Abbesi Akhamie"
     },
     "Abel Ferrara": {
-      "count": 2,
+      "count": 3,
       "name": "Abel Ferrara"
     },
     "Abel Gance": {
@@ -114,6 +116,14 @@
     "Abiola Abrams": {
       "count": 1,
       "name": "Abiola Abrams"
+    },
+    "Adam Piron": {
+      "count": 1,
+      "name": "Adam Piron"
+    },
+    "Adamu Halilu": {
+      "count": 1,
+      "name": "Adamu Halilu"
     },
     "Adepero Oduye": {
       "count": 1,
@@ -140,7 +150,7 @@
       "name": "Agnieszka Smoczyńska"
     },
     "Agnès Varda": {
-      "count": 42,
+      "count": 43,
       "name": "Agnès Varda"
     },
     "Ahmed El Maanouni": {
@@ -168,7 +178,7 @@
       "name": "Al Reinert"
     },
     "Alain Resnais": {
-      "count": 8,
+      "count": 7,
       "name": "Alain Resnais"
     },
     "Alan Clarke": {
@@ -183,17 +193,9 @@
       "count": 1,
       "name": "Alan Metter"
     },
-    "Alan Rudolph": {
-      "count": 1,
-      "name": "Alan Rudolph"
-    },
     "Alan Schneider": {
       "count": 1,
       "name": "Alan Schneider"
-    },
-    "Albert Brooks": {
-      "count": 1,
-      "name": "Albert Brooks"
     },
     "Albert Lamorisse": {
       "count": 2,
@@ -251,10 +253,6 @@
       "count": 1,
       "name": "Alexander Esway, Zoltán Korda, John Monk  Saunders, Alexander Shaw, and Donald Taylor"
     },
-    "Alexander Hall": {
-      "count": 1,
-      "name": "Alexander Hall"
-    },
     "Alexander Hammid": {
       "count": 1,
       "name": "Alexander Hammid"
@@ -268,7 +266,7 @@
       "name": "Alexander Mackendrick"
     },
     "Alexandre O. Philippe": {
-      "count": 1,
+      "count": 2,
       "name": "Alexandre O. Philippe"
     },
     "Alexis McCrimmon": {
@@ -280,7 +278,7 @@
       "name": "Alf Sjöberg"
     },
     "Alfred Hitchcock": {
-      "count": 11,
+      "count": 13,
       "name": "Alfred Hitchcock"
     },
     "Alfred J. Goulding": {
@@ -290,10 +288,6 @@
     "Alfred L. Werker": {
       "count": 1,
       "name": "Alfred L. Werker"
-    },
-    "Alice Guy Blaché": {
-      "count": 6,
-      "name": "Alice Guy Blaché"
     },
     "Alisha Tejpal": {
       "count": 1,
@@ -318,10 +312,6 @@
     "Amber Bemak and Angelo Madsen Minax": {
       "count": 1,
       "name": "Amber Bemak and Angelo Madsen Minax"
-    },
-    "Amy Holden Jones": {
-      "count": 1,
-      "name": "Amy Holden Jones"
     },
     "Anaïs Duplan": {
       "count": 1,
@@ -379,10 +369,6 @@
       "count": 1,
       "name": "Ann Hui and Vincent Chui"
     },
-    "Anna Biller": {
-      "count": 3,
-      "name": "Anna Biller"
-    },
     "Anna Mantzaris": {
       "count": 1,
       "name": "Anna Mantzaris"
@@ -402,6 +388,10 @@
     "Anthony Banua-Simon": {
       "count": 1,
       "name": "Anthony Banua-Simon"
+    },
+    "Anthony Chen": {
+      "count": 1,
+      "name": "Anthony Chen"
     },
     "Anthony Nti": {
       "count": 1,
@@ -443,6 +433,10 @@
       "count": 2,
       "name": "Arthur Crabtree"
     },
+    "Arthur Penn": {
+      "count": 1,
+      "name": "Arthur Penn"
+    },
     "Arturo Ripstein": {
       "count": 1,
       "name": "Arturo Ripstein"
@@ -463,13 +457,21 @@
       "count": 7,
       "name": "Atom Egoyan"
     },
+    "Augusto Caminito": {
+      "count": 1,
+      "name": "Augusto Caminito"
+    },
     "Ayanna Dozier": {
       "count": 1,
       "name": "Ayanna Dozier"
     },
     "Ayoka Chenzira": {
-      "count": 1,
+      "count": 10,
       "name": "Ayoka Chenzira"
+    },
+    "Ayoka Chenzira and HaJ": {
+      "count": 1,
+      "name": "Ayoka Chenzira and HaJ"
     },
     "Bahram Beyzaie": {
       "count": 1,
@@ -531,6 +533,10 @@
       "count": 1,
       "name": "Bernhard Wicki"
     },
+    "Bertrand Bonello": {
+      "count": 2,
+      "name": "Bertrand Bonello"
+    },
     "Bertrand Tavernier": {
       "count": 13,
       "name": "Bertrand Tavernier"
@@ -539,10 +545,6 @@
       "count": 1,
       "name": "Bertrand Tavernier and Robert Parrish"
     },
-    "Bi Gan": {
-      "count": 1,
-      "name": "Bi Gan"
-    },
     "Bill Jones, Kim Leggatt, and Ben Timlett": {
       "count": 1,
       "name": "Bill Jones, Kim Leggatt, and Ben Timlett"
@@ -550,6 +552,10 @@
     "Bill Morrison": {
       "count": 1,
       "name": "Bill Morrison"
+    },
+    "Billy Wilder": {
+      "count": 3,
+      "name": "Billy Wilder"
     },
     "Billy Woodberry": {
       "count": 1,
@@ -566,6 +572,10 @@
     "Bo Widerberg": {
       "count": 4,
       "name": "Bo Widerberg"
+    },
+    "Bob Fosse": {
+      "count": 1,
+      "name": "Bob Fosse"
     },
     "Bob Hoskins": {
       "count": 1,
@@ -635,6 +645,10 @@
       "count": 1,
       "name": "Buichi Saito"
     },
+    "Béla Tarr and Ágnes Hranitzky": {
+      "count": 1,
+      "name": "Béla Tarr and Ágnes Hranitzky"
+    },
     "Cai Thomas": {
       "count": 1,
       "name": "Cai Thomas"
@@ -672,7 +686,7 @@
       "name": "Carlos Saura"
     },
     "Carol Reed": {
-      "count": 3,
+      "count": 2,
       "name": "Carol Reed"
     },
     "Carolina Cavalli": {
@@ -683,8 +697,12 @@
       "count": 8,
       "name": "Caroline Monnet"
     },
+    "Caroline Rowland": {
+      "count": 1,
+      "name": "Caroline Rowland"
+    },
     "Carroll Ballard": {
-      "count": 2,
+      "count": 1,
       "name": "Carroll Ballard"
     },
     "Cary Cronenwett": {
@@ -710,6 +728,10 @@
     "Cedric Cheung-Lau": {
       "count": 1,
       "name": "Cedric Cheung-Lau"
+    },
+    "Celeste Lapida": {
+      "count": 1,
+      "name": "Celeste Lapida"
     },
     "Chan Chi-hwa": {
       "count": 1,
@@ -811,10 +833,6 @@
       "count": 1,
       "name": "Christian-Jaque"
     },
-    "Christine Choy": {
-      "count": 1,
-      "name": "Christine Choy"
-    },
     "Christine Choy and Cynthia Maurizio": {
       "count": 1,
       "name": "Christine Choy and Cynthia Maurizio"
@@ -843,13 +861,13 @@
       "count": 5,
       "name": "Claire Denis"
     },
-    "Claire Parker and Alexandre Alexeieff": {
-      "count": 1,
-      "name": "Claire Parker and Alexandre Alexeieff"
-    },
     "Claire Simon": {
       "count": 1,
       "name": "Claire Simon"
+    },
+    "Clara Law": {
+      "count": 1,
+      "name": "Clara Law"
     },
     "Claude Autant-Lara": {
       "count": 4,
@@ -875,6 +893,10 @@
       "count": 1,
       "name": "Claude Lelouch and François Reichenbach"
     },
+    "Claude Nuridsany and Marie Pérennou": {
+      "count": 1,
+      "name": "Claude Nuridsany and Marie Pérennou"
+    },
     "Clu Gulager": {
       "count": 1,
       "name": "Clu Gulager"
@@ -891,10 +913,6 @@
       "count": 1,
       "name": "Compton Bennett"
     },
-    "Cornel Wilde": {
-      "count": 1,
-      "name": "Cornel Wilde"
-    },
     "Costa-Gavras": {
       "count": 2,
       "name": "Costa-Gavras"
@@ -908,7 +926,7 @@
       "name": "Curtis Hanson"
     },
     "Cy Endfield": {
-      "count": 1,
+      "count": 2,
       "name": "Cy Endfield"
     },
     "Cyril Schäublin": {
@@ -943,13 +961,13 @@
       "count": 1,
       "name": "Dania Bdeir"
     },
-    "Daniel Myrick": {
-      "count": 1,
-      "name": "Daniel Myrick"
-    },
     "Daniel Patrick Carbone": {
       "count": 1,
       "name": "Daniel Patrick Carbone"
+    },
+    "Daniel Petrie": {
+      "count": 1,
+      "name": "Daniel Petrie"
     },
     "Dario Argento": {
       "count": 1,
@@ -983,20 +1001,12 @@
       "count": 3,
       "name": "David Gordon Green"
     },
-    "David Hamilton": {
-      "count": 1,
-      "name": "David Hamilton"
-    },
-    "David Hogan": {
-      "count": 1,
-      "name": "David Hogan"
-    },
     "David Koff": {
       "count": 1,
       "name": "David Koff"
     },
     "David Lean": {
-      "count": 9,
+      "count": 10,
       "name": "David Lean"
     },
     "David Lean…": {
@@ -1007,12 +1017,8 @@
       "count": 1,
       "name": "David Leland"
     },
-    "David Lowell Rich": {
-      "count": 1,
-      "name": "David Lowell Rich"
-    },
     "David Lynch": {
-      "count": 19,
+      "count": 20,
       "name": "David Lynch"
     },
     "David Mamet": {
@@ -1038,6 +1044,10 @@
     "Dawid Bodzak": {
       "count": 1,
       "name": "Dawid Bodzak"
+    },
+    "Deann Borshay Liem": {
+      "count": 1,
+      "name": "Deann Borshay Liem"
     },
     "Deborah Stratman": {
       "count": 1,
@@ -1083,25 +1093,21 @@
       "count": 1,
       "name": "Djibril Diop Mambéty"
     },
+    "Doan Hoang": {
+      "count": 1,
+      "name": "Doan Hoang"
+    },
     "Don Josephus Raphael Eblahan": {
       "count": 1,
       "name": "Don Josephus Raphael Eblahan"
-    },
-    "Don Siegel": {
-      "count": 1,
-      "name": "Don Siegel"
     },
     "Donna Deitch": {
       "count": 1,
       "name": "Donna Deitch"
     },
-    "Dorothy Davenport": {
+    "Doug Liman": {
       "count": 1,
-      "name": "Dorothy Davenport"
-    },
-    "Douglas Sirk": {
-      "count": 1,
-      "name": "Douglas Sirk"
+      "name": "Doug Liman"
     },
     "Drummond Challis and Tony Maylam": {
       "count": 1,
@@ -1131,6 +1137,10 @@
       "count": 1,
       "name": "E. A. Dupont"
     },
+    "EJ Gagui": {
+      "count": 1,
+      "name": "EJ Gagui"
+    },
     "Eagle Pennell": {
       "count": 1,
       "name": "Eagle Pennell"
@@ -1156,7 +1166,7 @@
       "name": "Edward Bland"
     },
     "Edward Dmytryk": {
-      "count": 2,
+      "count": 1,
       "name": "Edward Dmytryk"
     },
     "Edward Yang": {
@@ -1183,9 +1193,17 @@
       "count": 4,
       "name": "Elem Klimov"
     },
+    "Elia Kazan": {
+      "count": 2,
+      "name": "Elia Kazan"
+    },
     "Ellen Kuras and Thavisouk Phrasavath": {
       "count": 1,
       "name": "Ellen Kuras and Thavisouk Phrasavath"
+    },
+    "Ellie Foumbi": {
+      "count": 1,
+      "name": "Ellie Foumbi"
     },
     "Elliott Hong": {
       "count": 1,
@@ -1203,6 +1221,10 @@
       "count": 1,
       "name": "Emily Packer and Lesley Steele"
     },
+    "Emma Wolukau-Wanambwa": {
+      "count": 1,
+      "name": "Emma Wolukau-Wanambwa"
+    },
     "Enzo G. Castellari": {
       "count": 3,
       "name": "Enzo G. Castellari"
@@ -1219,10 +1241,6 @@
       "count": 2,
       "name": "Erin Vassilopoulos"
     },
-    "Erle C. Kenton": {
-      "count": 1,
-      "name": "Erle C. Kenton"
-    },
     "Ermanno Olmi": {
       "count": 3,
       "name": "Ermanno Olmi"
@@ -1236,12 +1254,16 @@
       "name": "Ernest B. Schoedsack…"
     },
     "Ernst Lubitsch": {
-      "count": 2,
+      "count": 1,
       "name": "Ernst Lubitsch"
     },
     "Errol Morris": {
       "count": 4,
       "name": "Errol Morris"
+    },
+    "Esy Casey": {
+      "count": 1,
+      "name": "Esy Casey"
     },
     "Ettore Scola": {
       "count": 2,
@@ -1311,10 +1333,6 @@
       "count": 7,
       "name": "Francesco Rosi"
     },
-    "Francis Ford Coppola": {
-      "count": 1,
-      "name": "Francis Ford Coppola"
-    },
     "Franco Rosso": {
       "count": 1,
       "name": "Franco Rosso"
@@ -1323,17 +1341,13 @@
       "count": 1,
       "name": "Frank Borzage"
     },
-    "Frank Henenlotter": {
-      "count": 1,
-      "name": "Frank Henenlotter"
-    },
     "Frank Launder": {
       "count": 1,
       "name": "Frank Launder"
     },
-    "Frank Perry": {
+    "Frank Tashlin": {
       "count": 1,
-      "name": "Frank Perry"
+      "name": "Frank Tashlin"
     },
     "František Vláčil": {
       "count": 1,
@@ -1359,8 +1373,12 @@
       "count": 3,
       "name": "Fred Newmeyer and Sam Taylor"
     },
+    "Fred Zinnemann": {
+      "count": 1,
+      "name": "Fred Zinnemann"
+    },
     "Fritz Lang": {
-      "count": 3,
+      "count": 2,
       "name": "Fritz Lang"
     },
     "Fronza Woods": {
@@ -1383,6 +1401,10 @@
       "count": 2,
       "name": "Gabriel Pascal"
     },
+    "Gabriela Serrano": {
+      "count": 1,
+      "name": "Gabriela Serrano"
+    },
     "Gabrielle Selnet, Adam Sillard, and Chloé Farr": {
       "count": 1,
       "name": "Gabrielle Selnet, Adam Sillard, and Chloé Farr"
@@ -1403,9 +1425,17 @@
       "count": 1,
       "name": "George A. Romero and Dario Argento"
     },
-    "George Miller": {
+    "George Cukor": {
       "count": 1,
-      "name": "George Miller"
+      "name": "George Cukor"
+    },
+    "George Roy Hill": {
+      "count": 1,
+      "name": "George Roy Hill"
+    },
+    "George Sherman": {
+      "count": 1,
+      "name": "George Sherman"
     },
     "George Sikharulidze": {
       "count": 2,
@@ -1438,10 +1468,6 @@
     "Geri Ashur, Peter Barton, Marilyn Mulford, and Stephanie Pawleski": {
       "count": 1,
       "name": "Geri Ashur, Peter Barton, Marilyn Mulford, and Stephanie Pawleski"
-    },
-    "Germaine Dulac": {
-      "count": 2,
-      "name": "Germaine Dulac"
     },
     "Gessica Généus": {
       "count": 1,
@@ -1483,9 +1509,17 @@
       "count": 1,
       "name": "Giuseppe De Santis"
     },
+    "Glenn Barit": {
+      "count": 1,
+      "name": "Glenn Barit"
+    },
     "Goran Stolevski": {
       "count": 1,
       "name": "Goran Stolevski"
+    },
+    "Gordon Douglas": {
+      "count": 1,
+      "name": "Gordon Douglas"
     },
     "Grace Lee": {
       "count": 1,
@@ -1524,7 +1558,7 @@
       "name": "Guillermo del Toro"
     },
     "Gurinder Chadha": {
-      "count": 4,
+      "count": 3,
       "name": "Gurinder Chadha"
     },
     "Gus Van Sant": {
@@ -1544,7 +1578,7 @@
       "name": "Gustavo Milan"
     },
     "Guy Maddin": {
-      "count": 2,
+      "count": 1,
       "name": "Guy Maddin"
     },
     "Guy Ritchie": {
@@ -1562,6 +1596,10 @@
     "Hajime Sato": {
       "count": 1,
       "name": "Hajime Sato"
+    },
+    "Hal Ashby": {
+      "count": 1,
+      "name": "Hal Ashby"
     },
     "Hal Hartley": {
       "count": 15,
@@ -1623,10 +1661,6 @@
       "count": 3,
       "name": "Heinosuke Gosho"
     },
-    "Helen Lee": {
-      "count": 1,
-      "name": "Helen Lee"
-    },
     "Helena Wittmann": {
       "count": 1,
       "name": "Helena Wittmann"
@@ -1642,10 +1676,6 @@
     "Henry Cass": {
       "count": 1,
       "name": "Henry Cass"
-    },
-    "Henry King": {
-      "count": 1,
-      "name": "Henry King"
     },
     "Heribert Meisel": {
       "count": 1,
@@ -1703,10 +1733,6 @@
       "count": 1,
       "name": "Howard Brookner"
     },
-    "Howard Hawks": {
-      "count": 1,
-      "name": "Howard Hawks"
-    },
     "Hristo Simeonov": {
       "count": 1,
       "name": "Hristo Simeonov"
@@ -1715,17 +1741,25 @@
       "count": 1,
       "name": "Hu Bo"
     },
-    "Huang Ji": {
-      "count": 1,
-      "name": "Huang Ji"
-    },
     "Huang Ji and Ryuji Otsuka": {
-      "count": 2,
+      "count": 1,
       "name": "Huang Ji and Ryuji Otsuka"
+    },
+    "Hubert Cornfield": {
+      "count": 1,
+      "name": "Hubert Cornfield"
+    },
+    "Hugh Wilson": {
+      "count": 1,
+      "name": "Hugh Wilson"
     },
     "Hugo Covarrubias": {
       "count": 1,
       "name": "Hugo Covarrubias"
+    },
+    "Hugo Fregonese": {
+      "count": 1,
+      "name": "Hugo Fregonese"
     },
     "Humberto Solás": {
       "count": 1,
@@ -1779,6 +1813,10 @@
       "count": 1,
       "name": "Iryna Tsilyk"
     },
+    "Isaac Julien": {
+      "count": 1,
+      "name": "Isaac Julien"
+    },
     "Isabel Sandoval": {
       "count": 3,
       "name": "Isabel Sandoval"
@@ -1812,28 +1850,20 @@
       "name": "J. Farrell MacDonald and Harold Lloyd"
     },
     "J. Lee Thompson": {
-      "count": 1,
+      "count": 2,
       "name": "J. Lee Thompson"
     },
     "J. T. Takagi": {
       "count": 1,
       "name": "J. T. Takagi"
     },
-    "J. T. Takagi and Christine Choy": {
-      "count": 2,
-      "name": "J. T. Takagi and Christine Choy"
-    },
-    "Jack Arnold": {
+    "JT Trinidad": {
       "count": 1,
-      "name": "Jack Arnold"
+      "name": "JT Trinidad"
     },
     "Jack Clayton": {
       "count": 1,
       "name": "Jack Clayton"
-    },
-    "Jack Conway": {
-      "count": 1,
-      "name": "Jack Conway"
     },
     "Jack Woods": {
       "count": 1,
@@ -1883,10 +1913,6 @@
       "count": 1,
       "name": "Jacques Tati and Jacques Berr"
     },
-    "Jacques Tourneur": {
-      "count": 1,
-      "name": "Jacques Tourneur"
-    },
     "Jafar Panahi": {
       "count": 3,
       "name": "Jafar Panahi"
@@ -1895,17 +1921,17 @@
       "count": 1,
       "name": "Jake Meginsky"
     },
-    "James Bond III": {
-      "count": 1,
-      "name": "James Bond III"
-    },
     "James Gray": {
-      "count": 5,
+      "count": 3,
       "name": "James Gray"
     },
     "James Ivory": {
       "count": 2,
       "name": "James Ivory"
+    },
+    "James Mangold": {
+      "count": 1,
+      "name": "James Mangold"
     },
     "James P. Hogan": {
       "count": 5,
@@ -1931,6 +1957,10 @@
       "count": 6,
       "name": "Jane Campion"
     },
+    "Janice Tanaka": {
+      "count": 1,
+      "name": "Janice Tanaka"
+    },
     "Janicza Bravo": {
       "count": 3,
       "name": "Janicza Bravo"
@@ -1946,6 +1976,10 @@
     "Jasmin Tenucci": {
       "count": 1,
       "name": "Jasmin Tenucci"
+    },
+    "Jason DaSilva": {
+      "count": 1,
+      "name": "Jason DaSilva"
     },
     "Jayro Bustamante": {
       "count": 1,
@@ -1966,6 +2000,14 @@
     "Jean Delannoy": {
       "count": 1,
       "name": "Jean Delannoy"
+    },
+    "Jean Eustache": {
+      "count": 11,
+      "name": "Jean Eustache"
+    },
+    "Jean Eustache and Jean-Michel Barjol": {
+      "count": 1,
+      "name": "Jean Eustache and Jean-Michel Barjol"
     },
     "Jean Grémillon": {
       "count": 3,
@@ -2023,6 +2065,10 @@
       "count": 3,
       "name": "Jean-Pierre Gorin"
     },
+    "Jean-Pierre Jeunet": {
+      "count": 1,
+      "name": "Jean-Pierre Jeunet"
+    },
     "Jean-Pierre Limosin": {
       "count": 1,
       "name": "Jean-Pierre Limosin"
@@ -2071,6 +2117,10 @@
       "count": 4,
       "name": "Jessica Beshir"
     },
+    "Jet Leyco": {
+      "count": 1,
+      "name": "Jet Leyco"
+    },
     "Jia Zhangke": {
       "count": 4,
       "name": "Jia Zhangke"
@@ -2078,6 +2128,10 @@
     "Jill Sprecher": {
       "count": 1,
       "name": "Jill Sprecher"
+    },
+    "Jim Fall": {
+      "count": 1,
+      "name": "Jim Fall"
     },
     "Jim Jarmusch": {
       "count": 8,
@@ -2095,6 +2149,10 @@
       "count": 1,
       "name": "Jiří Menzel, Věra Chytilová, Jaromil Jireš, Jan Němec, and Evald Schorm"
     },
+    "Joachim Trier": {
+      "count": 1,
+      "name": "Joachim Trier"
+    },
     "Joana Pimenta and Adirley Queirós": {
       "count": 1,
       "name": "Joana Pimenta and Adirley Queirós"
@@ -2111,10 +2169,6 @@
       "count": 1,
       "name": "Joe Jay Jalbert and R. Douglas Copsey"
     },
-    "Joe Stankus and Ashley Connor": {
-      "count": 1,
-      "name": "Joe Stankus and Ashley Connor"
-    },
     "Joel Coen": {
       "count": 1,
       "name": "Joel Coen"
@@ -2127,29 +2181,45 @@
       "count": 1,
       "name": "John Akomfrah"
     },
+    "John Boorman": {
+      "count": 1,
+      "name": "John Boorman"
+    },
+    "John Cameron Mitchell": {
+      "count": 1,
+      "name": "John Cameron Mitchell"
+    },
+    "John Carluccio": {
+      "count": 1,
+      "name": "John Carluccio"
+    },
     "John Carpenter": {
       "count": 2,
       "name": "John Carpenter"
     },
     "John Cassavetes": {
-      "count": 7,
+      "count": 6,
       "name": "John Cassavetes"
     },
     "John Coney": {
       "count": 1,
       "name": "John Coney"
     },
+    "John Cromwell": {
+      "count": 1,
+      "name": "John Cromwell"
+    },
     "John Elias Michalakis": {
       "count": 1,
       "name": "John Elias Michalakis"
     },
     "John Ford": {
-      "count": 4,
+      "count": 3,
       "name": "John Ford"
     },
-    "John Gilling": {
-      "count": 1,
-      "name": "John Gilling"
+    "John Frankenheimer": {
+      "count": 2,
+      "name": "John Frankenheimer"
     },
     "John Hubley": {
       "count": 9,
@@ -2179,9 +2249,9 @@
       "count": 1,
       "name": "John Palmer and David Weisman"
     },
-    "John Sturges": {
+    "John Schlesinger": {
       "count": 1,
-      "name": "John Sturges"
+      "name": "John Schlesinger"
     },
     "John Waters": {
       "count": 1,
@@ -2219,10 +2289,6 @@
       "count": 1,
       "name": "Jonathan Demme"
     },
-    "Jonathan Glazer": {
-      "count": 3,
-      "name": "Jonathan Glazer"
-    },
     "Jonathan Wacks": {
       "count": 1,
       "name": "Jonathan Wacks"
@@ -2252,7 +2318,7 @@
       "name": "Joseph Krumgold"
     },
     "Joseph L. Mankiewicz": {
-      "count": 2,
+      "count": 3,
       "name": "Joseph L. Mankiewicz"
     },
     "Joseph Losey": {
@@ -2263,13 +2329,13 @@
       "count": 3,
       "name": "Joseph Pierce"
     },
-    "Josephine Decker": {
-      "count": 4,
-      "name": "Josephine Decker"
-    },
     "Josh Safdie and Benny Safdie": {
       "count": 5,
       "name": "Josh Safdie and Benny Safdie"
+    },
+    "Joshua Logan": {
+      "count": 1,
+      "name": "Joshua Logan"
     },
     "Joyce Chopra": {
       "count": 6,
@@ -2304,7 +2370,7 @@
       "name": "Juleen Compton"
     },
     "Jules Dassin": {
-      "count": 2,
+      "count": 4,
       "name": "Jules Dassin"
     },
     "Julia Reichert and Jim Klein": {
@@ -2322,6 +2388,10 @@
     "Julien Duvivier": {
       "count": 8,
       "name": "Julien Duvivier"
+    },
+    "Julien Faraut": {
+      "count": 1,
+      "name": "Julien Faraut"
     },
     "Juliet Bashore": {
       "count": 1,
@@ -2427,20 +2497,12 @@
       "count": 43,
       "name": "Keisuke Kinoshita"
     },
-    "Keith Gordon": {
-      "count": 1,
-      "name": "Keith Gordon"
-    },
     "Kelly Reichardt": {
       "count": 4,
       "name": "Kelly Reichardt"
     },
-    "Ken Jacobs": {
-      "count": 2,
-      "name": "Ken Jacobs"
-    },
     "Ken Russell": {
-      "count": 10,
+      "count": 6,
       "name": "Ken Russell"
     },
     "Kenji Misumi": {
@@ -2504,7 +2566,7 @@
       "name": "Kim Takal"
     },
     "Kimi Takesue": {
-      "count": 1,
+      "count": 2,
       "name": "Kimi Takesue"
     },
     "Kimiyoshi Yasuda": {
@@ -2514,10 +2576,6 @@
     "King Hu": {
       "count": 2,
       "name": "King Hu"
-    },
-    "King Vidor": {
-      "count": 1,
-      "name": "King Vidor"
     },
     "Kinji Fukasaku": {
       "count": 1,
@@ -2571,10 +2629,6 @@
       "count": 1,
       "name": "LYZZA and Enantios Dromos"
     },
-    "Laida Lertxundi": {
-      "count": 1,
-      "name": "Laida Lertxundi"
-    },
     "Lam Nai-choi": {
       "count": 2,
       "name": "Lam Nai-choi"
@@ -2627,6 +2681,10 @@
       "count": 2,
       "name": "Lawrence Huntington"
     },
+    "Lawrence Lek": {
+      "count": 1,
+      "name": "Lawrence Lek"
+    },
     "Leah Shore": {
       "count": 6,
       "name": "Leah Shore"
@@ -2652,7 +2710,7 @@
       "name": "Lemohang Jeremiah Mosese"
     },
     "Leni Riefenstahl": {
-      "count": 3,
+      "count": 2,
       "name": "Leni Riefenstahl"
     },
     "Leo Hurwitz": {
@@ -2699,6 +2757,10 @@
       "count": 1,
       "name": "Liane Brandon"
     },
+    "Lila Avilés": {
+      "count": 1,
+      "name": "Lila Avilés"
+    },
     "Liliana Cavani": {
       "count": 2,
       "name": "Liliana Cavani"
@@ -2715,10 +2777,6 @@
       "count": 1,
       "name": "Lina Rodriguez and Jorge Lozano"
     },
-    "Lina Wertmüller": {
-      "count": 1,
-      "name": "Lina Wertmüller"
-    },
     "Lindsay Anderson": {
       "count": 1,
       "name": "Lindsay Anderson"
@@ -2728,7 +2786,7 @@
       "name": "Lino Brocka"
     },
     "Lionel Rogosin": {
-      "count": 1,
+      "count": 2,
       "name": "Lionel Rogosin"
     },
     "Lisa Krueger": {
@@ -2736,7 +2794,7 @@
       "name": "Lisa Krueger"
     },
     "Lizzie Borden": {
-      "count": 1,
+      "count": 3,
       "name": "Lizzie Borden"
     },
     "Lizzie Gottlieb": {
@@ -2756,16 +2814,16 @@
       "name": "Lodge Kerrigan"
     },
     "Lois Weber": {
-      "count": 2,
+      "count": 1,
       "name": "Lois Weber"
     },
-    "Lois Weber and Allen G. Siegler": {
-      "count": 1,
-      "name": "Lois Weber and Allen G. Siegler"
-    },
     "Lois Weber and Phillips Smalley": {
-      "count": 2,
+      "count": 1,
       "name": "Lois Weber and Phillips Smalley"
+    },
+    "Lone Scherfig": {
+      "count": 1,
+      "name": "Lone Scherfig"
     },
     "Lori Felker": {
       "count": 2,
@@ -2776,7 +2834,7 @@
       "name": "Lothar Mendes and Alexander Korda"
     },
     "Lotte Reiniger": {
-      "count": 13,
+      "count": 10,
       "name": "Lotte Reiniger"
     },
     "Lou Ye": {
@@ -2808,7 +2866,7 @@
       "name": "Luc Dardenne and Jean-Pierre Dardenne"
     },
     "Luchino Visconti": {
-      "count": 3,
+      "count": 4,
       "name": "Luchino Visconti"
     },
     "Luciano Emmer": {
@@ -2855,10 +2913,6 @@
       "count": 1,
       "name": "Luther Clement and Shuhan Fan"
     },
-    "Lynne Littman": {
-      "count": 1,
-      "name": "Lynne Littman"
-    },
     "Lynne Ramsay": {
       "count": 5,
       "name": "Lynne Ramsay"
@@ -2883,13 +2937,13 @@
       "count": 1,
       "name": "Lütfi Ö. Akad"
     },
-    "Mabel Normand": {
+    "Mabel Cheung": {
       "count": 1,
-      "name": "Mabel Normand"
+      "name": "Mabel Cheung"
     },
-    "Madeline Brandeis": {
+    "Mahamat-Saleh Haroun": {
       "count": 1,
-      "name": "Madeline Brandeis"
+      "name": "Mahamat-Saleh Haroun"
     },
     "Mahdi Fleifel": {
       "count": 1,
@@ -2900,12 +2954,16 @@
       "name": "Mai Zetterling"
     },
     "Makoto Shinkai": {
-      "count": 2,
+      "count": 8,
       "name": "Makoto Shinkai"
     },
     "Malcolm Mowbray": {
       "count": 1,
       "name": "Malcolm Mowbray"
+    },
+    "Manfred Blank and Wolf-Eckart Bühler": {
+      "count": 1,
+      "name": "Manfred Blank and Wolf-Eckart Bühler"
     },
     "Manoel de Oliveira": {
       "count": 1,
@@ -2947,6 +3005,10 @@
       "count": 1,
       "name": "Margaret Tait"
     },
+    "Margarethe von Trotta": {
+      "count": 1,
+      "name": "Margarethe von Trotta"
+    },
     "Margot Benacerraf": {
       "count": 1,
       "name": "Margot Benacerraf"
@@ -2958,6 +3020,10 @@
     "Maria Brendle": {
       "count": 1,
       "name": "Maria Brendle"
+    },
+    "Maria Estela Paiso": {
+      "count": 1,
+      "name": "Maria Estela Paiso"
     },
     "Mariama Diallo": {
       "count": 1,
@@ -2974,10 +3040,6 @@
     "Marie-Elsa Sgualdo": {
       "count": 1,
       "name": "Marie-Elsa Sgualdo"
-    },
-    "Marie-Louise Iribe": {
-      "count": 1,
-      "name": "Marie-Louise Iribe"
     },
     "Marin Håskjold": {
       "count": 2,
@@ -3032,7 +3094,7 @@
       "name": "Martin Rosen"
     },
     "Martin Scorsese": {
-      "count": 6,
+      "count": 7,
       "name": "Martin Scorsese"
     },
     "Martina Attille": {
@@ -3046,14 +3108,6 @@
     "Mary Bronstein": {
       "count": 1,
       "name": "Mary Bronstein"
-    },
-    "Mary Ellen Bute": {
-      "count": 1,
-      "name": "Mary Ellen Bute"
-    },
-    "Mary Ellen Bute, Norman McLaren, and Ted Nemeth": {
-      "count": 1,
-      "name": "Mary Ellen Bute, Norman McLaren, and Ted Nemeth"
     },
     "Maryam Touzani": {
       "count": 1,
@@ -3084,7 +3138,7 @@
       "name": "Mati Diop and Manon Lutanie"
     },
     "Matt Wolf": {
-      "count": 7,
+      "count": 3,
       "name": "Matt Wolf"
     },
     "Matthew Puccini": {
@@ -3092,7 +3146,7 @@
       "name": "Matthew Puccini"
     },
     "Matthew Rankin": {
-      "count": 2,
+      "count": 1,
       "name": "Matthew Rankin"
     },
     "Maureen Blackwood": {
@@ -3131,10 +3185,6 @@
       "count": 1,
       "name": "Maxime Jean-Baptiste"
     },
-    "Maya Deren and Alexander Hammid": {
-      "count": 1,
-      "name": "Maya Deren and Alexander Hammid"
-    },
     "Med Hondo": {
       "count": 1,
       "name": "Med Hondo"
@@ -3151,6 +3201,10 @@
       "count": 1,
       "name": "Merian C. Cooper and Ernest B. Schoedsack"
     },
+    "Meriem Bennani": {
+      "count": 1,
+      "name": "Meriem Bennani"
+    },
     "Metin Erksan": {
       "count": 1,
       "name": "Metin Erksan"
@@ -3164,7 +3218,7 @@
       "name": "Micaela Durand and Daniel Chew"
     },
     "Michael Almereyda": {
-      "count": 3,
+      "count": 1,
       "name": "Michael Almereyda"
     },
     "Michael Blakemore": {
@@ -3175,29 +3229,33 @@
       "count": 1,
       "name": "Michael Cimino"
     },
+    "Michael Curtiz": {
+      "count": 1,
+      "name": "Michael Curtiz"
+    },
     "Michael Fiore and Erik Sharkey": {
       "count": 1,
       "name": "Michael Fiore and Erik Sharkey"
     },
-    "Michael Gordon": {
-      "count": 1,
-      "name": "Michael Gordon"
-    },
     "Michael Haneke": {
       "count": 7,
       "name": "Michael Haneke"
+    },
+    "Michael Mann": {
+      "count": 3,
+      "name": "Michael Mann"
     },
     "Michael Powell": {
       "count": 3,
       "name": "Michael Powell"
     },
     "Michael Powell and Emeric Pressburger": {
-      "count": 8,
+      "count": 7,
       "name": "Michael Powell and Emeric Pressburger"
     },
-    "Michael Winterbottom": {
-      "count": 2,
-      "name": "Michael Winterbottom"
+    "Michael Roemer": {
+      "count": 3,
+      "name": "Michael Roemer"
     },
     "Michel Boisrond": {
       "count": 1,
@@ -3211,10 +3269,6 @@
       "count": 1,
       "name": "Michelle Parkerson"
     },
-    "Mick Garris": {
-      "count": 1,
-      "name": "Mick Garris"
-    },
     "Mick Jackson": {
       "count": 1,
       "name": "Mick Jackson"
@@ -3224,7 +3278,7 @@
       "name": "Mike Leigh"
     },
     "Mike Nichols": {
-      "count": 1,
+      "count": 3,
       "name": "Mike Nichols"
     },
     "Mikhail Kalatozov": {
@@ -3244,7 +3298,7 @@
       "name": "Mikko Niskanen"
     },
     "Miko Revereza": {
-      "count": 2,
+      "count": 3,
       "name": "Miko Revereza"
     },
     "Milcho Manchevski": {
@@ -3280,7 +3334,7 @@
       "name": "Mirra Bank"
     },
     "Miryam Charles": {
-      "count": 1,
+      "count": 2,
       "name": "Miryam Charles"
     },
     "Mohammadreza Mayghani": {
@@ -3335,14 +3389,6 @@
       "count": 18,
       "name": "Nagisa Oshima"
     },
-    "Naima Ramos-Chapman": {
-      "count": 1,
-      "name": "Naima Ramos-Chapman"
-    },
-    "Naomi Kawase": {
-      "count": 1,
-      "name": "Naomi Kawase"
-    },
     "Nathalie Álvarez Mesén": {
       "count": 1,
       "name": "Nathalie Álvarez Mesén"
@@ -3363,10 +3409,6 @@
       "count": 1,
       "name": "Neil Jordan"
     },
-    "Neil LaBute": {
-      "count": 1,
-      "name": "Neil LaBute"
-    },
     "Ngozi Onwurah": {
       "count": 1,
       "name": "Ngozi Onwurah"
@@ -3374,6 +3416,10 @@
     "Nguyen Tan Hoang": {
       "count": 1,
       "name": "Nguyen Tan Hoang"
+    },
+    "Nicholas Ray": {
+      "count": 2,
+      "name": "Nicholas Ray"
     },
     "Nick Canfield": {
       "count": 1,
@@ -3388,7 +3434,7 @@
       "name": "Nicolas Ribowski"
     },
     "Nicolas Roeg": {
-      "count": 5,
+      "count": 6,
       "name": "Nicolas Roeg"
     },
     "Nicole Amani Magabo Kiggundu": {
@@ -3424,20 +3470,20 @@
       "name": "Noah Baumbach"
     },
     "Nobuhiko Obayashi": {
-      "count": 3,
+      "count": 6,
       "name": "Nobuhiko Obayashi"
     },
     "Nobuo Nakagawa": {
       "count": 2,
       "name": "Nobuo Nakagawa"
     },
+    "Noel Black": {
+      "count": 1,
+      "name": "Noel Black"
+    },
     "Norbert A. Myles": {
       "count": 1,
       "name": "Norbert A. Myles"
-    },
-    "Norman Foster": {
-      "count": 1,
-      "name": "Norman Foster"
     },
     "Norman Lee": {
       "count": 1,
@@ -3447,16 +3493,12 @@
       "count": 3,
       "name": "Norman Mailer"
     },
-    "Olga Preobrazhenskaya and Ivan Pravov": {
-      "count": 1,
-      "name": "Olga Preobrazhenskaya and Ivan Pravov"
-    },
     "Olive Nwosu": {
       "count": 2,
       "name": "Olive Nwosu"
     },
     "Olivier Assayas": {
-      "count": 5,
+      "count": 6,
       "name": "Olivier Assayas"
     },
     "Ornella Pacchioni": {
@@ -3470,6 +3512,10 @@
     "Otakar Vávra": {
       "count": 1,
       "name": "Otakar Vávra"
+    },
+    "Otto Preminger": {
+      "count": 2,
+      "name": "Otto Preminger"
     },
     "Ousmane Sembène": {
       "count": 8,
@@ -3499,6 +3545,10 @@
       "count": 1,
       "name": "Patty Chang"
     },
+    "Paul B. Preciado": {
+      "count": 1,
+      "name": "Paul B. Preciado"
+    },
     "Paul Bartel": {
       "count": 1,
       "name": "Paul Bartel"
@@ -3506,10 +3556,6 @@
     "Paul Czinner": {
       "count": 1,
       "name": "Paul Czinner"
-    },
-    "Paul Joyce": {
-      "count": 1,
-      "name": "Paul Joyce"
     },
     "Paul Lynch": {
       "count": 1,
@@ -3523,9 +3569,17 @@
       "count": 2,
       "name": "Paul Schrader"
     },
+    "Paul Shemisi, Nizar Saleh, Rob Jacobs, and Anne Reijniers": {
+      "count": 1,
+      "name": "Paul Shemisi, Nizar Saleh, Rob Jacobs, and Anne Reijniers"
+    },
     "Paul Thomas Anderson": {
       "count": 1,
       "name": "Paul Thomas Anderson"
+    },
+    "Paul Vecchiali": {
+      "count": 1,
+      "name": "Paul Vecchiali"
     },
     "Paul Verhoeven": {
       "count": 1,
@@ -3567,6 +3621,10 @@
       "count": 1,
       "name": "Peter Adair and Rob Epstein"
     },
+    "Peter Bogdanovich": {
+      "count": 1,
+      "name": "Peter Bogdanovich"
+    },
     "Peter Brook": {
       "count": 1,
       "name": "Peter Brook"
@@ -3578,6 +3636,10 @@
     "Peter Glushanok": {
       "count": 2,
       "name": "Peter Glushanok"
+    },
+    "Peter Ho-sun Chan": {
+      "count": 1,
+      "name": "Peter Ho-sun Chan"
     },
     "Peter Medak": {
       "count": 1,
@@ -3598,6 +3660,10 @@
     "Phil Collins": {
       "count": 1,
       "name": "Phil Collins"
+    },
+    "Phil King": {
+      "count": 1,
+      "name": "Phil King"
     },
     "Philip Goodhew": {
       "count": 1,
@@ -3683,10 +3749,6 @@
       "count": 2,
       "name": "Raven Jackson"
     },
-    "Ray Milland": {
-      "count": 1,
-      "name": "Ray Milland"
-    },
     "Raymond Bernard": {
       "count": 5,
       "name": "Raymond Bernard"
@@ -3711,6 +3773,10 @@
       "count": 1,
       "name": "Rene Daalder"
     },
+    "Renee Tajima-Peña": {
+      "count": 1,
+      "name": "Renee Tajima-Peña"
+    },
     "René Clair": {
       "count": 7,
       "name": "René Clair"
@@ -3731,6 +3797,10 @@
       "count": 2,
       "name": "Rhea Storr"
     },
+    "Richard Brooks": {
+      "count": 1,
+      "name": "Richard Brooks"
+    },
     "Richard Fung": {
       "count": 1,
       "name": "Richard Fung"
@@ -3744,20 +3814,16 @@
       "name": "Richard Leacock and Noel E. Parmentel Jr."
     },
     "Richard Lester": {
-      "count": 3,
+      "count": 2,
       "name": "Richard Lester"
     },
     "Richard Linklater": {
-      "count": 3,
+      "count": 5,
       "name": "Richard Linklater"
     },
     "Richard Peete and Robert Yapkowitz": {
       "count": 1,
       "name": "Richard Peete and Robert Yapkowitz"
-    },
-    "Richard Quine": {
-      "count": 1,
-      "name": "Richard Quine"
     },
     "Richard Sylvarnes": {
       "count": 1,
@@ -3768,7 +3834,7 @@
       "name": "Ricky Lau"
     },
     "Rithy Panh": {
-      "count": 3,
+      "count": 1,
       "name": "Rithy Panh"
     },
     "Ritwik Ghatak": {
@@ -3779,8 +3845,12 @@
       "count": 3,
       "name": "Rob Epstein and Jeffrey Friedman"
     },
+    "Robert Aldrich": {
+      "count": 1,
+      "name": "Robert Aldrich"
+    },
     "Robert Altman": {
-      "count": 14,
+      "count": 13,
       "name": "Robert Altman"
     },
     "Robert Bresson": {
@@ -3815,10 +3885,6 @@
       "count": 1,
       "name": "Robert Greene"
     },
-    "Robert Greenwald": {
-      "count": 1,
-      "name": "Robert Greenwald"
-    },
     "Robert J. Flaherty": {
       "count": 1,
       "name": "Robert J. Flaherty"
@@ -3827,8 +3893,12 @@
       "count": 1,
       "name": "Robert M. Young"
     },
+    "Robert Rossen": {
+      "count": 1,
+      "name": "Robert Rossen"
+    },
     "Robert Siodmak": {
-      "count": 2,
+      "count": 1,
       "name": "Robert Siodmak"
     },
     "Robert Siodmak and Edgar G. Ulmer": {
@@ -3838,10 +3908,6 @@
     "Robert Stevenson": {
       "count": 1,
       "name": "Robert Stevenson"
-    },
-    "Robert Wise": {
-      "count": 1,
-      "name": "Robert Wise"
     },
     "Roberta Cantow": {
       "count": 1,
@@ -3855,6 +3921,10 @@
       "count": 20,
       "name": "Roberto Rossellini"
     },
+    "Roddy Bogawa": {
+      "count": 1,
+      "name": "Roddy Bogawa"
+    },
     "Rodney Llaverías": {
       "count": 1,
       "name": "Rodney Llaverías"
@@ -3866,10 +3936,6 @@
     "Rodrigo Ribeiro-Andrade": {
       "count": 1,
       "name": "Rodrigo Ribeiro-Andrade"
-    },
-    "Roger Donaldson": {
-      "count": 1,
-      "name": "Roger Donaldson"
     },
     "Roger Vadim": {
       "count": 4,
@@ -3888,8 +3954,12 @@
       "name": "Ronald Bronstein"
     },
     "Ronald Neame": {
-      "count": 4,
+      "count": 5,
       "name": "Ronald Neame"
+    },
+    "Rosine Mbakam": {
+      "count": 3,
+      "name": "Rosine Mbakam"
     },
     "Ross Lipman": {
       "count": 1,
@@ -3915,13 +3985,13 @@
       "count": 1,
       "name": "Ryan Clancy"
     },
+    "Ryan Daly and Will Oldham": {
+      "count": 1,
+      "name": "Ryan Daly and Will Oldham"
+    },
     "Ryan McKenna": {
       "count": 1,
       "name": "Ryan McKenna"
-    },
-    "Ryusuke Hamaguchi": {
-      "count": 3,
-      "name": "Ryusuke Hamaguchi"
     },
     "Réka Bucsi": {
       "count": 1,
@@ -3959,6 +4029,10 @@
       "count": 1,
       "name": "Samantha Fuller"
     },
+    "Samantha Futerman and Ryan Miyamoto": {
+      "count": 1,
+      "name": "Samantha Futerman and Ryan Miyamoto"
+    },
     "Samantha Nell and Michael Wahrmann": {
       "count": 1,
       "name": "Samantha Nell and Michael Wahrmann"
@@ -3987,6 +4061,10 @@
       "count": 1,
       "name": "Sandhya Suri"
     },
+    "Sara Driver": {
+      "count": 4,
+      "name": "Sara Driver"
+    },
     "Sarah Maldoror": {
       "count": 1,
       "name": "Sarah Maldoror"
@@ -4006,6 +4084,10 @@
     "Satyajit Ray": {
       "count": 16,
       "name": "Satyajit Ray"
+    },
+    "Saul Bass": {
+      "count": 1,
+      "name": "Saul Bass"
     },
     "Saul J. Turell": {
       "count": 2,
@@ -4055,6 +4137,10 @@
       "count": 1,
       "name": "Sergei Parajanov"
     },
+    "Sergio Leone": {
+      "count": 1,
+      "name": "Sergio Leone"
+    },
     "Serhat Karaaslan": {
       "count": 1,
       "name": "Serhat Karaaslan"
@@ -4075,6 +4161,10 @@
       "count": 1,
       "name": "Shauna McGarry"
     },
+    "Shievar Olegario": {
+      "count": 1,
+      "name": "Shievar Olegario"
+    },
     "Shikeith": {
       "count": 2,
       "name": "Shikeith"
@@ -4084,7 +4174,7 @@
       "name": "Shintaro Katsu"
     },
     "Shirley Clarke": {
-      "count": 18,
+      "count": 19,
       "name": "Shirley Clarke"
     },
     "Shirley Clarke and D. A. Pennebaker": {
@@ -4098,6 +4188,10 @@
     "Shirley Clarke and Willard Van Dyke": {
       "count": 1,
       "name": "Shirley Clarke and Willard Van Dyke"
+    },
+    "Shirley MacLaine and Claudia Weill": {
+      "count": 1,
+      "name": "Shirley MacLaine and Claudia Weill"
     },
     "Shirô Toyoda": {
       "count": 2,
@@ -4135,6 +4229,10 @@
       "count": 2,
       "name": "Sofia Coppola"
     },
+    "Sofia Theodore-Pierce": {
+      "count": 1,
+      "name": "Sofia Theodore-Pierce"
+    },
     "Sophie E. Constantinou": {
       "count": 1,
       "name": "Sophie E. Constantinou"
@@ -4159,16 +4257,24 @@
       "count": 1,
       "name": "Spencer G. Bennet"
     },
+    "Spencer Nakasako and Sokly Ny": {
+      "count": 1,
+      "name": "Spencer Nakasako and Sokly Ny"
+    },
+    "Spike Jonze": {
+      "count": 1,
+      "name": "Spike Jonze"
+    },
+    "Spike Lee": {
+      "count": 1,
+      "name": "Spike Lee"
+    },
     "Stan Lathan": {
       "count": 1,
       "name": "Stan Lathan"
     },
-    "Stanley Kubrick": {
-      "count": 1,
-      "name": "Stanley Kubrick"
-    },
     "Stanley Kwan": {
-      "count": 3,
+      "count": 4,
       "name": "Stanley Kwan"
     },
     "Stephanie Saint Sanchez": {
@@ -4178,6 +4284,10 @@
     "Stephen Frears": {
       "count": 1,
       "name": "Stephen Frears"
+    },
+    "Stephen Lopez": {
+      "count": 1,
+      "name": "Stephen Lopez"
     },
     "Steve James": {
       "count": 1,
@@ -4234,6 +4344,10 @@
     "Sérgio Toledo": {
       "count": 1,
       "name": "Sérgio Toledo"
+    },
+    "Søren Lind and Larissa Sansour": {
+      "count": 1,
+      "name": "Søren Lind and Larissa Sansour"
     },
     "Tadashi Imai": {
       "count": 1,
@@ -4299,6 +4413,10 @@
       "count": 2,
       "name": "Terry Gilliam"
     },
+    "Terry Zwigoff": {
+      "count": 1,
+      "name": "Terry Zwigoff"
+    },
     "Theo Hörmann": {
       "count": 1,
       "name": "Theo Hörmann"
@@ -4307,12 +4425,8 @@
       "count": 1,
       "name": "Theodoros Bafaloukos"
     },
-    "Thom Eberhardt": {
-      "count": 1,
-      "name": "Thom Eberhardt"
-    },
     "Thomas Vinterberg": {
-      "count": 4,
+      "count": 3,
       "name": "Thomas Vinterberg"
     },
     "Thornton Freeland and William K. Howard": {
@@ -4330,6 +4444,10 @@
     "Tim Whelan and Arthur B. Woods": {
       "count": 1,
       "name": "Tim Whelan and Arthur B. Woods"
+    },
+    "Timothy Carey": {
+      "count": 1,
+      "name": "Timothy Carey"
     },
     "Tiona Nekkia McClodden": {
       "count": 1,
@@ -4358,10 +4476,6 @@
     "Tokuzo Tanaka": {
       "count": 3,
       "name": "Tokuzo Tanaka"
-    },
-    "Tom Green": {
-      "count": 1,
-      "name": "Tom Green"
     },
     "Tom Surgal": {
       "count": 1,
@@ -4411,6 +4525,10 @@
       "count": 1,
       "name": "Trevor Tweeten"
     },
+    "Trishtan Perez": {
+      "count": 1,
+      "name": "Trishtan Perez"
+    },
     "Tsai Ming-liang": {
       "count": 1,
       "name": "Tsai Ming-liang"
@@ -4451,6 +4569,10 @@
       "count": 1,
       "name": "Usmar Ismail"
     },
+    "Vahn Leinard Pascual": {
+      "count": 1,
+      "name": "Vahn Leinard Pascual"
+    },
     "Val Guest": {
       "count": 1,
       "name": "Val Guest"
@@ -4487,9 +4609,9 @@
       "count": 3,
       "name": "Vilgot Sjöman"
     },
-    "Vincente Minnelli": {
+    "Vincent Sherman": {
       "count": 1,
-      "name": "Vincente Minnelli"
+      "name": "Vincent Sherman"
     },
     "Visra Vichit-Vadakan": {
       "count": 1,
@@ -4539,6 +4661,10 @@
       "count": 9,
       "name": "Věra Chytilová"
     },
+    "Walter Lang": {
+      "count": 1,
+      "name": "Walter Lang"
+    },
     "Walter Reisch": {
       "count": 1,
       "name": "Walter Reisch"
@@ -4583,6 +4709,10 @@
       "count": 1,
       "name": "Wes Hurley and Nathan M. Miller"
     },
+    "Whammy Alcazaren": {
+      "count": 1,
+      "name": "Whammy Alcazaren"
+    },
     "Whit Stillman": {
       "count": 1,
       "name": "Whit Stillman"
@@ -4595,16 +4725,16 @@
       "count": 1,
       "name": "William Cameron Menzies"
     },
-    "William Castle": {
+    "William Conrad": {
       "count": 1,
-      "name": "William Castle"
+      "name": "William Conrad"
     },
     "William Dieterle": {
       "count": 1,
       "name": "William Dieterle"
     },
     "William Friedkin": {
-      "count": 1,
+      "count": 4,
       "name": "William Friedkin"
     },
     "William Greaves": {
@@ -4619,12 +4749,16 @@
       "count": 3,
       "name": "William Klein"
     },
+    "William Wyler": {
+      "count": 1,
+      "name": "William Wyler"
+    },
     "Wim Wenders": {
-      "count": 11,
+      "count": 12,
       "name": "Wim Wenders"
     },
     "Wong Kar Wai": {
-      "count": 9,
+      "count": 8,
       "name": "Wong Kar Wai"
     },
     "Ximena Cuevas": {
@@ -4716,125 +4850,122 @@
     "0": 1,
     "1899": 1,
     "1900": 1,
-    "1902": 2,
+    "1902": 1,
     "1903": 3,
     "1904": 1,
     "1905": 1,
-    "1906": 4,
-    "1907": 1,
+    "1906": 3,
     "1909": 1,
     "1910": 1,
-    "1912": 3,
-    "1913": 1,
-    "1914": 1,
     "1915": 1,
-    "1916": 4,
+    "1916": 3,
     "1917": 7,
-    "1918": 8,
-    "1919": 13,
+    "1918": 7,
+    "1919": 12,
     "1920": 7,
-    "1921": 6,
+    "1921": 5,
     "1922": 7,
-    "1923": 12,
+    "1923": 11,
     "1924": 6,
     "1925": 8,
     "1926": 3,
-    "1927": 8,
+    "1927": 7,
     "1928": 8,
     "1929": 7,
     "1930": 12,
-    "1931": 19,
+    "1931": 17,
     "1932": 11,
-    "1933": 13,
-    "1934": 21,
-    "1935": 13,
+    "1933": 12,
+    "1934": 19,
+    "1935": 11,
     "1936": 24,
-    "1937": 22,
+    "1937": 21,
     "1938": 18,
     "1939": 15,
-    "1940": 7,
-    "1941": 11,
-    "1942": 12,
-    "1943": 13,
-    "1944": 12,
-    "1945": 16,
-    "1946": 20,
-    "1947": 18,
-    "1948": 23,
-    "1949": 20,
-    "1950": 20,
-    "1951": 22,
-    "1952": 26,
-    "1953": 25,
-    "1954": 30,
-    "1955": 43,
+    "1940": 6,
+    "1941": 10,
+    "1942": 11,
+    "1943": 11,
+    "1944": 10,
+    "1945": 15,
+    "1946": 16,
+    "1947": 15,
+    "1948": 21,
+    "1949": 18,
+    "1950": 37,
+    "1951": 20,
+    "1952": 25,
+    "1953": 23,
+    "1954": 31,
+    "1955": 46,
     "1956": 34,
     "1957": 28,
     "1958": 46,
-    "1959": 41,
-    "1960": 48,
-    "1961": 39,
-    "1962": 57,
-    "1963": 47,
-    "1964": 51,
-    "1965": 39,
-    "1966": 55,
-    "1967": 43,
-    "1968": 50,
+    "1959": 43,
+    "1960": 50,
+    "1961": 40,
+    "1962": 59,
+    "1963": 49,
+    "1964": 52,
+    "1965": 40,
+    "1966": 60,
+    "1967": 46,
+    "1968": 52,
     "1969": 49,
     "1970": 38,
     "1971": 28,
-    "1972": 46,
-    "1973": 42,
-    "1974": 43,
+    "1972": 45,
+    "1973": 44,
+    "1974": 45,
     "1975": 32,
-    "1976": 29,
-    "1977": 30,
+    "1976": 31,
+    "1977": 32,
     "1978": 30,
-    "1979": 38,
-    "1980": 54,
-    "1981": 30,
-    "1982": 36,
-    "1983": 36,
-    "1984": 37,
-    "1985": 24,
-    "1986": 36,
+    "1979": 41,
+    "1980": 53,
+    "1981": 32,
+    "1982": 35,
+    "1983": 37,
+    "1984": 36,
+    "1985": 26,
+    "1986": 38,
     "1987": 38,
-    "1988": 42,
-    "1989": 21,
-    "1990": 34,
-    "1991": 32,
-    "1992": 37,
-    "1993": 27,
-    "1994": 31,
-    "1995": 25,
-    "1996": 20,
-    "1997": 28,
+    "1988": 44,
+    "1989": 22,
+    "1990": 33,
+    "1991": 30,
+    "1992": 40,
+    "1993": 29,
+    "1994": 33,
+    "1995": 30,
+    "1996": 21,
+    "1997": 30,
     "1998": 19,
-    "1999": 22,
-    "2000": 23,
-    "2001": 18,
+    "1999": 30,
+    "2000": 22,
+    "2001": 17,
     "2002": 31,
-    "2003": 15,
-    "2004": 17,
+    "2003": 13,
+    "2004": 19,
     "2005": 8,
-    "2006": 13,
+    "2006": 12,
     "2007": 17,
-    "2008": 17,
-    "2009": 18,
-    "2010": 24,
-    "2011": 23,
+    "2008": 16,
+    "2009": 17,
+    "2010": 22,
+    "2011": 27,
     "2012": 19,
-    "2013": 29,
-    "2014": 20,
+    "2013": 27,
+    "2014": 22,
     "2015": 25,
-    "2016": 39,
-    "2017": 44,
-    "2018": 56,
-    "2019": 46,
-    "2020": 55,
-    "2021": 60,
-    "2022": 44,
-    "2023": 7
+    "2016": 37,
+    "2017": 43,
+    "2018": 55,
+    "2019": 49,
+    "2020": 54,
+    "2021": 66,
+    "2022": 54,
+    "2023": 17,
+    "2024": 1
   }
 }
