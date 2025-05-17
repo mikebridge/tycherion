@@ -77,12 +77,12 @@ FILMS_BY_GENRE_RAW_CA="$TMPDIR/films_by_genre_raw_CA.jl"
 FILMS_BY_GENRE_RAW="$TMPDIR/films_by_genre_raw.jl"
 mkdir -p "$TMPDIR"
 
+verify_env
 
 cd "$SCRAPETERION_HOME" || exit
 # shellcheck disable=SC1090
 . "$SCRAPETERION_VENV"
 
-verify_env
 refresh_film_data
 extract_summaries
 extract_genres
