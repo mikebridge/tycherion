@@ -5,7 +5,7 @@ import Fuse from "fuse.js";
 // import 'bootstrap/dist/css/bootstrap.css';
 
 const fuseOptions = {}
-const fuseIndex = Fuse.parseIndex(filmIndex);
+const fuseIndex = Fuse.parseIndex(filmIndex as any);
 const fuse = new Fuse(films, fuseOptions, fuseIndex);
 
 export const Search = () => (
