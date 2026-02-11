@@ -32,10 +32,12 @@ DATE_TODAY=$(date +%Y-%m-%d)
 
 
 git checkout master
+if [ -n "$GITHUB_ACTIONS" ]; then
+  git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+fi
 git add -A .
 git commit -m "Data Update $DATE_TODAY"
 git tag "v$DATE_TODAY"
 npm run deploy
 git push origin --tags
 git push origin master
-

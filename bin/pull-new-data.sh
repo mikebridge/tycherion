@@ -5,6 +5,10 @@ set -eo pipefail
 SCRAPETERION_VERSION="1.2.0"
 
 verify_env () {
+  if [ -n "$GITHUB_ACTIONS" ]; then
+    echo "Running in GitHub Actions, skipping env verification"
+    return 0
+  fi
   if [ -z "$SCRAPETERION_VENV" ]; then
     echo "SCRAPETERION_VENV is undefined."
     echo "It needs to point to scrapeterion's python venv activation script"
@@ -79,13 +83,13 @@ mkdir -p "$TMPDIR"
 
 
 cd "$SCRAPETERION_HOME" || exit
-# shellcheck disable=SC1090
-. "$SCRAPETERION_VENV"
+if [ -z "$GITHUB_ACTIONS" ]; then
+  # shellcheck disable=SC1090
+  . "$SCRAPETERION_VENV"
+fi
 
 verify_env
 refresh_film_data
 extract_summaries
 extract_genres
 update_site_meta
-
-

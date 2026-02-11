@@ -1,0 +1,72 @@
+name: Update Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.actor == github.repository_owner
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout tycherion
+        uses: actions/checkout@v3
+        with:
+          path: tycherion
+          fetch-depth: 0
+
+      - name: Checkout scrapeterion
+        uses: actions/checkout@v3
+        with:
+          repository: mikebridge/scrapeterion
+          path: scrapeterion
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install scrapeterion dependencies
+        run: |
+          cd scrapeterion
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+          pip install scrapy
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: tycherion/package-lock.json
+
+      - name: Install tycherion dependencies
+        run: |
+          cd tycherion
+          npm install
+
+      - name: Run pull-new-data script
+        env:
+          SCRAPETERION_HOME: ${{ github.workspace }}/scrapeterion
+          SCRAPETERION_VENV: /usr/bin/true # Dummy, we'll install in global python env
+        run: |
+          cd tycherion
+          # We need to bypass the virtualenv activation in the script or make it work
+          # The script does: . "$SCRAPETERION_VENV"
+          # Since we're using global python, we can point SCRAPETERION_VENV to something that does nothing.
+          ./bin/pull-new-data.sh
+
+      - name: Run push-new-data script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          cd tycherion
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          ./bin/push-new-data.sh
