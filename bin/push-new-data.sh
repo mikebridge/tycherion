@@ -36,8 +36,22 @@ if [ -n "$GITHUB_ACTIONS" ]; then
   git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 fi
 git add -A .
-git commit -m "Data Update $DATE_TODAY"
-git tag "v$DATE_TODAY"
+
+# Only commit if there are changes
+if ! git diff-index --quiet HEAD --; then
+  git commit -m "Data Update $DATE_TODAY"
+else
+  echo "No changes to commit"
+fi
+
+# Only tag if the tag doesn't exist
+TAG_NAME="v$DATE_TODAY"
+if ! git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
+  git tag "$TAG_NAME"
+else
+  echo "Tag $TAG_NAME already exists, skipping."
+fi
+
 npm run deploy
 git push origin --tags
 git push origin master
