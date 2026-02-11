@@ -1,5 +1,5 @@
 {
-  "count": 3064,
+  "count": 3063,
   "countries": {
     "Algeria": 1,
     "Angola": 1,
@@ -76,7 +76,7 @@
     "Uganda": 1,
     "Ukraine": 3,
     "United Kingdom": 237,
-    "United States": 927,
+    "United States": 926,
     "Unknown": 7,
     "Venezuela": 1,
     "West Germany": 52,
@@ -1750,10 +1750,6 @@
     "Ira Deutchman": {
       "count": 1,
       "name": "Ira Deutchman"
-    },
-    "Ira Sachs": {
-      "count": 1,
-      "name": "Ira Sachs"
     },
     "Irvin S. Yeaworth Jr.": {
       "count": 1,
@@ -4877,6 +4873,6 @@
     "2022": 48,
     "2023": 51,
     "2024": 32,
-    "2025": 6
+    "2025": 5
   }
 }
