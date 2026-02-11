@@ -1,7 +1,8 @@
 import {timeAgoInWords} from "./utils";
 import {metaData, summary} from "./filmData";
 import React from "react";
-import {version} from "../../package.json";
+import packageJson from "../../package.json";
+const version = packageJson.version;
 
 
 export const Footer = () => (
