@@ -162,12 +162,12 @@ export const Suggest = () => {
                 }
                 <div>
                     <div>
-                        <h1>Random Movie Finder</h1>
-                        <hr/>
+                        <h1 className="text-4xl font-bold mb-4">Random Movie Finder</h1>
+                        <hr className="mb-6"/>
                     </div>
                     {!suggestedMovie &&
 					<>
-						<p className="lead">Let the Goddess of Fortune, <a
+						<p className="lead mb-6">Let the Goddess of Fortune, <a
 							href="https://greekgodsandgoddesses.net/goddesses/tyche/" rel="noreferrer"
 							target="_blank">Tyche</a>,
 							assign you a movie from <a href="https://www.criterionchannel.com/" target="_blank"
