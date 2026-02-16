@@ -1,5 +1,5 @@
 {
-  "count": 3063,
+  "count": 3062,
   "countries": {
     "Algeria": 1,
     "Angola": 1,
@@ -40,7 +40,7 @@
     "Iran": 37,
     "Ireland": 3,
     "Italy": 119,
-    "Japan": 380,
+    "Japan": 379,
     "Jordan": 1,
     "Kazakhstan": 1,
     "Kyrgyzstan": 1,
@@ -152,7 +152,7 @@
       "name": "Akira Inoue"
     },
     "Akira Kurosawa": {
-      "count": 26,
+      "count": 25,
       "name": "Akira Kurosawa"
     },
     "Al Reinert": {
@@ -4797,7 +4797,7 @@
     "1946": 23,
     "1947": 15,
     "1948": 23,
-    "1949": 22,
+    "1949": 21,
     "1950": 23,
     "1951": 21,
     "1952": 27,
