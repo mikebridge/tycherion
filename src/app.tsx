@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Routes, Route, useParams} from 'react-router-dom';
 
 import {NavBar} from "./main/navBar";
 import {Suggest} from "./main/suggest";
@@ -10,40 +10,32 @@ import { SelectApp } from './selectApp';
 import {Search} from "./main/search";
 import "./app.css";
 
-const Switch2 = Switch as any;
-const Route2 = Route as any;
-
 const App = () => (
     <div className="app">
         <NavBar/>
         <div className="page">
             <div className="content">
-                <Switch2>
+                <Routes>
                     {/*<Route path="/">*/}
                     {/*    <SearchSelector></SearchSelector>*/}
                     {/*</Route>*/}
-                    <Route2 exact path="/">
-                        <SelectApp />
-                    </Route2>
-                    <Route2 exact path="/suggest">
-                        <Suggest/>
-                    </Route2>
-                    <Route2 path="/suggest/:slug">{
-                        (props: any) =>
-                            props?.match?.params.slug ?
-                                (<SuggestedResult slug={props.match.params.slug}/>)
-                                : <div>not found!</div>
-                    }
-                    </Route2>
-                    <Route2 path="/search">
-                        <Search/>
-                    </Route2>
-                </Switch2>
+                    <Route path="/" element={<SelectApp />} />
+                    <Route path="/suggest" element={<Suggest/>} />
+                    <Route path="/suggest/:slug" element={
+                        <SuggestedResultWrapper />
+                    } />
+                    <Route path="/search" element={<Search/>} />
+                </Routes>
             </div>
         </div>
         <Footer />
         {/*{<Redirect exact from="/" to="/suggest" />}*/}
     </div>
 );
+
+const SuggestedResultWrapper = () => {
+    const { slug } = useParams();
+    return slug ? <SuggestedResult slug={slug} /> : <div>not found!</div>;
+};
 
 export default App;

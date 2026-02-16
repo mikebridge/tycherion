@@ -6,7 +6,7 @@ import {IMovie, movieList} from "./filmData";
 import {GenreMultiSelector} from "./selectors/genreMultiSelector";
 import {MoviePreview} from "./moviePreview";
 import {Alert} from "./alert";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {topFunction} from "./utils";
 import "./suggest.css"
 import {getQueryParamFromHash, getSearchStateQS, setQueryParamInHash} from "./urlUtils";
@@ -89,19 +89,19 @@ export const Suggest = () => {
     const [countries, setCountries] = useState<string[]>(getCountryState());
     const [genres, setGenres] = useState<string[]>(getGenreState());
     const [geo, setGeo] = useState<string>('US');
-    const history = useHistory();
+    const navigate = useNavigate();
 
     useEffect(() => {
-        history.replace(setQueryParamInHash(window.location.hash, 'd', decades));
-    }, [decades, history]);
+        navigate(setQueryParamInHash(window.location.hash, 'd', decades), { replace: true });
+    }, [decades, navigate]);
 
     useEffect(() => {
-        history.replace(setQueryParamInHash(window.location.hash, 'c', countries));
-    }, [countries, history]);
+        navigate(setQueryParamInHash(window.location.hash, 'c', countries), { replace: true });
+    }, [countries, navigate]);
 
     useEffect(() => {
-        history.replace(setQueryParamInHash(window.location.hash, 'g', genres));
-    }, [genres, history]);
+        navigate(setQueryParamInHash(window.location.hash, 'g', genres), { replace: true });
+    }, [genres, navigate]);
 
     const changeCountries = (countries: string[]) => {
         setCountries(countries);
@@ -125,7 +125,7 @@ export const Suggest = () => {
         if (movie) {
             const qs = getSearchStateQS(window.location.hash);
             const path = qs ? `/suggest/${movie.slug}?${qs}`: `/suggest/${movie.slug}`;
-            history.push(path);
+            navigate(path);
         }
     }
 

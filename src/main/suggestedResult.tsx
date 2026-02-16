@@ -1,7 +1,7 @@
 import React from "react";
 import {MoviePreview} from "./moviePreview";
 import {movieList} from "./filmData";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {getSearchStateQS} from "./urlUtils";
 
 interface ISuggestedResultProps {
@@ -9,11 +9,11 @@ interface ISuggestedResultProps {
 }
 
 export const SuggestedResult = ({slug}: ISuggestedResultProps) => {
-    let history = useHistory();
+    let navigate = useNavigate();
     const handleClick = () => {
         const qs = getSearchStateQS(window.location.hash);
         const path = qs ? `/suggest?${qs}`: `/suggest`;
-        history.push(path);
+        navigate(path);
     }
     const movie = movieList.find(m => m.slug === slug);
     return (
