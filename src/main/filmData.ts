@@ -1,4 +1,8 @@
 import {withDateStringsAsDates} from "./utils";
+import films from '../data/films.json';
+import filmsMetaData from '../data/filmsMetaData.json';
+import summaryData from '../data/summary.json';
+import genresData from '../data/genres.json';
 
 export interface IMovie {
     title: string,
@@ -36,15 +40,13 @@ export interface IGenre {
 }
 
 
-export const movieList: IMovie[] = require('../data/films.json');
+export const movieList: IMovie[] = films as IMovie[];
 
-export const metaDataPreDate: any = require('../data/filmsMetaData.json');
+export const metaData: IMovieMetaData = withDateStringsAsDates(filmsMetaData);
 
-export const metaData: IMovieMetaData = withDateStringsAsDates(metaDataPreDate);
+export const summary: ISummary = summaryData as ISummary;
 
-export const summary: ISummary = require('../data/summary.json');
-
-export const genreData: IGenre[] = require('../data/genres.json');
+export const genreData: IGenre[] = genresData as IGenre[];
 
 interface ISummary {
     count: number,
@@ -52,4 +54,3 @@ interface ISummary {
     directors: { [key: string]: IDirectorSummary },
     years: IYearSummary
 }
-

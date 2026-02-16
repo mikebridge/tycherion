@@ -30,7 +30,7 @@ export const GeoSelector = ({onChange}: IGeoSelectorProps) => {
         <div className="selector">
             <div className="selector-button geoselector-button">I am in:
                 <img className="geoselector-flag"
-                     src={`/${geo.toLowerCase()}.svg`} alt={geoLookup(geo)}
+                     src={`${import.meta.env.BASE_URL}${geo.toLowerCase()}.svg`} alt={geoLookup(geo)}
                      onClick={(e) => onSelectionChanged(e,geo === 'US' ? 'CA': 'US')}/>
             </div>
 
