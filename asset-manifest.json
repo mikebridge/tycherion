@@ -1,26 +1,23 @@
 {
   "files": {
-    "main.css": "/tycherion/static/css/main.accb9f29.chunk.css",
-    "main.js": "/tycherion/static/js/main.9999eb3f.chunk.js",
-    "main.js.map": "/tycherion/static/js/main.9999eb3f.chunk.js.map",
-    "runtime-main.js": "/tycherion/static/js/runtime-main.c221be67.js",
-    "runtime-main.js.map": "/tycherion/static/js/runtime-main.c221be67.js.map",
-    "static/css/2.8d459d15.chunk.css": "/tycherion/static/css/2.8d459d15.chunk.css",
-    "static/js/2.a749b855.chunk.js": "/tycherion/static/js/2.a749b855.chunk.js",
-    "static/js/2.a749b855.chunk.js.map": "/tycherion/static/js/2.a749b855.chunk.js.map",
-    "static/js/3.7c3d50f6.chunk.js": "/tycherion/static/js/3.7c3d50f6.chunk.js",
-    "static/js/3.7c3d50f6.chunk.js.map": "/tycherion/static/js/3.7c3d50f6.chunk.js.map",
+    "main.css": "/tycherion/static/css/main.d305677e.css",
+    "main.js": "/tycherion/static/js/main.bf4efb05.js",
+    "static/js/488.6f7d21bb.chunk.js": "/tycherion/static/js/488.6f7d21bb.chunk.js",
+    "static/media/fa-solid-900.ttf": "/tycherion/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/tycherion/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/tycherion/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/tycherion/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/tycherion/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/tycherion/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/tycherion/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/tycherion/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/tycherion/index.html",
-    "static/css/2.8d459d15.chunk.css.map": "/tycherion/static/css/2.8d459d15.chunk.css.map",
-    "static/css/main.accb9f29.chunk.css.map": "/tycherion/static/css/main.accb9f29.chunk.css.map",
-    "static/js/2.a749b855.chunk.js.LICENSE.txt": "/tycherion/static/js/2.a749b855.chunk.js.LICENSE.txt",
-    "static/media/all.css": "/tycherion/static/media/fa-solid-900.eeccf4f6.woff"
+    "main.d305677e.css.map": "/tycherion/static/css/main.d305677e.css.map",
+    "main.bf4efb05.js.map": "/tycherion/static/js/main.bf4efb05.js.map",
+    "488.6f7d21bb.chunk.js.map": "/tycherion/static/js/488.6f7d21bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c221be67.js",
-    "static/css/2.8d459d15.chunk.css",
-    "static/js/2.a749b855.chunk.js",
-    "static/css/main.accb9f29.chunk.css",
-    "static/js/main.9999eb3f.chunk.js"
+    "static/css/main.d305677e.css",
+    "static/js/main.bf4efb05.js"
   ]
 }
