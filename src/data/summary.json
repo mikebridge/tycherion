@@ -1,10 +1,10 @@
 {
-  "count": 3062,
+  "count": 3057,
   "countries": {
     "Algeria": 1,
     "Angola": 1,
     "Antigua and Barbuda": 1,
-    "Argentina": 3,
+    "Argentina": 2,
     "Australia": 17,
     "Austria": 11,
     "Bangladesh": 2,
@@ -15,7 +15,7 @@
     "Cambodia": 1,
     "Cameroon": 1,
     "Canada": 63,
-    "China": 20,
+    "China": 19,
     "Colombia": 3,
     "Congo": 1,
     "Congo, The Democratic Republic of the": 1,
@@ -35,12 +35,12 @@
     "Hong Kong": 74,
     "Hungary": 8,
     "Iceland": 4,
-    "India": 36,
+    "India": 35,
     "Indonesia": 1,
     "Iran": 37,
     "Ireland": 3,
     "Italy": 119,
-    "Japan": 379,
+    "Japan": 378,
     "Jordan": 1,
     "Kazakhstan": 1,
     "Kyrgyzstan": 1,
@@ -76,7 +76,7 @@
     "Uganda": 1,
     "Ukraine": 3,
     "United Kingdom": 237,
-    "United States": 926,
+    "United States": 925,
     "Unknown": 7,
     "Venezuela": 1,
     "West Germany": 52,
@@ -602,10 +602,6 @@
     "Brett Story": {
       "count": 2,
       "name": "Brett Story"
-    },
-    "Brian  De Palma": {
-      "count": 1,
-      "name": "Brian  De Palma"
     },
     "Brian De Palma": {
       "count": 1,
@@ -2063,10 +2059,6 @@
       "count": 1,
       "name": "Jia Zhang-Ke"
     },
-    "Jia Zhang-ke": {
-      "count": 1,
-      "name": "Jia Zhang-ke"
-    },
     "Jia Zhangke": {
       "count": 7,
       "name": "Jia Zhangke"
@@ -2931,10 +2923,6 @@
       "count": 2,
       "name": "Mario Monicelli"
     },
-    "Mario Soffici": {
-      "count": 1,
-      "name": "Mario Soffici"
-    },
     "Mariposa Film Group": {
       "count": 1,
       "name": "Mariposa Film Group"
@@ -2988,7 +2976,7 @@
       "name": "Mary Harron"
     },
     "Masahiro Shinoda": {
-      "count": 20,
+      "count": 19,
       "name": "Masahiro Shinoda"
     },
     "Masaki Kobayashi": {
@@ -3964,7 +3952,7 @@
       "name": "Satsuo Yamamoto"
     },
     "Satyajit Ray": {
-      "count": 16,
+      "count": 15,
       "name": "Satyajit Ray"
     },
     "Saul J. Turell": {
@@ -4787,7 +4775,7 @@
     "1936": 27,
     "1937": 22,
     "1938": 20,
-    "1939": 22,
+    "1939": 21,
     "1940": 9,
     "1941": 12,
     "1942": 12,
@@ -4811,8 +4799,8 @@
     "1960": 50,
     "1961": 37,
     "1962": 57,
-    "1963": 49,
-    "1964": 54,
+    "1963": 48,
+    "1964": 53,
     "1965": 41,
     "1966": 59,
     "1967": 47,
@@ -4821,7 +4809,7 @@
     "1970": 43,
     "1971": 34,
     "1972": 48,
-    "1973": 46,
+    "1973": 45,
     "1974": 54,
     "1975": 39,
     "1976": 35,
@@ -4866,7 +4854,7 @@
     "2015": 26,
     "2016": 26,
     "2017": 29,
-    "2018": 25,
+    "2018": 24,
     "2019": 30,
     "2020": 25,
     "2021": 35,
