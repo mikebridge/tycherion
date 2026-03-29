@@ -1,5 +1,5 @@
 {
-  "count": 3053,
+  "count": 3030,
   "countries": {
     "Algeria": 2,
     "Angola": 1,
@@ -8,7 +8,7 @@
     "Australia": 16,
     "Austria": 11,
     "Bangladesh": 2,
-    "Belgium": 13,
+    "Belgium": 12,
     "Bosnia and Herzegovina": 1,
     "Brazil": 16,
     "Burkina Faso": 5,
@@ -21,12 +21,12 @@
     "Congo, The Democratic Republic of the": 1,
     "Cuba": 14,
     "Czechoslovakia": 51,
-    "Denmark": 12,
+    "Denmark": 13,
     "Dominican Republic": 2,
     "Egypt": 20,
     "Ethiopia": 2,
     "Finland": 21,
-    "France": 479,
+    "France": 478,
     "Georgia": 1,
     "Germany": 80,
     "Greece": 5,
@@ -37,10 +37,10 @@
     "Iceland": 4,
     "India": 28,
     "Indonesia": 1,
-    "Iran": 37,
+    "Iran": 23,
     "Ireland": 3,
-    "Italy": 119,
-    "Japan": 432,
+    "Italy": 118,
+    "Japan": 426,
     "Jordan": 1,
     "Kazakhstan": 2,
     "Lesotho": 3,
@@ -74,8 +74,8 @@
     "Turkey": 4,
     "Uganda": 1,
     "Ukraine": 3,
-    "United Kingdom": 235,
-    "United States": 879,
+    "United Kingdom": 236,
+    "United States": 877,
     "Unknown": 7,
     "Venezuela": 1,
     "West Germany": 52,
@@ -87,7 +87,7 @@
       "name": "AG Rojas"
     },
     "Abbas Kiarostami": {
-      "count": 23,
+      "count": 9,
       "name": "Abbas Kiarostami"
     },
     "Abel Ferrara": {
@@ -743,7 +743,7 @@
       "name": "Chan Chuen"
     },
     "Chantal Akerman": {
-      "count": 10,
+      "count": 9,
       "name": "Chantal Akerman"
     },
     "Charles Atlas": {
@@ -1407,7 +1407,7 @@
       "name": "George T. Nierenberg"
     },
     "Georges Franju": {
-      "count": 2,
+      "count": 3,
       "name": "Georges Franju"
     },
     "Gessica Généus": {
@@ -1991,7 +1991,7 @@
       "name": "Jean-Pierre Limosin"
     },
     "Jean-Pierre Melville": {
-      "count": 7,
+      "count": 6,
       "name": "Jean-Pierre Melville"
     },
     "Jeff Lieberman": {
@@ -2518,10 +2518,6 @@
       "count": 1,
       "name": "Kinji Fukasaku"
     },
-    "Kinuyo Tanaka": {
-      "count": 6,
-      "name": "Kinuyo Tanaka"
-    },
     "Kira Muratova": {
       "count": 3,
       "name": "Kira Muratova"
@@ -2635,7 +2631,7 @@
       "name": "Lemohang Jeremiah Mosese"
     },
     "Lena Dunham": {
-      "count": 6,
+      "count": 5,
       "name": "Lena Dunham"
     },
     "Leni Riefenstahl": {
@@ -2803,7 +2799,7 @@
       "name": "Luc Dardenne and Jean-Pierre Dardenne"
     },
     "Luchino Visconti": {
-      "count": 3,
+      "count": 2,
       "name": "Luchino Visconti"
     },
     "Luciano Emmer": {
@@ -3543,7 +3539,7 @@
       "name": "Pierre Creton"
     },
     "Pierre Etaix": {
-      "count": 6,
+      "count": 5,
       "name": "Pierre Etaix"
     },
     "Pierre Etaix and Jean-Claude Carrière": {
@@ -4023,7 +4019,7 @@
       "name": "Shintaro Katsu"
     },
     "Shirley Clarke": {
-      "count": 19,
+      "count": 18,
       "name": "Shirley Clarke"
     },
     "Shirley Clarke and D. A. Pennebaker": {
@@ -4049,6 +4045,10 @@
     "Shohei Imamura": {
       "count": 9,
       "name": "Shohei Imamura"
+    },
+    "Shu Lea Cheang": {
+      "count": 1,
+      "name": "Shu Lea Cheang"
     },
     "Sidney Gilliat": {
       "count": 1,
@@ -4365,6 +4365,10 @@
     "Tony Richardson": {
       "count": 4,
       "name": "Tony Richardson"
+    },
+    "Torben Anton Svendsen": {
+      "count": 1,
+      "name": "Torben Anton Svendsen"
     },
     "Toshio Masuda": {
       "count": 2,
@@ -4723,49 +4727,49 @@
     "1949": 22,
     "1950": 22,
     "1951": 21,
-    "1952": 25,
-    "1953": 24,
+    "1952": 26,
+    "1953": 23,
     "1954": 32,
-    "1955": 41,
+    "1955": 39,
     "1956": 35,
-    "1957": 30,
+    "1957": 29,
     "1958": 45,
     "1959": 41,
-    "1960": 49,
-    "1961": 36,
-    "1962": 57,
-    "1963": 48,
+    "1960": 48,
+    "1961": 35,
+    "1962": 56,
+    "1963": 49,
     "1964": 54,
     "1965": 42,
     "1966": 59,
-    "1967": 47,
+    "1967": 46,
     "1968": 54,
     "1969": 50,
-    "1970": 43,
-    "1971": 34,
-    "1972": 46,
-    "1973": 45,
-    "1974": 54,
-    "1975": 39,
-    "1976": 33,
-    "1977": 38,
+    "1970": 42,
+    "1971": 33,
+    "1972": 45,
+    "1973": 44,
+    "1974": 53,
+    "1975": 36,
+    "1976": 31,
+    "1977": 36,
     "1978": 30,
-    "1979": 47,
-    "1980": 55,
-    "1981": 32,
+    "1979": 46,
+    "1980": 54,
+    "1981": 31,
     "1982": 39,
     "1983": 33,
-    "1984": 43,
+    "1984": 42,
     "1985": 30,
     "1986": 36,
     "1987": 47,
     "1988": 47,
-    "1989": 31,
+    "1989": 30,
     "1990": 31,
     "1991": 38,
     "1992": 40,
     "1993": 36,
-    "1994": 34,
+    "1994": 35,
     "1995": 27,
     "1996": 23,
     "1997": 37,
@@ -4782,7 +4786,7 @@
     "2007": 21,
     "2008": 23,
     "2009": 11,
-    "2010": 27,
+    "2010": 26,
     "2011": 21,
     "2012": 14,
     "2013": 14,
