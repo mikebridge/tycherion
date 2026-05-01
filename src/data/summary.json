@@ -1,5 +1,5 @@
 {
-  "count": 3031,
+  "count": 3056,
   "countries": {
     "Algeria": 2,
     "Angola": 1,
@@ -25,10 +25,10 @@
     "Dominican Republic": 2,
     "Egypt": 20,
     "Ethiopia": 2,
-    "Finland": 20,
-    "France": 471,
+    "Finland": 21,
+    "France": 477,
     "Georgia": 1,
-    "Germany": 79,
+    "Germany": 81,
     "Greece": 5,
     "Guatemala": 1,
     "Haiti": 2,
@@ -37,12 +37,12 @@
     "Iceland": 4,
     "India": 29,
     "Indonesia": 1,
-    "Iran": 36,
+    "Iran": 37,
     "Ireland": 3,
     "Italy": 119,
-    "Japan": 426,
+    "Japan": 433,
     "Jordan": 1,
-    "Kazakhstan": 1,
+    "Kazakhstan": 2,
     "Lesotho": 3,
     "Mexico": 20,
     "Morocco": 2,
@@ -52,8 +52,8 @@
     "Nigeria": 2,
     "Norway": 12,
     "Palestinian Territory": 1,
-    "Philippines": 18,
-    "Poland": 29,
+    "Philippines": 19,
+    "Poland": 30,
     "Portugal": 5,
     "Puerto Rico": 2,
     "Republic of Macedonia": 1,
@@ -64,16 +64,16 @@
     "South Africa": 2,
     "South Korea": 9,
     "Soviet Union": 30,
-    "Spain": 32,
+    "Spain": 33,
     "Sudan": 5,
-    "Sweden": 88,
+    "Sweden": 91,
     "Switzerland": 4,
     "Taiwan": 13,
     "Thailand": 1,
     "Turkey": 4,
     "Uganda": 1,
     "Ukraine": 3,
-    "United Kingdom": 229,
+    "United Kingdom": 230,
     "United States": 877,
     "Unknown": 8,
     "Venezuela": 1,
@@ -130,7 +130,7 @@
       "name": "Agnieszka Smoczyńska"
     },
     "Agnès Varda": {
-      "count": 42,
+      "count": 43,
       "name": "Agnès Varda"
     },
     "Ahmed El Maanouni": {
@@ -142,7 +142,7 @@
       "name": "Aisling Chin-Yee and Chase Joynt"
     },
     "Aki Kaurismäki": {
-      "count": 14,
+      "count": 15,
       "name": "Aki Kaurismäki"
     },
     "Akira Inoue": {
@@ -397,6 +397,10 @@
       "count": 1,
       "name": "Apichatpong Weerasethakul"
     },
+    "Ardak Amirkulov": {
+      "count": 1,
+      "name": "Ardak Amirkulov"
+    },
     "Arie Esiri": {
       "count": 1,
       "name": "Arie Esiri"
@@ -526,7 +530,7 @@
       "name": "Bigas Luna"
     },
     "Bigas Luna and Bigas Luna": {
-      "count": 2,
+      "count": 3,
       "name": "Bigas Luna and Bigas Luna"
     },
     "Bill Jones, Kim Leggatt, and Ben Timlett": {
@@ -832,6 +836,10 @@
     "Clara Law": {
       "count": 1,
       "name": "Clara Law"
+    },
+    "Claude Autant-Lara": {
+      "count": 4,
+      "name": "Claude Autant-Lara"
     },
     "Claude Berri": {
       "count": 2,
@@ -1734,7 +1742,7 @@
       "name": "Im Kwon-taek"
     },
     "Ingmar Bergman": {
-      "count": 45,
+      "count": 47,
       "name": "Ingmar Bergman"
     },
     "Ira Deutchman": {
@@ -1866,7 +1874,7 @@
       "name": "Jacques Tourneur"
     },
     "Jafar Panahi": {
-      "count": 5,
+      "count": 6,
       "name": "Jafar Panahi"
     },
     "Jake Meginsky": {
@@ -2054,7 +2062,7 @@
       "name": "Jennifer Reeder"
     },
     "Jerzy Skolimowski": {
-      "count": 1,
+      "count": 2,
       "name": "Jerzy Skolimowski"
     },
     "Jess X. Snow": {
@@ -2545,6 +2553,10 @@
       "count": 1,
       "name": "Kinji Fukasaku"
     },
+    "Kinuyo Tanaka": {
+      "count": 6,
+      "name": "Kinuyo Tanaka"
+    },
     "Kira Muratova": {
       "count": 3,
       "name": "Kira Muratova"
@@ -2632,6 +2644,10 @@
     "Laurie Anderson": {
       "count": 1,
       "name": "Laurie Anderson"
+    },
+    "Lav Diaz": {
+      "count": 1,
+      "name": "Lav Diaz"
     },
     "Lawrence Huntington": {
       "count": 1,
@@ -2969,6 +2985,10 @@
       "count": 1,
       "name": "Mariano Blatt and Eduardo Williams"
     },
+    "Marie Nyreröd": {
+      "count": 1,
+      "name": "Marie Nyreröd"
+    },
     "Mario Monicelli": {
       "count": 2,
       "name": "Mario Monicelli"
@@ -3086,7 +3106,7 @@
       "name": "Mauro Bolognini"
     },
     "Max Ophuls": {
-      "count": 3,
+      "count": 4,
       "name": "Max Ophuls"
     },
     "Maxime Jean-Baptiste": {
@@ -3106,7 +3126,7 @@
       "name": "Maya Deren, Teiji Ito, and Chero Ito"
     },
     "Med Hondo": {
-      "count": 1,
+      "count": 2,
       "name": "Med Hondo"
     },
     "Melvin Van Peebles": {
@@ -3190,7 +3210,7 @@
       "name": "Michelangelo Antonioni"
     },
     "Mike Leigh": {
-      "count": 15,
+      "count": 16,
       "name": "Mike Leigh"
     },
     "Mikhail Kalatozov": {
@@ -3310,7 +3330,7 @@
       "name": "Naghmeh Abbasi"
     },
     "Nagisa Oshima": {
-      "count": 17,
+      "count": 18,
       "name": "Nagisa Oshima"
     },
     "Nancy Savoca": {
@@ -4610,7 +4630,7 @@
       "name": "William Wyler"
     },
     "Wim Wenders": {
-      "count": 14,
+      "count": 15,
       "name": "Wim Wenders"
     },
     "Wim Wenders and Nicholas Ray": {
@@ -4740,27 +4760,27 @@
     "1939": 21,
     "1940": 7,
     "1941": 12,
-    "1942": 9,
-    "1943": 11,
+    "1942": 11,
+    "1943": 12,
     "1944": 11,
     "1945": 15,
-    "1946": 19,
+    "1946": 20,
     "1947": 14,
     "1948": 23,
     "1949": 21,
     "1950": 22,
     "1951": 20,
     "1952": 27,
-    "1953": 23,
+    "1953": 24,
     "1954": 32,
-    "1955": 39,
+    "1955": 42,
     "1956": 35,
     "1957": 31,
     "1958": 45,
     "1959": 40,
-    "1960": 48,
-    "1961": 35,
-    "1962": 56,
+    "1960": 50,
+    "1961": 36,
+    "1962": 57,
     "1963": 49,
     "1964": 55,
     "1965": 42,
@@ -4774,24 +4794,24 @@
     "1973": 44,
     "1974": 53,
     "1975": 38,
-    "1976": 33,
+    "1976": 34,
     "1977": 38,
     "1978": 29,
-    "1979": 45,
+    "1979": 47,
     "1980": 55,
-    "1981": 31,
+    "1981": 32,
     "1982": 38,
     "1983": 33,
-    "1984": 42,
+    "1984": 43,
     "1985": 31,
     "1986": 36,
     "1987": 47,
     "1988": 47,
     "1989": 31,
     "1990": 31,
-    "1991": 36,
-    "1992": 38,
-    "1993": 37,
+    "1991": 37,
+    "1992": 40,
+    "1993": 38,
     "1994": 36,
     "1995": 26,
     "1996": 24,
@@ -4805,7 +4825,7 @@
     "20032": 1,
     "2004": 18,
     "2005": 17,
-    "2006": 8,
+    "2006": 9,
     "2007": 21,
     "2008": 24,
     "2009": 9,
@@ -4821,9 +4841,9 @@
     "2019": 33,
     "2020": 24,
     "2021": 31,
-    "2022": 38,
+    "2022": 40,
     "2023": 54,
     "2024": 39,
-    "2025": 12
+    "2025": 13
   }
 }
