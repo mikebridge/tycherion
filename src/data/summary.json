@@ -1,5 +1,5 @@
 {
-  "count": 3043,
+  "count": 3015,
   "countries": {
     "Algeria": 2,
     "Angola": 1,
@@ -14,7 +14,7 @@
     "Burkina Faso": 5,
     "Cambodia": 1,
     "Cameroon": 1,
-    "Canada": 72,
+    "Canada": 71,
     "China": 18,
     "Colombia": 3,
     "Congo": 1,
@@ -26,7 +26,7 @@
     "Egypt": 20,
     "Ethiopia": 2,
     "Finland": 21,
-    "France": 475,
+    "France": 465,
     "Georgia": 1,
     "Germany": 68,
     "Greece": 5,
@@ -40,15 +40,15 @@
     "Indonesia": 1,
     "Iran": 34,
     "Ireland": 3,
-    "Italy": 119,
+    "Italy": 118,
     "Jamaica": 1,
-    "Japan": 430,
+    "Japan": 429,
     "Jordan": 1,
     "Kazakhstan": 2,
     "Lao People's Democratic Republic": 1,
     "Lesotho": 3,
     "Mexico": 22,
-    "Morocco": 2,
+    "Morocco": 1,
     "Netherlands": 3,
     "New Zealand": 3,
     "Niger": 3,
@@ -56,19 +56,19 @@
     "Norway": 12,
     "Palestinian Territory": 1,
     "Peru": 1,
-    "Philippines": 19,
+    "Philippines": 18,
     "Poland": 30,
     "Portugal": 5,
     "Puerto Rico": 2,
     "Republic of Macedonia": 1,
-    "Romania": 7,
+    "Romania": 6,
     "Russia": 4,
     "Senegal": 7,
     "Singapore": 1,
     "South Africa": 2,
     "South Korea": 9,
     "Soviet Union": 30,
-    "Spain": 33,
+    "Spain": 32,
     "Sudan": 5,
     "Suriname": 1,
     "Sweden": 91,
@@ -78,8 +78,8 @@
     "Turkey": 4,
     "Uganda": 2,
     "Ukraine": 3,
-    "United Kingdom": 229,
-    "United States": 882,
+    "United Kingdom": 228,
+    "United States": 872,
     "Unknown": 9,
     "Venezuela": 1,
     "Vietnam": 1,
@@ -136,12 +136,8 @@
       "name": "Agnieszka Smoczyńska"
     },
     "Agnès Varda": {
-      "count": 43,
+      "count": 34,
       "name": "Agnès Varda"
-    },
-    "Ahmed El Maanouni": {
-      "count": 1,
-      "name": "Ahmed El Maanouni"
     },
     "Aisling Chin-Yee and Chase Joynt": {
       "count": 1,
@@ -475,10 +471,6 @@
       "count": 1,
       "name": "Barbara Connell and William C. Jersey"
     },
-    "Barbara Kopple": {
-      "count": 1,
-      "name": "Barbara Kopple"
-    },
     "Barbara Loden": {
       "count": 1,
       "name": "Barbara Loden"
@@ -552,7 +544,7 @@
       "name": "Bigas Luna"
     },
     "Bigas Luna and Bigas Luna": {
-      "count": 3,
+      "count": 2,
       "name": "Bigas Luna and Bigas Luna"
     },
     "Bill Jones, Kim Leggatt, and Ben Timlett": {
@@ -614,10 +606,6 @@
     "Brian  De Palma": {
       "count": 1,
       "name": "Brian  De Palma"
-    },
-    "Brian De Palma": {
-      "count": 1,
-      "name": "Brian De Palma"
     },
     "Bridgett M. Davis": {
       "count": 1,
@@ -932,7 +920,7 @@
       "name": "Cristi Puiu"
     },
     "Cristian Mungiu": {
-      "count": 2,
+      "count": 1,
       "name": "Cristian Mungiu"
     },
     "Cy Endfield": {
@@ -944,7 +932,7 @@
       "name": "Céline Sciamma"
     },
     "D. A. Pennebaker": {
-      "count": 5,
+      "count": 2,
       "name": "D. A. Pennebaker"
     },
     "D. A. Pennebaker and Chris Hegedus": {
@@ -1024,7 +1012,7 @@
       "name": "David Maysles, Albert Maysles, Ellen Hovde, and Muffie Meyer"
     },
     "David Maysles, Albert Maysles, and Charlotte Zwerin": {
-      "count": 2,
+      "count": 1,
       "name": "David Maysles, Albert Maysles, and Charlotte Zwerin"
     },
     "David Rathod": {
@@ -1362,10 +1350,6 @@
     "František Vláčil": {
       "count": 5,
       "name": "František Vláčil"
-    },
-    "François Girard": {
-      "count": 1,
-      "name": "François Girard"
     },
     "François Truffaut": {
       "count": 14,
@@ -2083,10 +2067,6 @@
       "count": 1,
       "name": "Jem Cohen and Peter Sillen"
     },
-    "Jennie Livingston": {
-      "count": 1,
-      "name": "Jennie Livingston"
-    },
     "Jennifer Reeder": {
       "count": 3,
       "name": "Jennifer Reeder"
@@ -2636,7 +2616,7 @@
       "name": "Koreyoshi Kurahara"
     },
     "Krzysztof Kieślowski": {
-      "count": 16,
+      "count": 15,
       "name": "Krzysztof Kieślowski"
     },
     "Kyujae Park": {
@@ -2678,10 +2658,6 @@
     "Laurie Anderson": {
       "count": 1,
       "name": "Laurie Anderson"
-    },
-    "Lav Diaz": {
-      "count": 1,
-      "name": "Lav Diaz"
     },
     "Lawrence Huntington": {
       "count": 1,
@@ -2740,7 +2716,7 @@
       "name": "Leos Carax"
     },
     "Les Blank": {
-      "count": 20,
+      "count": 19,
       "name": "Les Blank"
     },
     "Les Blank and Gina Leibrecht": {
@@ -2888,7 +2864,7 @@
       "name": "Luc Dardenne and Jean-Pierre Dardenne"
     },
     "Luchino Visconti": {
-      "count": 3,
+      "count": 2,
       "name": "Luchino Visconti"
     },
     "Luciano Emmer": {
@@ -3351,10 +3327,6 @@
       "count": 4,
       "name": "Moustapha Alassane"
     },
-    "Murray Lerner": {
-      "count": 1,
-      "name": "Murray Lerner"
-    },
     "Myra Paci": {
       "count": 1,
       "name": "Myra Paci"
@@ -3400,7 +3372,7 @@
       "name": "Neil Jordan"
     },
     "Neo Sora": {
-      "count": 2,
+      "count": 1,
       "name": "Neo Sora"
     },
     "Ngozi Onwurah": {
@@ -4127,10 +4099,6 @@
       "count": 9,
       "name": "Shohei Imamura"
     },
-    "Shu Lea Cheang": {
-      "count": 1,
-      "name": "Shu Lea Cheang"
-    },
     "Sidney Gilliat": {
       "count": 1,
       "name": "Sidney Gilliat"
@@ -4628,7 +4596,7 @@
       "name": "William Dieterle"
     },
     "William Greaves": {
-      "count": 2,
+      "count": 1,
       "name": "William Greaves"
     },
     "William K. Howard": {
@@ -4753,7 +4721,6 @@
     }
   },
   "years": {
-    "0": 1,
     "1913": 2,
     "1915": 2,
     "1916": 3,
@@ -4795,52 +4762,52 @@
     "1952": 27,
     "1953": 24,
     "1954": 31,
-    "1955": 42,
+    "1955": 41,
     "1956": 35,
-    "1957": 31,
+    "1957": 30,
     "1958": 45,
     "1959": 40,
     "1960": 51,
     "1961": 36,
-    "1962": 56,
+    "1962": 55,
     "1963": 49,
     "1964": 55,
-    "1965": 42,
+    "1965": 41,
     "1966": 59,
-    "1967": 48,
-    "1968": 52,
+    "1967": 46,
+    "1968": 51,
     "1969": 50,
-    "1970": 42,
+    "1970": 40,
     "1971": 32,
     "1972": 44,
-    "1973": 45,
-    "1974": 50,
-    "1975": 38,
-    "1976": 32,
-    "1977": 37,
+    "1973": 44,
+    "1974": 49,
+    "1975": 37,
+    "1976": 31,
+    "1977": 36,
     "1978": 30,
     "1979": 45,
     "1980": 54,
-    "1981": 31,
+    "1981": 30,
     "1982": 39,
     "1983": 36,
     "1984": 39,
-    "1985": 30,
+    "1985": 29,
     "1986": 36,
     "1987": 45,
     "1988": 47,
     "1989": 30,
-    "1990": 30,
+    "1990": 29,
     "1991": 38,
-    "1992": 39,
-    "1993": 37,
-    "1994": 35,
+    "1992": 38,
+    "1993": 35,
+    "1994": 34,
     "1995": 27,
     "1996": 23,
     "1997": 35,
     "1998": 20,
     "1999": 32,
-    "2000": 25,
+    "2000": 24,
     "2001": 20,
     "2002": 44,
     "2003": 46,
@@ -4848,8 +4815,8 @@
     "2004": 19,
     "2005": 16,
     "2006": 9,
-    "2007": 19,
-    "2008": 24,
+    "2007": 18,
+    "2008": 23,
     "2009": 10,
     "2010": 26,
     "2011": 22,
@@ -4860,12 +4827,12 @@
     "2016": 23,
     "2017": 26,
     "2018": 25,
-    "2019": 34,
+    "2019": 33,
     "2020": 24,
     "2021": 30,
     "2022": 40,
-    "2023": 53,
+    "2023": 52,
     "2024": 43,
-    "2025": 15
+    "2025": 14
   }
 }
