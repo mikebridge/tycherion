@@ -1,7 +1,7 @@
 {
-  "count": 3168,
+  "count": 3176,
   "countries": {
-    "Algeria": 1,
+    "Algeria": 2,
     "Angola": 1,
     "Antigua and Barbuda": 1,
     "Argentina": 3,
@@ -26,9 +26,9 @@
     "Egypt": 20,
     "Ethiopia": 2,
     "Finland": 21,
-    "France": 502,
+    "France": 503,
     "Georgia": 1,
-    "Germany": 64,
+    "Germany": 65,
     "Greece": 5,
     "Guatemala": 1,
     "Guyana": 1,
@@ -36,13 +36,13 @@
     "Hong Kong": 71,
     "Hungary": 8,
     "Iceland": 5,
-    "India": 28,
+    "India": 29,
     "Indonesia": 1,
     "Iran": 34,
     "Ireland": 3,
     "Italy": 119,
     "Jamaica": 1,
-    "Japan": 437,
+    "Japan": 438,
     "Jordan": 1,
     "Kazakhstan": 2,
     "Lao People's Democratic Republic": 1,
@@ -68,7 +68,7 @@
     "South Africa": 2,
     "South Korea": 9,
     "Soviet Union": 32,
-    "Spain": 33,
+    "Spain": 34,
     "Sudan": 5,
     "Suriname": 1,
     "Sweden": 91,
@@ -77,9 +77,9 @@
     "Thailand": 1,
     "Turkey": 5,
     "Uganda": 2,
-    "Ukraine": 3,
+    "Ukraine": 4,
     "United Kingdom": 234,
-    "United States": 885,
+    "United States": 886,
     "Unknown": 84,
     "Venezuela": 1,
     "Vietnam": 1,
@@ -552,7 +552,7 @@
       "name": "Bigas Luna"
     },
     "Bigas Luna and Bigas Luna": {
-      "count": 1,
+      "count": 2,
       "name": "Bigas Luna and Bigas Luna"
     },
     "Bill Jones, Kim Leggatt, and Ben Timlett": {
@@ -1419,6 +1419,10 @@
       "count": 2,
       "name": "Fritz Lang"
     },
+    "G. Aravindan": {
+      "count": 1,
+      "name": "G. Aravindan"
+    },
     "G. W. Pabst": {
       "count": 4,
       "name": "G. W. Pabst"
@@ -1444,7 +1448,7 @@
       "name": "Garrett Bradley"
     },
     "Gary Hustwit": {
-      "count": 4,
+      "count": 5,
       "name": "Gary Hustwit"
     },
     "Gary Walkow": {
@@ -2448,7 +2452,7 @@
       "name": "Kazuki Omori"
     },
     "Kazuo Hara": {
-      "count": 4,
+      "count": 5,
       "name": "Kazuo Hara"
     },
     "Kazuo Ikehiro": {
@@ -2760,7 +2764,7 @@
       "name": "Leonard Kastle"
     },
     "Leos Carax": {
-      "count": 1,
+      "count": 2,
       "name": "Leos Carax"
     },
     "Les Blank": {
@@ -3350,6 +3354,10 @@
     "Mohammad Reza Aslani": {
       "count": 1,
       "name": "Mohammad Reza Aslani"
+    },
+    "Mohammed Lakhdar-Hamina": {
+      "count": 1,
+      "name": "Mohammed Lakhdar-Hamina"
     },
     "Monika Treut": {
       "count": 6,
@@ -4098,6 +4106,10 @@
     "Sergei Eisenstein and Grigori Aleksandrov": {
       "count": 1,
       "name": "Sergei Eisenstein and Grigori Aleksandrov"
+    },
+    "Sergei Loznitsa": {
+      "count": 2,
+      "name": "Sergei Loznitsa"
     },
     "Sergei Parajanov": {
       "count": 1,
@@ -4861,17 +4873,17 @@
     "1971": 36,
     "1972": 49,
     "1973": 46,
-    "1974": 51,
-    "1975": 36,
+    "1974": 52,
+    "1975": 37,
     "1976": 36,
     "1977": 39,
     "1978": 30,
-    "1979": 49,
+    "1979": 50,
     "1980": 54,
     "1981": 34,
     "1982": 40,
     "1983": 37,
-    "1984": 40,
+    "1984": 41,
     "1985": 32,
     "1986": 37,
     "1987": 48,
@@ -4888,7 +4900,7 @@
     "1998": 18,
     "1999": 33,
     "2000": 26,
-    "2001": 20,
+    "2001": 21,
     "2002": 44,
     "2003": 46,
     "20032": 1,
@@ -4906,13 +4918,13 @@
     "2015": 23,
     "2016": 24,
     "2017": 25,
-    "2018": 27,
+    "2018": 28,
     "2019": 36,
     "2020": 25,
     "2021": 30,
     "2022": 41,
     "2023": 53,
-    "2024": 50,
-    "2025": 21
+    "2024": 51,
+    "2025": 22
   }
 }
