@@ -1,5 +1,5 @@
 {
-  "count": 3193,
+  "count": 3189,
   "countries": {
     "Algeria": 2,
     "Angola": 1,
@@ -21,13 +21,13 @@
     "Congo": 1,
     "Congo, The Democratic Republic of the": 1,
     "Cuba": 17,
-    "Czechoslovakia": 52,
+    "Czechoslovakia": 51,
     "Denmark": 13,
     "Dominican Republic": 2,
     "Egypt": 20,
     "Ethiopia": 2,
     "Finland": 21,
-    "France": 497,
+    "France": 495,
     "Georgia": 1,
     "Germany": 65,
     "Ghana": 1,
@@ -44,7 +44,7 @@
     "Ireland": 3,
     "Italy": 118,
     "Jamaica": 1,
-    "Japan": 439,
+    "Japan": 438,
     "Jordan": 1,
     "Kazakhstan": 2,
     "Lao People's Democratic Republic": 1,
@@ -2437,10 +2437,6 @@
       "count": 3,
       "name": "Kaneto Shindo"
     },
-    "Karel Kachyna": {
-      "count": 1,
-      "name": "Karel Kachyna"
-    },
     "Karel Kachyňa": {
       "count": 1,
       "name": "Karel Kachyňa"
@@ -2802,7 +2798,7 @@
       "name": "Leonard Kastle"
     },
     "Leos Carax": {
-      "count": 2,
+      "count": 1,
       "name": "Leos Carax"
     },
     "Les Blank": {
@@ -2998,7 +2994,7 @@
       "name": "Luis Alejandro Yero"
     },
     "Luis Buñuel": {
-      "count": 7,
+      "count": 6,
       "name": "Luis Buñuel"
     },
     "Luis García Berlanga": {
@@ -3450,7 +3446,7 @@
       "name": "Naghmeh Abbasi"
     },
     "Nagisa Oshima": {
-      "count": 18,
+      "count": 17,
       "name": "Nagisa Oshima"
     },
     "Nancy Savoca": {
@@ -4922,7 +4918,7 @@
     "1957": 31,
     "1958": 47,
     "1959": 40,
-    "1960": 53,
+    "1960": 52,
     "1961": 36,
     "1962": 57,
     "1963": 51,
@@ -4932,11 +4928,11 @@
     "1967": 58,
     "1968": 58,
     "1969": 52,
-    "1970": 42,
+    "1970": 41,
     "1971": 35,
     "1972": 49,
     "1973": 45,
-    "1974": 53,
+    "1974": 52,
     "1975": 38,
     "1976": 37,
     "1977": 39,
@@ -4946,7 +4942,7 @@
     "1981": 34,
     "1982": 38,
     "1983": 38,
-    "1984": 40,
+    "1984": 39,
     "1985": 32,
     "1986": 38,
     "1987": 47,
