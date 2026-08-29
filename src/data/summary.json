@@ -1,7 +1,7 @@
 {
-  "count": 3181,
+  "count": 3185,
   "countries": {
-    "Unknown": 3181
+    "Unknown": 3185
   },
   "directors": {
     "AG Rojas": {
@@ -457,7 +457,7 @@
       "name": "Bertrand Bonello"
     },
     "Bertrand Tavernier": {
-      "count": 13,
+      "count": 14,
       "name": "Bertrand Tavernier"
     },
     "Bertrand Tavernier and Robert Parrish": {
@@ -2069,7 +2069,7 @@
       "name": "Jennifer Reeder"
     },
     "Jerzy Skolimowski": {
-      "count": 1,
+      "count": 2,
       "name": "Jerzy Skolimowski"
     },
     "Jess X. Snow": {
@@ -2237,7 +2237,7 @@
       "name": "Jon Nguyen, Rick Barnes, and Olivia Neergaard-Holm"
     },
     "Jonathan Demme": {
-      "count": 4,
+      "count": 5,
       "name": "Jonathan Demme"
     },
     "Jonathan Wacks": {
@@ -3149,7 +3149,7 @@
       "name": "Maya Deren and Alexander Hammid"
     },
     "Med Hondo": {
-      "count": 2,
+      "count": 3,
       "name": "Med Hondo"
     },
     "Mehboob Khan": {
@@ -4589,7 +4589,7 @@
       "name": "Volker Schlöndorff and Margarethe von Trotta"
     },
     "Václav Vorlíček": {
-      "count": 2,
+      "count": 1,
       "name": "Václav Vorlíček"
     },
     "Víctor Erice": {
@@ -4733,7 +4733,7 @@
       "name": "Yoshiyuki Kuroda"
     },
     "Youssef Chahine": {
-      "count": 19,
+      "count": 20,
       "name": "Youssef Chahine"
     },
     "Yuen Woo-ping": {
@@ -4825,16 +4825,16 @@
     "1969": 52,
     "1970": 43,
     "1971": 36,
-    "1972": 49,
+    "1972": 48,
     "1973": 46,
     "1974": 52,
     "1975": 38,
     "1976": 38,
     "1977": 37,
-    "1978": 33,
-    "1979": 49,
+    "1978": 34,
+    "1979": 50,
     "1980": 51,
-    "1981": 34,
+    "1981": 35,
     "1982": 38,
     "1983": 36,
     "1984": 40,
@@ -4844,7 +4844,7 @@
     "1988": 47,
     "1989": 31,
     "1990": 34,
-    "1991": 36,
+    "1991": 37,
     "1992": 38,
     "1993": 35,
     "1994": 33,
@@ -4852,7 +4852,7 @@
     "1996": 25,
     "1997": 38,
     "1998": 21,
-    "1999": 30,
+    "1999": 31,
     "2000": 26,
     "2001": 22,
     "2002": 43,
