@@ -1,7 +1,7 @@
 {
-  "count": 3185,
+  "count": 3184,
   "countries": {
-    "Unknown": 3185
+    "Unknown": 3184
   },
   "directors": {
     "AG Rojas": {
@@ -2401,7 +2401,7 @@
       "name": "Kazuki Omori"
     },
     "Kazuo Hara": {
-      "count": 5,
+      "count": 4,
       "name": "Kazuo Hara"
     },
     "Kazuo Ikehiro": {
@@ -4870,7 +4870,7 @@
     "2013": 26,
     "2014": 20,
     "2015": 22,
-    "2016": 23,
+    "2016": 22,
     "2017": 26,
     "2018": 30,
     "2019": 35,
